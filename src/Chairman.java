@@ -15,14 +15,14 @@ public class Chairman {
         ui.printConfirmationForPayment(member);
         allMembers.add(member);
         FileHandling fileHandling = new FileHandling();
-        fileHandling.writeAllMembersToFile();
+        fileHandling.writeAllMembersToFile(allMembers);
 
         //tilføj member til arraylist
     }
     public void removeMember(Member member) {
         allMembers.remove(member);
         FileHandling fileHandling = new FileHandling();
-        fileHandling.writeAllMembersToFile();
+        fileHandling.writeAllMembersToFile(allMembers);
     }
 
 

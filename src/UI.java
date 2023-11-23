@@ -133,7 +133,11 @@ public class UI {
 
     public int getUserInputInt() {
         Scanner scanner = new Scanner(System.in);
-        System.out.print("Enter the number corresponding to the member you want to remove: ");
+        removeMessage();
         return scanner.nextInt();
+    }
+
+    public void removeMessage() {
+        System.out.println("Enter the number corresponding to the member you want to remove: ");
     }
 }

@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class FileHandling {
+    private ArrayList<Object> allMembers;
     String memberFirstName;
     String memberLastName;
     int memberYearOfBirth;
@@ -14,8 +15,6 @@ public class FileHandling {
     boolean hasPaid;
 
 
-    ArrayList<Member> allMembers = new ArrayList<Member>();
-
     Scanner in = new Scanner(System.in);
 
     final File financeFile = new File("src\\finances.csv");
@@ -24,20 +23,25 @@ public class FileHandling {
     final File regularSwimmersFile = new File("src\\regular_swimmers.csv");
     final File competitionFile = new File("src\\competition.csv");
 
-    public void writeAllMembersToFile() {
-        Chairman chairman = new Chairman();
+    public FileHandling() {
+        this.allMembers = new ArrayList<>();
+    }
+
+
+    public void writeAllMembersToFile(ArrayList<Member> allMembers) {
+
         PrintStream ps;
         try {
             ps = new PrintStream(allMembersFile);
-            ArrayList temp = chairman.getAllMembers();
-            for (int i = 0; i < chairman.getAllMembers().size(); i++) {
-                ps.println(chairman.getAllMembers().
-                        get(i).getFirstName() + "," + chairman.getAllMembers().
-                        get(i).getLastName() + "," + chairman.getAllMembers().
-                        get(i).getYearOfBirth() + "," + chairman.getAllMembers().
-                        get(i).getEmail() + "," + chairman.getAllMembers().
-                        get(i).getAdress() + "," + chairman.getAllMembers().
-                        get(i).isActive() + "," + chairman.getAllMembers().
+
+            for (int i = 0; i < allMembers.size(); i++) {
+                ps.println(allMembers.
+                        get(i).getFirstName() + "," + allMembers.
+                        get(i).getLastName() + "," + allMembers.
+                        get(i).getYearOfBirth() + "," + allMembers.
+                        get(i).getEmail() + "," + allMembers.
+                        get(i).getAdress() + "," + allMembers.
+                        get(i).isActive() + "," + allMembers.
                         get(i).getHasPaid());
             }
         } catch (FileNotFoundException e) {
@@ -65,19 +69,24 @@ public class FileHandling {
             memberAdress = parts[4];
             isActive = Boolean.parseBoolean(parts[5]);
             hasPaid = Boolean.parseBoolean(parts[6]);
-
+            Member member = new Member(memberFirstName, memberLastName, memberYearOfBirth, memberEmail, memberAdress, isActive, hasPaid);
+            allMembers.add(member);
         }
     }
+
+
+    public ArrayList<Member> initFromFile() {
+        ArrayList<Member> allMembers = new ArrayList<>();
+
+        Member member = new Member(
+                memberFirstName, memberLastName, memberYearOfBirth,
+                memberEmail, memberAdress, isActive, hasPaid
+        );
+        allMembers.add(member);
+
+        return allMembers;
+    }
 }
-
-
-         /*public ArrayList<Member> initFromFile () {
-
-            allMembers.add((memberFirstName,memberLastName,memberYearOfBirth,
-                        memberEmail,memberAdress,isActive,hasPaid));
-
-            return allMembers;
-            }
 
    /* public Aftale opretAftaleFraString(String linje) {
         DateTimeFormatter datoFormaterer = DateTimeFormatter.ofPattern("yyyy-MM-dd");

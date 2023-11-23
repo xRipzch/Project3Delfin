@@ -56,9 +56,14 @@ public class MenuMaker {
             case 1 -> chairman.addMemberToDelfinen();
             case 2 -> removeMemberFromDelfinen();
             //    case 3 -> changeMembershipForExsitingMember();
+            case 4 -> {
+               // todo fix den her fileHandling.loadAllMembersFromFile();
+                displayMemberList();
+            }
             case 9 -> chooseFromMainMenu();
         }
     }
+    // todo find det rigtige sted til alt det her funktionalitet
  public void displayMemberList () {
      for (int i = 0; i < chairman.getAllMembers().size(); i++) {
          System.out.println(i + ". " + chairman.getAllMembers().get(i).getFirstName() + " " +
@@ -103,7 +108,7 @@ public class MenuMaker {
 
     private String[] pointsChairmanMenu() {
         return new String[]{"1. Add new member to Delfinen.", "2. Remove member.",
-                "3. Change membership for exsisting member.",
+                "3. Change membership for exsisting member.", "4. Display member list.",
                 "9. Main Menu.", "0. Exit program"};
     }
 
