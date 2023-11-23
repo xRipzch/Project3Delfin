@@ -12,9 +12,17 @@ public class Chairman {
     public void addMemberToDelfinen() {
         Member member = new Member(ui.typeFirstName(), ui.typeLastName(),
                 ui.typeYearOfBirth(), ui.typeEmailAdress(), ui.typeAdress(), ui.isActive(), ui.hasPaid());
-        ui.printConfirmationForPayment(Member member);
+        ui.printConfirmationForPayment(member);
+        allMembers.add(member);
+        FileHandling fileHandling = new FileHandling();
+        fileHandling.writeAllMembersToFile();
 
         //tilføj member til arraylist
+    }
+    public void removeMember(Member member) {
+        allMembers.remove(member);
+        FileHandling fileHandling = new FileHandling();
+        fileHandling.writeAllMembersToFile();
     }
 
 

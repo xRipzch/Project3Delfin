@@ -4,7 +4,7 @@ public class Subscription {
     UI ui = new UI();
 
     public int getSubscriptionPrice(Member member) {
-        calculateSubscriptionPrice();
+        calculateSubscriptionPrice(member);
         return subscriptionPrice;
     }
 
@@ -30,8 +30,8 @@ public class Subscription {
     }
 
 
-    public void processPayment() {
-        ui.printConfirmationForPayment();
+    public void processPayment(Member member) {
+        ui.printConfirmationForPayment(member);
         //metode der bruger setter
     }
 }

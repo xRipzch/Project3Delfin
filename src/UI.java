@@ -101,8 +101,8 @@ public class UI {
         switch (choice) {
             case 1 -> {
                 hasPaid = true;
-                printConfirmationForPayment();
-                fileHandling.writeAllMembersToFile();
+                printConfirmationForPayment(member);
+
             }
             case 2 -> hasPaid = false;
             default -> {
@@ -117,7 +117,7 @@ public class UI {
     public void printConfirmationForPayment(Member member) {
         Subscription Subscription = new Subscription();
         System.out.println("You're subscription is:  " +
-                Subscription.getSubscriptionPrice(Member member) + "$$$.");
+                Subscription.getSubscriptionPrice(member) + "$$$.");
         try {
             System.out.println("Proccessing Payment.");
             TimeUnit.SECONDS.sleep(1);
@@ -131,4 +131,9 @@ public class UI {
         System.out.println("Payment received!");
     }
 
+    public int getUserInputInt() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter the number corresponding to the member you want to remove: ");
+        return scanner.nextInt();
+    }
 }
