@@ -26,12 +26,13 @@ public class Subscription {
         } else {
             subscriptionPrice = 500; // passive subscription
         }
-        return subscriptionPrice;
+
+        System.out.println("You're subscription fee is:  " + subscriptionPrice + "$$$.");
     }
 
 
     public void processPayment(Member member) {
-        ui.printConfirmationForPayment(member);
+        ui.printConfirmationForPayment();
         //metode der bruger setter
     }
 }

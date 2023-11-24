@@ -53,12 +53,14 @@ public class MenuMaker {
         userChoice = scanner.nextInt();
         switch (userChoice) {
             case 0 -> exitProgram();
-            case 1 -> chairman.addMemberToDelfinen();
-            case 2 -> removeMemberFromDelfinen();
-            //    case 3 -> changeMembershipForExsitingMember();
-            case 4 -> {
-               // todo fix den her fileHandling.loadAllMembersFromFile();
-                displayMemberList();
+            case 1 -> chairman.createProMember();
+            case 2 -> chairman.createMember();
+            case 3 -> chairman.removeMemberFromDelfinen();
+            //    case 4 -> changeMembershipForExsitingMember();
+            case 5 -> {
+              fileHandling.loadAllMembersFromFile();
+              fileHandling.initFromFile();
+                chairman.displayMemberList();
             }
             case 9 -> chooseFromMainMenu();
         }

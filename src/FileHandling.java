@@ -30,19 +30,19 @@ public class FileHandling {
 
     public void writeAllMembersToFile(ArrayList<Member> allMembers) {
 
-        PrintStream ps;
+
         try {
             ps = new PrintStream(allMembersFile);
 
             for (int i = 0; i < allMembers.size(); i++) {
-                ps.println(allMembers.
+                ps.println (allMembers.
                         get(i).getFirstName() + "," + allMembers.
                         get(i).getLastName() + "," + allMembers.
                         get(i).getYearOfBirth() + "," + allMembers.
                         get(i).getEmail() + "," + allMembers.
                         get(i).getAdress() + "," + allMembers.
-                        get(i).isActive() + "," + allMembers.
-                        get(i).getHasPaid());
+                        get(i).isActive() + "," + (allMembers.
+                        get(i).getHasPaid()));
             }
         } catch (FileNotFoundException e) {
             System.out.println("File not found.");

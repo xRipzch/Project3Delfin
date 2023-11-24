@@ -101,13 +101,21 @@ public class UI {
         switch (choice) {
             case 1 -> {
                 hasPaid = true;
-                printConfirmationForPayment(member);
-
+                try {
+                    System.out.println("Proccessing Payment.");
+                    TimeUnit.SECONDS.sleep(1);
+                    System.out.println("Proccessing Payment..");
+                    TimeUnit.SECONDS.sleep(1);
+                    System.out.println("Proccessing Payment...");
+                    TimeUnit.SECONDS.sleep(1);
+                } catch (InterruptedException e) {
+                    throw new RuntimeException(e);
+                }
+                System.out.println("Payment received!");
             }
             case 2 -> hasPaid = false;
             default -> {
                 System.out.println("Invalid choice. Try again.");
-                hasPaid();
             }
         }
         return hasPaid;
