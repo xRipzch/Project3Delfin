@@ -9,7 +9,7 @@ public class Member {
 
 
     public Member (String firstName, String lastName, int yearOfBirth,
-                   String email, String adress, boolean isActive, boolean hasPaid) {//der mangler type af svømmer
+                   String email, String adress, boolean isActive, boolean hasPaid) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.yearOfBirth = yearOfBirth;

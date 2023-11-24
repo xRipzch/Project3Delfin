@@ -91,6 +91,41 @@ public class UI {
         return isActive;
     }
 
+    public SwimDisciplin chooseSwimDisciplin() {
+        int choice = 0;
+        System.out.println("Please choose a swimming discipline:");
+        System.out.println("1. Crawl");
+        System.out.println("2. Butterfly");
+        System.out.println("3. Breaststroke");
+        System.out.println("4. Backcrawl");
+        System.out.println("5. Medley");
+        choice = scanner.nextInt();
+        switch (choice) {
+            case 1 -> {
+                return SwimDisciplin.CRAWL;
+            }
+            case 2 -> {
+                return SwimDisciplin.BUTTERFLY;
+            }
+            case 3 -> {
+                return SwimDisciplin.BREASTSTROKE;
+            }
+            case 4 -> {
+                return SwimDisciplin.BACKCRAWL;
+            }
+            case 5 -> {
+                return SwimDisciplin.MEDLEY;
+            }
+            default -> {
+                System.out.println("Invalid choice, try again.");
+            }
+        }
+
+        return null;
+    }
+
+
+
     public boolean hasPaid() {
         int choice = 0;
         boolean hasPaid = false;
@@ -119,13 +154,9 @@ public class UI {
             }
         }
         return hasPaid;
-
     }
 
-    public void printConfirmationForPayment(Member member) {
-        Subscription Subscription = new Subscription();
-        System.out.println("You're subscription is:  " +
-                Subscription.getSubscriptionPrice(member) + "$$$.");
+    public void printConfirmationForPayment() {
         try {
             System.out.println("Proccessing Payment.");
             TimeUnit.SECONDS.sleep(1);
@@ -148,4 +179,6 @@ public class UI {
     public void removeMessage() {
         System.out.println("Enter the number corresponding to the member you want to remove: ");
     }
+
+
 }

@@ -3,17 +3,15 @@ import java.time.LocalDate;
 public class Subscription {
     UI ui = new UI();
 
-    public int getSubscriptionPrice(Member member) {
-        calculateSubscriptionPrice(member);
-        return subscriptionPrice;
-    }
 
-    public int subscriptionPrice = 0;
+
+
 
     //Calculate the price of the subscription based on age.
-    public int calculateSubscriptionPrice(Member member) {
+    public void calculateSubscriptionPrice(Member member) {
         int currentYear = LocalDate.now().getYear();
         int age = currentYear - member.getYearOfBirth();
+        int subscriptionPrice = 0;
 
         if (member.isActive()) {
             if (age < 18) {

@@ -65,30 +65,8 @@ public class MenuMaker {
             case 9 -> chooseFromMainMenu();
         }
     }
-    // todo find det rigtige sted til alt det her funktionalitet
- public void displayMemberList () {
-     for (int i = 0; i < chairman.getAllMembers().size(); i++) {
-         System.out.println(i + ". " + chairman.getAllMembers().get(i).getFirstName() + " " +
-                 chairman.getAllMembers().get(i).getLastName());
-     }
- }
-    private void removeMemberFromDelfinen() {
-        UI ui = new UI();
-        System.out.println("Choose member to remove from Delfinen.");
-        displayMemberList();
-        int memberIndexToRemove = ui.getUserInputInt(); // todo lave den i UI klasse
-        if (isValidIndex(memberIndexToRemove, chairman)) {
-            Member memberToRemove = chairman.getAllMembers().get(memberIndexToRemove);
-            chairman.removeMember(memberToRemove);
-            System.out.println(memberToRemove.getFirstName() + " " + memberToRemove.getLastName() +
-                    " has been removed from Delfinen.");
-            scanner.nextLine();
 
-        }
-    }
-    private boolean isValidIndex(int index, Chairman chairman) {
-        return index >= 0 && index < chairman.getAllMembers().size();
-    }
+
 
 
 
@@ -109,9 +87,9 @@ public class MenuMaker {
     }
 
     private String[] pointsChairmanMenu() {
-        return new String[]{"1. Add new member to Delfinen.", "2. Remove member.",
-                "3. Change membership for exsisting member.", "4. Display member list.",
-                "9. Main Menu.", "0. Exit program"};
+        return new String[]{"1. Add new pro member to Delfinen.", "2. Add new regular member.",
+                "3. Remove member from Delfinen" + "4. Change membership for exsisting member.",
+                "5. Display member list.", "9. Main Menu.", "0. Exit program"};
     }
 
     private String[] pointsCoachMenu() {

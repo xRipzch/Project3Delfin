@@ -7,9 +7,11 @@ public class Chairman {
     private ArrayList<ProSwimmer> proSwimmers = new ArrayList<>();
     private ArrayList<RegularSwimmer> regularSwimmers = new ArrayList<>();
     UI ui = new UI();
+    FileHandling fileHandling = new FileHandling();
+    Subscription subscription = new Subscription();
 
 
-    public void addMemberToDelfinen() {
+    public void createMember() {
         Member member = new Member(ui.typeFirstName(), ui.typeLastName(),
                 ui.typeYearOfBirth(), ui.typeEmailAdress(), ui.typeAdress(),
                 ui.isActive(), ui.hasPaid());
@@ -40,8 +42,8 @@ public class Chairman {
         fileHandling.writeAllMembersToFile(allMembers);
     }
 
-        //tilføj member til arraylist
-    }
+
+
     public void removeMember(Member member) {
         allMembers.remove(member);
         FileHandling fileHandling = new FileHandling();
@@ -51,6 +53,33 @@ public class Chairman {
 
     public ArrayList<Member> getAllMembers() {
         return new ArrayList<Member>(allMembers);
+    }
+
+    public void displayMemberList() {
+        for (int i = 0; i < getAllMembers().size(); i++) {
+            System.out.println(i + ". " + getAllMembers().get(i).getFirstName() + " " +
+                    getAllMembers().get(i).getLastName());
+        }
+    }
+
+
+    public void removeMemberFromDelfinen() {
+        UI ui = new UI();
+        System.out.println("Choose member to remove from Delfinen.");
+        displayMemberList();
+        int memberIndexToRemove = ui.getUserInputInt();
+        if (isValidIndex(memberIndexToRemove, allMembers)) {
+            Member memberToRemove = getAllMembers().get(memberIndexToRemove);
+            removeMember(memberToRemove);
+            System.out.println(memberToRemove.getFirstName() + " " + memberToRemove.getLastName() +
+                    " has been removed from Delfinen.");
+            scanner.nextLine();
+
+        }
+    }
+
+    private boolean isValidIndex(int index, ArrayList<Member> allMembers) {
+        return index >= 0 && index < getAllMembers().size();
     }
 
     public void sortByAge() {

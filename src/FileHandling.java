@@ -1,6 +1,4 @@
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.PrintStream;
+import java.io.*;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -17,11 +15,11 @@ public class FileHandling {
 
     Scanner in = new Scanner(System.in);
 
-    final File financeFile = new File("src\\finances.csv");
-    final File allMembersFile = new File("all_members.csv");
-    final File proSwimmersFile = new File("src\\pro_swimmers.csv");
-    final File regularSwimmersFile = new File("src\\regular_swimmers.csv");
-    final File competitionFile = new File("src\\competition.csv");
+    static final File financeFile = new File("src\\finances.csv");
+    static final File allMembersFile = new File("all_members.csv");
+    static final File proSwimmersFile = new File("src\\pro_swimmers.csv");
+    static final File regularSwimmersFile = new File("src\\regular_swimmers.csv");
+    static final File competitionFile = new File("src\\competition.csv");
 
     public FileHandling() {
         this.allMembers = new ArrayList<>();
@@ -32,7 +30,8 @@ public class FileHandling {
 
 
         try {
-            ps = new PrintStream(allMembersFile);
+            PrintStream ps;
+            ps = new PrintStream(new FileOutputStream("all_members.csv"), true);
 
             for (int i = 0; i < allMembers.size(); i++) {
                 ps.println (allMembers.
