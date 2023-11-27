@@ -4,38 +4,44 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1a7dfa2b-dcc2-4474-948f-4ef6cd864b54" name="Changes" comment="">
+    <list default="true" id="1a7dfa2b-dcc2-4474-948f-4ef6cd864b54" name="Changes" comment="Second commit fr">
       <change afterPath="$PROJECT_DIR$/../Sortering/src/CarsSortedByPlate/Car.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../Sortering/src/CarsSortedByPlate/SortCars.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../Sortering/src/SortByHeight/Kid.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../Sortering/src/SortByHeight/SortByHeight.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../Sortering/src/SortDemo/Car.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../Sortering/src/SortDemo/Garage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_members.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Project3_delfin/Chairman.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Project3_delfin/Chairman.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Project3_delfin/Delfinen.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Project3_delfin/Delfinen.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Project3_delfin/FileHandling.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Project3_delfin/FileHandling.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Project3_delfin/Member.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Project3_delfin/Member.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Project3_delfin/MenuMaker.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Project3_delfin/MenuMaker.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Project3_delfin/ProSwimmer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Project3_delfin/ProSwimmer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Project3_delfin/RegularSwimmer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Project3_delfin/UI.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Chairman.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Chairman.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Delfinen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Delfinen.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/FileHandling.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/FileHandling.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/MenuMaker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MenuMaker.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Subscription.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Subscription.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/RegularSwimmer.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/UI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Project3_delfin/src/Chairman.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Project3_delfin/src/Chairman.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Project3_delfin/src/Member.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Project3_delfin/src/Member.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Project3_delfin/src/RegularSwimmer.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Project3_delfin/src/RegularSwimmer.java" afterDir="false" />
     </list>
-    <list id="e764c490-f053-49a9-bad0-852e42607d12" name="Changes by LENOVO" comment="">
-      <change beforePath="$PROJECT_DIR$/src/Chairman.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Chairman.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/FileHandling.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/FileHandling.java" afterDir="false" />
+    <list id="e764c490-f053-49a9-bad0-852e42607d12" name="Changes by LENOVO" comment="Changes by LENOVO">
       <change beforePath="$PROJECT_DIR$/src/Member.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Member.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MenuMaker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MenuMaker.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ProSwimmer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ProSwimmer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Subscription.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Subscription.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/UI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI.java" afterDir="false" />
     </list>
     <list id="4d616dc7-1ce6-4141-a620-02a668497665" name="Changes by Magne" comment="">
+      <change beforePath="$PROJECT_DIR$/src/Chairman.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Chairman.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/FileHandling.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/FileHandling.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MenuMaker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MenuMaker.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ProSwimmer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ProSwimmer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/UI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI.java" afterDir="false" />
     </list>
     <list id="37d53e69-8a3f-4c5a-9ea7-3c814c972658" name="Changes by ottob" comment="">
       <change beforePath="$PROJECT_DIR$/src/Chairman.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Chairman.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/FileHandling.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/FileHandling.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/MenuMaker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MenuMaker.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -47,79 +53,107 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="LineStatusTrackerManager">
-    <file path="$PROJECT_DIR$/src/Chairman.java">
-      <ranges>
-        <range start1="9" end1="9" start2="9" end2="11" changelist="e764c490-f053-49a9-bad0-852e42607d12" />
-        <range start1="11" end1="12" start2="13" end2="14" changelist="e764c490-f053-49a9-bad0-852e42607d12" />
-        <range start1="13" end1="15" start2="15" end2="40" changelist="1a7dfa2b-dcc2-4474-948f-4ef6cd864b54" />
-        <range start1="16" end1="17" start2="41" end2="41" changelist="1a7dfa2b-dcc2-4474-948f-4ef6cd864b54" />
-        <range start1="18" end1="18" start2="42" end2="43" changelist="1a7dfa2b-dcc2-4474-948f-4ef6cd864b54" />
-        <range start1="19" end1="21" start2="44" end2="46" changelist="e764c490-f053-49a9-bad0-852e42607d12" />
-        <range start1="30" end1="30" start2="55" end2="82" changelist="37d53e69-8a3f-4c5a-9ea7-3c814c972658" />
-        <range start1="32" end1="33" start2="84" end2="103" changelist="1a7dfa2b-dcc2-4474-948f-4ef6cd864b54" />
-        <range start1="34" end1="34" start2="104" end2="106" changelist="1a7dfa2b-dcc2-4474-948f-4ef6cd864b54" />
-      </ranges>
-    </file>
     <file path="$PROJECT_DIR$/src/MenuMaker.java">
       <ranges>
-        <range start1="55" end1="61" start2="55" end2="63" changelist="1a7dfa2b-dcc2-4474-948f-4ef6cd864b54" />
-        <range start1="65" end1="83" start2="67" end2="67" changelist="37d53e69-8a3f-4c5a-9ea7-3c814c972658" />
-        <range start1="84" end1="89" start2="68" end2="69" changelist="37d53e69-8a3f-4c5a-9ea7-3c814c972658" />
-        <range start1="109" end1="112" start2="89" end2="92" changelist="e764c490-f053-49a9-bad0-852e42607d12" />
+        <range start1="56" end1="64" start2="56" end2="61" changelist="1a7dfa2b-dcc2-4474-948f-4ef6cd864b54" />
+        <range start1="68" end1="72" start2="65" end2="65" changelist="4d616dc7-1ce6-4141-a620-02a668497665" />
+        <range start1="90" end1="92" start2="83" end2="85" changelist="37d53e69-8a3f-4c5a-9ea7-3c814c972658" />
       </ranges>
     </file>
     <file path="$PROJECT_DIR$/src/FileHandling.java">
       <ranges>
-        <range start1="0" end1="3" start2="0" end2="1" changelist="4d616dc7-1ce6-4141-a620-02a668497665" />
-        <range start1="19" end1="24" start2="17" end2="22" changelist="e764c490-f053-49a9-bad0-852e42607d12" />
-        <range start1="34" end1="35" start2="32" end2="33" changelist="4d616dc7-1ce6-4141-a620-02a668497665" />
-        <range start1="37" end1="38" start2="35" end2="36" changelist="1a7dfa2b-dcc2-4474-948f-4ef6cd864b54" />
-        <range start1="43" end1="45" start2="41" end2="43" changelist="1a7dfa2b-dcc2-4474-948f-4ef6cd864b54" />
+        <range start1="0" end1="0" start2="0" end2="2" changelist="1a7dfa2b-dcc2-4474-948f-4ef6cd864b54" />
+        <range start1="3" end1="3" start2="5" end2="6" changelist="1a7dfa2b-dcc2-4474-948f-4ef6cd864b54" />
+        <range start1="5" end1="6" start2="8" end2="11" changelist="37d53e69-8a3f-4c5a-9ea7-3c814c972658" />
+        <range start1="13" end1="14" start2="18" end2="19" changelist="37d53e69-8a3f-4c5a-9ea7-3c814c972658" />
+        <range start1="18" end1="20" start2="23" end2="25" changelist="1a7dfa2b-dcc2-4474-948f-4ef6cd864b54" />
+        <range start1="21" end1="22" start2="26" end2="27" changelist="1a7dfa2b-dcc2-4474-948f-4ef6cd864b54" />
+        <range start1="24" end1="25" start2="29" end2="30" changelist="4d616dc7-1ce6-4141-a620-02a668497665" />
+        <range start1="28" end1="31" start2="33" end2="35" changelist="4d616dc7-1ce6-4141-a620-02a668497665" />
+        <range start1="32" end1="34" start2="36" end2="37" changelist="4d616dc7-1ce6-4141-a620-02a668497665" />
+        <range start1="35" end1="44" start2="38" end2="47" changelist="4d616dc7-1ce6-4141-a620-02a668497665" />
+        <range start1="51" end1="51" start2="54" end2="55" changelist="4d616dc7-1ce6-4141-a620-02a668497665" />
+        <range start1="52" end1="52" start2="56" end2="78" changelist="4d616dc7-1ce6-4141-a620-02a668497665" />
+        <range start1="53" end1="55" start2="79" end2="81" changelist="37d53e69-8a3f-4c5a-9ea7-3c814c972658" />
+        <range start1="57" end1="61" start2="83" end2="88" changelist="4d616dc7-1ce6-4141-a620-02a668497665" />
+        <range start1="70" end1="73" start2="97" end2="106" changelist="1a7dfa2b-dcc2-4474-948f-4ef6cd864b54" />
+        <range start1="74" end1="74" start2="107" end2="116" changelist="1a7dfa2b-dcc2-4474-948f-4ef6cd864b54" />
+        <range start1="75" end1="75" start2="117" end2="126" changelist="1a7dfa2b-dcc2-4474-948f-4ef6cd864b54" />
+        <range start1="76" end1="78" start2="127" end2="127" changelist="1a7dfa2b-dcc2-4474-948f-4ef6cd864b54" />
+        <range start1="79" end1="84" start2="128" end2="131" changelist="1a7dfa2b-dcc2-4474-948f-4ef6cd864b54" />
+        <range start1="85" end1="88" start2="132" end2="137" changelist="1a7dfa2b-dcc2-4474-948f-4ef6cd864b54" />
+        <range start1="89" end1="107" start2="138" end2="139" changelist="1a7dfa2b-dcc2-4474-948f-4ef6cd864b54" />
+        <range start1="121" end1="122" start2="153" end2="154" changelist="4d616dc7-1ce6-4141-a620-02a668497665" />
+      </ranges>
+    </file>
+    <file path="$PROJECT_DIR$/src/Chairman.java">
+      <ranges>
+        <range start1="0" end1="0" start2="0" end2="2" changelist="4d616dc7-1ce6-4141-a620-02a668497665" />
+        <range start1="5" end1="8" start2="7" end2="9" changelist="1a7dfa2b-dcc2-4474-948f-4ef6cd864b54" />
+        <range start1="11" end1="21" start2="12" end2="17" changelist="1a7dfa2b-dcc2-4474-948f-4ef6cd864b54" />
+        <range start1="22" end1="24" start2="18" end2="22" changelist="1a7dfa2b-dcc2-4474-948f-4ef6cd864b54" />
+        <range start1="27" end1="27" start2="25" end2="26" changelist="37d53e69-8a3f-4c5a-9ea7-3c814c972658" />
+        <range start1="30" end1="31" start2="29" end2="33" changelist="1a7dfa2b-dcc2-4474-948f-4ef6cd864b54" />
+        <range start1="34" end1="36" start2="36" end2="38" changelist="1a7dfa2b-dcc2-4474-948f-4ef6cd864b54" />
+        <range start1="39" end1="44" start2="41" end2="41" changelist="37d53e69-8a3f-4c5a-9ea7-3c814c972658" />
+        <range start1="45" end1="50" start2="42" end2="45" changelist="37d53e69-8a3f-4c5a-9ea7-3c814c972658" />
+        <range start1="53" end1="55" start2="48" end2="50" changelist="37d53e69-8a3f-4c5a-9ea7-3c814c972658" />
+        <range start1="57" end1="63" start2="52" end2="52" changelist="1a7dfa2b-dcc2-4474-948f-4ef6cd864b54" />
+        <range start1="64" end1="66" start2="53" end2="55" changelist="1a7dfa2b-dcc2-4474-948f-4ef6cd864b54" />
+        <range start1="68" end1="69" start2="57" end2="58" changelist="37d53e69-8a3f-4c5a-9ea7-3c814c972658" />
+        <range start1="70" end1="74" start2="59" end2="64" changelist="37d53e69-8a3f-4c5a-9ea7-3c814c972658" />
+        <range start1="80" end1="82" start2="70" end2="73" changelist="1a7dfa2b-dcc2-4474-948f-4ef6cd864b54" />
+        <range start1="83" end1="83" start2="74" end2="205" changelist="37d53e69-8a3f-4c5a-9ea7-3c814c972658" />
+        <range start1="88" end1="106" start2="210" end2="234" changelist="1a7dfa2b-dcc2-4474-948f-4ef6cd864b54" />
       </ranges>
     </file>
     <file path="$PROJECT_DIR$/src/UI.java">
       <ranges>
-        <range start1="93" end1="93" start2="93" end2="128" changelist="e764c490-f053-49a9-bad0-852e42607d12" />
-        <range start1="103" end1="105" start2="138" end2="149" changelist="1a7dfa2b-dcc2-4474-948f-4ef6cd864b54" />
-        <range start1="109" end1="110" start2="153" end2="153" changelist="1a7dfa2b-dcc2-4474-948f-4ef6cd864b54" />
-        <range start1="116" end1="120" start2="159" end2="160" changelist="4d616dc7-1ce6-4141-a620-02a668497665" />
-        <range start1="142" end1="142" start2="182" end2="184" changelist="e764c490-f053-49a9-bad0-852e42607d12" />
-      </ranges>
-    </file>
-    <file path="$PROJECT_DIR$/src/Subscription.java">
-      <ranges>
-        <range start1="5" end1="9" start2="5" end2="6" changelist="e764c490-f053-49a9-bad0-852e42607d12" />
-        <range start1="10" end1="11" start2="7" end2="8" changelist="e764c490-f053-49a9-bad0-852e42607d12" />
-        <range start1="13" end1="14" start2="10" end2="11" changelist="e764c490-f053-49a9-bad0-852e42607d12" />
-        <range start1="16" end1="16" start2="13" end2="14" changelist="e764c490-f053-49a9-bad0-852e42607d12" />
-        <range start1="28" end1="29" start2="26" end2="28" changelist="1a7dfa2b-dcc2-4474-948f-4ef6cd864b54" />
-        <range start1="33" end1="34" start2="32" end2="33" changelist="1a7dfa2b-dcc2-4474-948f-4ef6cd864b54" />
+        <range start1="8" end1="8" start2="8" end2="10" changelist="e764c490-f053-49a9-bad0-852e42607d12" />
+        <range start1="78" end1="88" start2="80" end2="97" changelist="4d616dc7-1ce6-4141-a620-02a668497665" />
+        <range start1="89" end1="90" start2="98" end2="99" changelist="4d616dc7-1ce6-4141-a620-02a668497665" />
+        <range start1="93" end1="125" start2="102" end2="163" changelist="1a7dfa2b-dcc2-4474-948f-4ef6cd864b54" />
+        <range start1="127" end1="127" start2="165" end2="166" changelist="1a7dfa2b-dcc2-4474-948f-4ef6cd864b54" />
+        <range start1="128" end1="152" start2="167" end2="210" changelist="1a7dfa2b-dcc2-4474-948f-4ef6cd864b54" />
+        <range start1="154" end1="157" start2="212" end2="213" changelist="1a7dfa2b-dcc2-4474-948f-4ef6cd864b54" />
+        <range start1="158" end1="170" start2="214" end2="215" changelist="1a7dfa2b-dcc2-4474-948f-4ef6cd864b54" />
+        <range start1="172" end1="173" start2="217" end2="220" changelist="1a7dfa2b-dcc2-4474-948f-4ef6cd864b54" />
+        <range start1="177" end1="182" start2="224" end2="224" changelist="1a7dfa2b-dcc2-4474-948f-4ef6cd864b54" />
+        <range start1="184" end1="184" start2="226" end2="227" changelist="1a7dfa2b-dcc2-4474-948f-4ef6cd864b54" />
       </ranges>
     </file>
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 0
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 0
+}</component>
   <component name="ProjectId" id="2Yc88UiAwlYhX5twVqjDGRV2VOP" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "codeWithMe.voiceChat.enabledByDefault": "false",
-    "git-widget-placeholder": "main",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  },
+  &quot;keyToStringList&quot;: {
+    &quot;ChangesTree.GroupingKeys&quot;: [
+      &quot;directory&quot;,
+      &quot;module&quot;,
+      &quot;repository&quot;
+    ]
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="Delfinen" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Delfinen" />
@@ -142,11 +176,26 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1700813347812</updated>
-      <workItem from="1700813348932" duration="4365000" />
+      <workItem from="1700813348932" duration="5164000" />
+      <workItem from="1701070367097" duration="12746000" />
     </task>
+    <task id="LOCAL-00001" summary="Second commit fr">
+      <option name="closed" value="true" />
+      <created>1700818828108</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1700818828108</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Second commit fr" />
+    <MESSAGE value="Changes by LENOVO" />
+    <option name="LAST_COMMIT_MESSAGE" value="Changes by LENOVO" />
   </component>
 </project>

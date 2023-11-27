@@ -54,21 +54,14 @@ public class MenuMaker {
         switch (userChoice) {
             case 0 -> exitProgram();
             case 1 -> chairman.createProMember();
-            case 2 -> chairman.createMember();
-            case 3 -> chairman.removeMemberFromDelfinen();
-            //    case 4 -> changeMembershipForExsitingMember();
-            case 5 -> {
-              fileHandling.loadAllMembersFromFile();
-              fileHandling.initFromFile();
-                chairman.displayMemberList();
-            }
+            case 2 -> chairman.createRegularMember();
+            case 3 -> chairman.removeRegularMemberFromDelfinen();
+            case 4 -> chairman.removeProMemberFromDelfinen();
+            case 5 -> chairman.displayRegularMember();
+            case 6 -> chairman.displayProMember();
             case 9 -> chooseFromMainMenu();
         }
     }
-
-
-
-
 
         private void chooseFromMainMenu() {
         mainMenu.printMenu();
@@ -88,8 +81,8 @@ public class MenuMaker {
 
     private String[] pointsChairmanMenu() {
         return new String[]{"1. Add new pro member to Delfinen.", "2. Add new regular member.",
-                "3. Remove member from Delfinen" + "4. Change membership for exsisting member.",
-                "5. Display member list.", "9. Main Menu.", "0. Exit program"};
+                "3. Remove  regular member from Delfinen" + "\n4. Remove pro member from Delfinen.",
+                "5. Display regular member list.", "6. Display pro member list.", "9. Main Menu.", "0. Exit program"};
     }
 
     private String[] pointsCoachMenu() {

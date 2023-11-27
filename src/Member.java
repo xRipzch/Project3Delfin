@@ -5,7 +5,7 @@ public class Member {
     private String email;
     private  String adress;
     private boolean isActive;
-    private boolean hasPaid;
+    private boolean isPaid;
 
 
     public Member (String firstName, String lastName, int yearOfBirth,
@@ -16,7 +16,7 @@ public class Member {
         this.email = email;
         this.adress = adress;
         this.isActive = isActive;
-        this.hasPaid = false;
+        this.isPaid = false;
     }
     public String getFirstName() {
         return firstName;
@@ -48,10 +48,10 @@ public class Member {
     }
 
     public boolean getHasPaid() {
-        return hasPaid;
+        return isPaid;
     }
 
     public void setHasPaid(boolean hasPaid) {
-        this.hasPaid = hasPaid;
+        this.isPaid = hasPaid;
     }
 }
