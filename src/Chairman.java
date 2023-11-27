@@ -142,47 +142,64 @@ public class Chairman {
         }
     }
     public void changeActivityStatus() {
-       int choice = ui.chooseSwimmerType();
+       int swimmerType = ui.chooseSwimmerType();
 
-        if (choice == 1) {
+        if (swimmerType == 1) {
+            changeActivityStatusPro();
             displayProMember();
-        } else if (choice == 2) {
+        } else if (swimmerType == 2) {
+           changeActivityStatusRegular();
            displayRegularMember();
         }
-
-        System.out.println("Choose the member you want to change:");
-        int choice1 = scanner.nextInt();
-        int chosenMember = scanner.nextInt(choice1 - 1);
-
-        if (choice == 1) {
-
-        }
-        }
-
-/*
-    private void changeActivityStatusPro() {
-            boolean validChoice= false;
-
-    do {
-    System.out.println("Change the status to:");
-    System.out.println("1. Active.");
-    System.out.println("2. Passive.");
-    int choice2 = scanner.nextInt();
-
-    if (choice2 == 1) {
-        proSwimmers.get(chosenMember).setActive(true);
-        validChoice = true;
-    } else if (choice2 == 2) {
-        proSwimmers.get(chosenMember).setActive(false);
-        validChoice = true;
-    } else {
-        System.out.println("Invalid input. Try again.");
     }
-}while(!validChoice);
+
+    private void changeActivityStatusPro() {
+        int chosenMember = ui.chooseMember();
+        int statusChoice =ui.chooseStatus();
+        boolean validChoice= false;
+
+        do {
+            if (statusChoice == 1) {
+                proSwimmers.get(chosenMember).setActive(true);
+                validChoice = true;
+            } else if (statusChoice == 2) {
+                proSwimmers.get(chosenMember).setActive(false);
+                validChoice = true;
+            } else {
+                System.out.println("Invalid input. Try again.");
+            }
+        }while(!validChoice);
         scanner.close();
     }
 
-*/
+
+
+    private void changeActivityStatusRegular() {
+        int chosenMember = ui.chooseMember();
+        int statusChoice =ui.chooseStatus();
+        boolean validChoice= false;
+
+        do {
+            if (statusChoice == 1) {
+                regularSwimmers.get(chosenMember).setActive(true);
+                validChoice = true;
+            } else if (statusChoice == 2) {
+                regularSwimmers.get(chosenMember).setActive(false);
+                validChoice = true;
+            } else {
+                System.out.println("Invalid input. Try again.");
+            }
+        }while(!validChoice);
+        scanner.close();
+    }
+
+
+
+
+
+
+
+
 
     public void changeRegularSwimmerToPro() {
         //Skal først soute arraylisten

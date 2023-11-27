@@ -5,45 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1a7dfa2b-dcc2-4474-948f-4ef6cd864b54" name="Changes" comment="Second commit fr">
-      <change afterPath="$PROJECT_DIR$/../Sortering/src/CarsSortedByPlate/Car.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Sortering/src/CarsSortedByPlate/SortCars.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Sortering/src/SortByHeight/Kid.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Sortering/src/SortByHeight/SortByHeight.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Sortering/src/SortDemo/Car.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Sortering/src/SortDemo/Garage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/all_members.csv" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Project3_delfin/Chairman.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Project3_delfin/Chairman.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Project3_delfin/Delfinen.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Project3_delfin/Delfinen.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Project3_delfin/FileHandling.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Project3_delfin/FileHandling.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Project3_delfin/Member.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Project3_delfin/Member.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Project3_delfin/MenuMaker.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Project3_delfin/MenuMaker.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Project3_delfin/ProSwimmer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Project3_delfin/ProSwimmer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Project3_delfin/RegularSwimmer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Project3_delfin/UI.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Chairman.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Chairman.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Delfinen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Delfinen.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/FileHandling.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/FileHandling.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MenuMaker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MenuMaker.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/RegularSwimmer.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/UI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI.java" afterDir="false" />
     </list>
-    <list id="e764c490-f053-49a9-bad0-852e42607d12" name="Changes by LENOVO" comment="Changes by LENOVO">
-      <change beforePath="$PROJECT_DIR$/src/Member.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Member.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI.java" afterDir="false" />
-    </list>
+    <list id="e764c490-f053-49a9-bad0-852e42607d12" name="Changes by LENOVO" comment="Changes by LENOVO" />
     <list id="4d616dc7-1ce6-4141-a620-02a668497665" name="Changes by Magne" comment="">
-      <change beforePath="$PROJECT_DIR$/src/Chairman.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Chairman.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/FileHandling.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/FileHandling.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MenuMaker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MenuMaker.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ProSwimmer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ProSwimmer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI.java" afterDir="false" />
-    </list>
-    <list id="37d53e69-8a3f-4c5a-9ea7-3c814c972658" name="Changes by ottob" comment="">
-      <change beforePath="$PROJECT_DIR$/src/Chairman.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Chairman.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/FileHandling.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/FileHandling.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/MenuMaker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MenuMaker.java" afterDir="false" />
     </list>
+    <list id="37d53e69-8a3f-4c5a-9ea7-3c814c972658" name="Changes by ottob" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -51,77 +23,6 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="LineStatusTrackerManager">
-    <file path="$PROJECT_DIR$/src/MenuMaker.java">
-      <ranges>
-        <range start1="56" end1="64" start2="56" end2="61" changelist="1a7dfa2b-dcc2-4474-948f-4ef6cd864b54" />
-        <range start1="68" end1="72" start2="65" end2="65" changelist="4d616dc7-1ce6-4141-a620-02a668497665" />
-        <range start1="90" end1="92" start2="83" end2="85" changelist="37d53e69-8a3f-4c5a-9ea7-3c814c972658" />
-      </ranges>
-    </file>
-    <file path="$PROJECT_DIR$/src/FileHandling.java">
-      <ranges>
-        <range start1="0" end1="0" start2="0" end2="2" changelist="1a7dfa2b-dcc2-4474-948f-4ef6cd864b54" />
-        <range start1="3" end1="3" start2="5" end2="6" changelist="1a7dfa2b-dcc2-4474-948f-4ef6cd864b54" />
-        <range start1="5" end1="6" start2="8" end2="11" changelist="37d53e69-8a3f-4c5a-9ea7-3c814c972658" />
-        <range start1="13" end1="14" start2="18" end2="19" changelist="37d53e69-8a3f-4c5a-9ea7-3c814c972658" />
-        <range start1="18" end1="20" start2="23" end2="25" changelist="1a7dfa2b-dcc2-4474-948f-4ef6cd864b54" />
-        <range start1="21" end1="22" start2="26" end2="27" changelist="1a7dfa2b-dcc2-4474-948f-4ef6cd864b54" />
-        <range start1="24" end1="25" start2="29" end2="30" changelist="4d616dc7-1ce6-4141-a620-02a668497665" />
-        <range start1="28" end1="31" start2="33" end2="35" changelist="4d616dc7-1ce6-4141-a620-02a668497665" />
-        <range start1="32" end1="34" start2="36" end2="37" changelist="4d616dc7-1ce6-4141-a620-02a668497665" />
-        <range start1="35" end1="44" start2="38" end2="47" changelist="4d616dc7-1ce6-4141-a620-02a668497665" />
-        <range start1="51" end1="51" start2="54" end2="55" changelist="4d616dc7-1ce6-4141-a620-02a668497665" />
-        <range start1="52" end1="52" start2="56" end2="78" changelist="4d616dc7-1ce6-4141-a620-02a668497665" />
-        <range start1="53" end1="55" start2="79" end2="81" changelist="37d53e69-8a3f-4c5a-9ea7-3c814c972658" />
-        <range start1="57" end1="61" start2="83" end2="88" changelist="4d616dc7-1ce6-4141-a620-02a668497665" />
-        <range start1="70" end1="73" start2="97" end2="106" changelist="1a7dfa2b-dcc2-4474-948f-4ef6cd864b54" />
-        <range start1="74" end1="74" start2="107" end2="116" changelist="1a7dfa2b-dcc2-4474-948f-4ef6cd864b54" />
-        <range start1="75" end1="75" start2="117" end2="126" changelist="1a7dfa2b-dcc2-4474-948f-4ef6cd864b54" />
-        <range start1="76" end1="78" start2="127" end2="127" changelist="1a7dfa2b-dcc2-4474-948f-4ef6cd864b54" />
-        <range start1="79" end1="84" start2="128" end2="131" changelist="1a7dfa2b-dcc2-4474-948f-4ef6cd864b54" />
-        <range start1="85" end1="88" start2="132" end2="137" changelist="1a7dfa2b-dcc2-4474-948f-4ef6cd864b54" />
-        <range start1="89" end1="107" start2="138" end2="139" changelist="1a7dfa2b-dcc2-4474-948f-4ef6cd864b54" />
-        <range start1="121" end1="122" start2="153" end2="154" changelist="4d616dc7-1ce6-4141-a620-02a668497665" />
-      </ranges>
-    </file>
-    <file path="$PROJECT_DIR$/src/Chairman.java">
-      <ranges>
-        <range start1="0" end1="0" start2="0" end2="2" changelist="4d616dc7-1ce6-4141-a620-02a668497665" />
-        <range start1="5" end1="8" start2="7" end2="9" changelist="1a7dfa2b-dcc2-4474-948f-4ef6cd864b54" />
-        <range start1="11" end1="21" start2="12" end2="17" changelist="1a7dfa2b-dcc2-4474-948f-4ef6cd864b54" />
-        <range start1="22" end1="24" start2="18" end2="22" changelist="1a7dfa2b-dcc2-4474-948f-4ef6cd864b54" />
-        <range start1="27" end1="27" start2="25" end2="26" changelist="37d53e69-8a3f-4c5a-9ea7-3c814c972658" />
-        <range start1="30" end1="31" start2="29" end2="33" changelist="1a7dfa2b-dcc2-4474-948f-4ef6cd864b54" />
-        <range start1="34" end1="36" start2="36" end2="38" changelist="1a7dfa2b-dcc2-4474-948f-4ef6cd864b54" />
-        <range start1="39" end1="44" start2="41" end2="41" changelist="37d53e69-8a3f-4c5a-9ea7-3c814c972658" />
-        <range start1="45" end1="50" start2="42" end2="45" changelist="37d53e69-8a3f-4c5a-9ea7-3c814c972658" />
-        <range start1="53" end1="55" start2="48" end2="50" changelist="37d53e69-8a3f-4c5a-9ea7-3c814c972658" />
-        <range start1="57" end1="63" start2="52" end2="52" changelist="1a7dfa2b-dcc2-4474-948f-4ef6cd864b54" />
-        <range start1="64" end1="66" start2="53" end2="55" changelist="1a7dfa2b-dcc2-4474-948f-4ef6cd864b54" />
-        <range start1="68" end1="69" start2="57" end2="58" changelist="37d53e69-8a3f-4c5a-9ea7-3c814c972658" />
-        <range start1="70" end1="74" start2="59" end2="64" changelist="37d53e69-8a3f-4c5a-9ea7-3c814c972658" />
-        <range start1="80" end1="82" start2="70" end2="73" changelist="1a7dfa2b-dcc2-4474-948f-4ef6cd864b54" />
-        <range start1="83" end1="83" start2="74" end2="205" changelist="37d53e69-8a3f-4c5a-9ea7-3c814c972658" />
-        <range start1="88" end1="106" start2="210" end2="234" changelist="1a7dfa2b-dcc2-4474-948f-4ef6cd864b54" />
-      </ranges>
-    </file>
-    <file path="$PROJECT_DIR$/src/UI.java">
-      <ranges>
-        <range start1="8" end1="8" start2="8" end2="10" changelist="e764c490-f053-49a9-bad0-852e42607d12" />
-        <range start1="78" end1="88" start2="80" end2="97" changelist="4d616dc7-1ce6-4141-a620-02a668497665" />
-        <range start1="89" end1="90" start2="98" end2="99" changelist="4d616dc7-1ce6-4141-a620-02a668497665" />
-        <range start1="93" end1="125" start2="102" end2="163" changelist="1a7dfa2b-dcc2-4474-948f-4ef6cd864b54" />
-        <range start1="127" end1="127" start2="165" end2="166" changelist="1a7dfa2b-dcc2-4474-948f-4ef6cd864b54" />
-        <range start1="128" end1="152" start2="167" end2="210" changelist="1a7dfa2b-dcc2-4474-948f-4ef6cd864b54" />
-        <range start1="154" end1="157" start2="212" end2="213" changelist="1a7dfa2b-dcc2-4474-948f-4ef6cd864b54" />
-        <range start1="158" end1="170" start2="214" end2="215" changelist="1a7dfa2b-dcc2-4474-948f-4ef6cd864b54" />
-        <range start1="172" end1="173" start2="217" end2="220" changelist="1a7dfa2b-dcc2-4474-948f-4ef6cd864b54" />
-        <range start1="177" end1="182" start2="224" end2="224" changelist="1a7dfa2b-dcc2-4474-948f-4ef6cd864b54" />
-        <range start1="184" end1="184" start2="226" end2="227" changelist="1a7dfa2b-dcc2-4474-948f-4ef6cd864b54" />
-      </ranges>
-    </file>
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 0
@@ -192,6 +93,17 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Second commit fr" />

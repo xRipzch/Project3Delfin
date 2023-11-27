@@ -191,8 +191,6 @@ public class UI {
 
 ///////////////////////////////////////////EDIT MEMBERS///////////////////////////////////////////
 
-
-
     public int chooseSwimmerType() {
         boolean validInput = false;
         int choice = 0;
@@ -214,6 +212,24 @@ public class UI {
 
         return choice;
     }
+
+    public int chooseMember(){
+        System.out.println("Choose the member you want to change:");//skal sikres så den kan catche et forkert svar
+        int choice = scanner.nextInt();
+        int chosenMember = choice - 1;
+        return chosenMember;
+    }
+
+
+    public int chooseStatus() {
+        System.out.println("Change the status to:");
+        System.out.println("1. Active.");
+        System.out.println("2. Passive.");
+        int choice = scanner.nextInt();
+        return choice;
+    }
+
+
 
     ///////////////////////////////////////////UNCATEGORIZED///////////////////////////////////////////
 
