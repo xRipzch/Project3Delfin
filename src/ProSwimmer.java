@@ -1,10 +1,10 @@
-public class ProSwimmer  extends  Member{
+public class ProSwimmer  extends Swimmer {
     private  SwimDisciplin swimDisciplin;
 
 
     public ProSwimmer (String firstName, String lastName, int yearOfBirth, String email,
-                       String adress, boolean isActive, boolean hasPaid, SwimDisciplin swimDisciplin) {
-        super(firstName, lastName, yearOfBirth, email, adress, isActive, hasPaid);
+                       String adress, boolean isActive, boolean isPaid, SwimDisciplin swimDisciplin) {
+        super(firstName, lastName, yearOfBirth, email, adress, isActive, isPaid);
         this.swimDisciplin = swimDisciplin;
     }
 

@@ -8,12 +8,12 @@ public class Subscription {
 
 
     //Calculate the price of the subscription based on age.
-    public void calculateSubscriptionPrice(Member member) {
+    public void calculateSubscriptionPrice(Swimmer swimmer) {
         int currentYear = LocalDate.now().getYear();
-        int age = currentYear - member.getYearOfBirth();
+        int age = currentYear - swimmer.getYearOfBirth();
         int subscriptionPrice = 0;
 
-        if (member.isActive()) {
+        if (swimmer.isActive()) {
             if (age < 18) {
                 subscriptionPrice = 1000;
             } else if (age >= 18 && age < 60) {
@@ -25,11 +25,12 @@ public class Subscription {
             subscriptionPrice = 500; // passive subscription
         }
 
-        System.out.println("You're subscription fee is:  " + subscriptionPrice + "$$$.");
+        System.out.println(ConsoleColors.GREEN_BRIGHT + "You're subscription fee is:  " +
+                ConsoleColors.GREEN_BOLD + subscriptionPrice + " DKK,-" + ConsoleColors.RESET);
     }
 
 
-    public void processPayment(Member member) {
+    public void processPayment(Swimmer swimmer) {
         ui.printConfirmationForPayment();
         //metode der bruger setter
     }

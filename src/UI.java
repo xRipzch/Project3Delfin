@@ -1,13 +1,15 @@
-import java.util.concurrent.TimeUnit;
 import java.util.Scanner;
+import java.util.concurrent.TimeUnit;
+import java.util.regex.Pattern;
+import java.time.LocalDate;
 
 public class UI {
 
-    Member member = new Member("first name", "last name", 1990, "email", "adresse", true, true);
+    Swimmer swimmer = new Swimmer("first name", "last name", 1990, "email", "adresse", true, true);
     Scanner scanner = new Scanner(System.in);
-    FileHandling fileHandling = new FileHandling();
 
-    ///////////////////////////////////////////CREATE MEMBER///////////////////////////////////////////
+
+    ///////////////////////////////////////////FIRST AND LAST NAME///////////////////////////////////////////
 
     public String typeFirstName() {
         String firstName = "";
@@ -32,38 +34,68 @@ public class UI {
         }
         return lastName;
     }
+/////////////////////////////////////////////Year of Birth////////////////////////////////////////////////////
+    public int typeYearOfBirth() {
+        int yearOfBirth = 0;
 
-    public int typeYearOfBirth() {//kontrol for for langt tal
-        int yearOfBirth = -1;
-        boolean validInput = false;
-
-        while (!validInput) {
-            System.out.println("Please enter the new members birthyear");
+        while (yearOfBirth == 0 || !isValidYearOfBirth(yearOfBirth)) {
+            System.out.println("Please enter the new member's year of birth: [YYYY]");
             try {
-                yearOfBirth = Integer.parseInt(scanner.nextLine().trim());
-                validInput = true;
+                String input = scanner.nextLine().trim();
+
+                if (input.length() > 4) {  // Sikre at inputtet ikke er længere end 4 cifre
+                    System.out.println("Invalid input. Please enter a valid number for the year of birth.");
+                    continue;
+                }
+                yearOfBirth = Integer.parseInt(input);
+
+                if (yearOfBirth == 0 || !isValidYearOfBirth(yearOfBirth)) {
+                    System.out.println("Invalid year of birth. Please enter a valid year.");
+                }
             } catch (NumberFormatException e) {
-                System.out.println("Invalid input. Try again.");
+                System.out.println("Invalid input. Please enter a valid number for the year of birth.");
             }
         }
+
         return yearOfBirth;
     }
-
-
-    public String typeEmailAdress() { //skal der tilføjes noget for at sikre at der indtastes et gyldigt email format?
-        String emailAdress = "";
-        while (emailAdress.isEmpty()) {
-            System.out.println("Please enter the new members Email adress:");
-            emailAdress = scanner.nextLine().trim();
-            if (emailAdress.isEmpty()) {
-                System.out.println("Field can't be empty. try again");
-            }
-        }
-        return emailAdress;
+    
+    public boolean isValidYearOfBirth (int yearOfBirth) { //sikre at YOB er mellem 1900 og nuværende år
+        int currentYear = LocalDate.now().getYear();
+        return yearOfBirth > 1900 && yearOfBirth <= currentYear;
     }
 
+//////////////////////////////////////////EMAIL///////////////////////////////////////////
+    public String typeEmailAdress() {
+           String email= "";
+           while (email.isEmpty() || !isValid(email)) {
+               System.out.println("Please enter the new members email:");
+               email = scanner.nextLine().trim();
 
-    public String typeAdress() { //skal der tilføjes noget ift. nummer?
+               if (email.isEmpty()) {  // Sikre at emailen er i korrekt format, ellers skal den prompte igen
+                   System.out.println("Field can't be empty. Try again!");
+                } else if (!isValid(email)) {
+                   System.out.println("Invalid email. Try again!");
+               }
+           }
+              return email;
+    }
+
+    private boolean isValid(String email) {     // Logik til at tjekke om emailen er i korrekt format
+        String emailRegex = "^[a-zA-Z0-9_+&*-]+(?:\\." +
+                             "[a-zA-Z0-9_+&*-]+)*@" +
+                             "(?:[a-zA-Z0-9-]+\\.)+[a-z" +
+                             "A-Z]{2,7}$";
+
+        Pattern pat = Pattern.compile(emailRegex);
+        if (email == null) {
+            return false;
+        }
+        return pat.matcher(email).matches();
+    }
+
+////////////////////////////////////////////Adress////////////////////////////////////////////////////
+    public String typeAdress() { //Skal der tilføjes noget ift. nummer?
         String adress = "";
         while (adress.isEmpty()) {
             System.out.println("Please enter the new members adress:");
@@ -86,6 +118,7 @@ public class UI {
             System.out.println("2. No");
 
             choice = scanner.nextInt();
+            scanner.nextLine();
 
             if (choice == 1) {
                 isActive = true;
@@ -101,9 +134,9 @@ public class UI {
     }
 
 
-        public boolean hasPaid () {
+        public boolean isPaid () {
             int choice = 0;
-            boolean hasPaid = true;
+            boolean isPaid = false;
             boolean validInput = false;
 
             do {
@@ -112,27 +145,28 @@ public class UI {
                 System.out.println("2. No");
 
                 choice = scanner.nextInt();
+                scanner.nextLine();
 
                 if (choice == 1) {
-                    hasPaid = true;
+                    isPaid = true;
                     printConfirmationForPayment();
                     validInput = true;
                 } else if (choice == 2) {
-                    hasPaid = false;
+                    isPaid = false;
                     System.out.println("Please provide payment in the next 30 days");
                     validInput = true;
                 } else {
-                    System.out.println("Invallid choice. Try again.");
+                    System.out.println("Invalid choice. Try again.");
                 }
 
             } while (!validInput);
-            return hasPaid;
+                return isPaid;
         }
 
 
         public SwimDisciplin chooseSwimDisciplin () {
             int choice = 0;
-            System.out.println("Please choose a swimming discipline:");
+            System.out.println("\nPlease choose a swimming discipline:");
             System.out.println("1. Crawl");
             System.out.println("2. Butterfly");
             System.out.println("3. Breaststroke");
@@ -167,25 +201,27 @@ public class UI {
 
         public void printConfirmationForPayment () {
             try {
-                System.out.println("Proccessing Payment.");
+                System.out.print(ConsoleColors.RED_BOLD + "Proccessing Payment.");
                 TimeUnit.SECONDS.sleep(1);
-                System.out.println("Proccessing Payment..");
+                System.out.print(".");
                 TimeUnit.SECONDS.sleep(1);
-                System.out.println("Proccessing Payment...");
+                System.out.print(".");
                 TimeUnit.SECONDS.sleep(1);
+                System.out.print(ConsoleColors.RESET);
             } catch (InterruptedException e) {
                 throw new RuntimeException(e);
             }
-            System.out.println("Payment received!");
+            System.out.println(ConsoleColors.GREEN_BOLD + "Payment received!" + ConsoleColors.RESET);
         }
 
 
         public void removeMessage () {
-            System.out.println("Enter the number corresponding to the member you want to remove: ");
+            System.out.println(ConsoleColors.BLUE + "Enter the number corresponding to the member you want to remove: "
+                    + ConsoleColors.RESET);
         }
 
         public void ConfirmationMessage () {
-            System.out.println("Success!");
+            System.out.println(ConsoleColors.GREEN_BOLD + "Success!" + ConsoleColors.RESET);
         }
 
 
@@ -196,9 +232,9 @@ public class UI {
         int choice = 0;
 
         do {
-            System.out.println("Please choose the type of swimmer:");
+            System.out.println(ConsoleColors.BLUE + "Please choose the type of swimmer:");
             System.out.println("1. Proffesional swimmers");
-            System.out.println("2. Regular swimmers");
+            System.out.println("2. Regular swimmers" + ConsoleColors.RESET);
             choice = scanner.nextInt();
 
             if (choice == 1) {
@@ -214,8 +250,9 @@ public class UI {
     }
 
     public int chooseMember(){
-        System.out.println("Choose the member you want to change:");//skal sikres så den kan catche et forkert svar
+        System.out.println("Please choose member");//skal sikres så den kan catche et forkert svar
         int choice = scanner.nextInt();
+        scanner.nextLine();
         int chosenMember = choice - 1;
         return chosenMember;
     }
@@ -225,6 +262,7 @@ public class UI {
         System.out.println("Change the status to:");
         System.out.println("1. Active.");
         System.out.println("2. Passive.");
+        scanner.nextLine();
         int choice = scanner.nextInt();
         return choice;
     }
@@ -233,10 +271,10 @@ public class UI {
 
     ///////////////////////////////////////////UNCATEGORIZED///////////////////////////////////////////
 
-    public int getUserInputInt () {
-        Scanner scanner = new Scanner(System.in);
-        removeMessage();
-        return scanner.nextInt();
-    }
+    //public int getUserInputInt () {
+        //Scanner scanner = new Scanner(System.in);
+        //removeMessage();
+        //return scanner.nextInt();
+    //}
 
 }

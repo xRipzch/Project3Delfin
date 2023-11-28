@@ -9,6 +9,7 @@ public class Menu {
     public void printMenu() {
         String printString = menuHeader + "\n";
         for (int i = 0; i < menuPoint.length; i++) printString += menuPoint[i] + "\n";
-        System.out.println("\n" + printString);
+        System.out.println(ConsoleColors.PURPLE_BOLD_BRIGHT + "\n" +
+                printString + ConsoleColors.RESET);
     }
 }
