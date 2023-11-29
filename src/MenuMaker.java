@@ -6,14 +6,16 @@ public class MenuMaker {
     private int userChoice = -1;
     private int chooseStaffMember = -1;
     Chairman chairman;
+    Cashier cashier;
     Menu mainMenu = new Menu("Main Menu:", pointsMainMenu());
     Menu chairmanMenu = new Menu("Chairman Menu:", pointsChairmanMenu());
     Menu coachMenu = new Menu("Coach Menu:", pointsCoachMenu());
     Menu cashierMenu = new Menu("Cashier Menu:", pointsCashierMenu());
     Menu changeMemberMenu = new Menu("Change member menu", pointsChooseChangeMenu());
 
-    public MenuMaker(Chairman chairman) {
+    public MenuMaker(Chairman chairman, Cashier cashier) {
         this.chairman = chairman;
+        this.cashier = cashier;
     }
 
 
@@ -35,8 +37,9 @@ public class MenuMaker {
         userChoice = scanner.nextInt();
         switch (userChoice) {
             case 0 -> exitProgram();
-            //    case 1 -> fileHandling.printFinancesFile();
-//            case 2 -> HVAD SKAL VI HAVE HER?
+              case 1 -> cashier.showFinances();
+            case 2 -> cashier.showMembersInArrears();
+//            case 3 -> cashier.
             case 9 -> chooseFromMainMenu();
         }
     }
@@ -75,10 +78,10 @@ changeMemberMenu.printMenu();
             case 0 -> exitProgram();
             case 1 -> chairman.changeRegularSwimmerToPro();
             case 2 -> chairman.changeProSwimmerToRegular();
-        //    case 3 -> chairman.changeSwimDiciple();
+        //    case 3 -> chairman.changeSwimDiscipline();
             case 4 -> chairman.changeActivityStatus();
         //    case 5 -> chairman.changeEmail();
-        //    case 6 -> chairman.changeAdress();
+        //    case 6 -> chairman.changeAddress();
 
             case 9 -> chooseFromMainMenu();
         }
@@ -96,29 +99,31 @@ changeMemberMenu.printMenu();
     }
 
     private String[] pointsMainMenu() {
-        return new String[]{ConsoleColors.BLUE + "1. Chairman menu.", "2. Coach menu.",
+        return new String[]{ConsoleColors.BLUE_BRIGHT + "1. Chairman menu.", "2. Coach menu.",
                 "3. Cashier menu.", "0. Exit program." + ConsoleColors.RESET};
     }
 
     private String[] pointsChairmanMenu() {
-        return new String[]{ConsoleColors.BLUE_BOLD + "1. Add new pro member to Delfinen.", "2. Add new regular member.",
-                "3. Remove  regular member from Delfinen" + "\n4. Remove pro member from Delfinen.",
-                "5. Display regular member list.", "6. Display pro member list.", "7. Edit member.", "9. Main Menu.", "0. Exit program" + ConsoleColors.RESET};
+        return new String[]{ConsoleColors.BLUE_BOLD + "1. Add new pro member to Delfinen.",
+                "2. Add new regular member.","3. Remove  regular member from Delfinen" +
+                "\n4. Remove pro member from Delfinen.", "5. Display regular member list.",
+                "6. Display pro member list.", "7. Edit member.", "9. Main Menu.",
+                "0. Exit program" + ConsoleColors.RESET};
     }
 
     private String[] pointsCoachMenu() {
-        return new String[]{ConsoleColors.BLUE_BRIGHT + "1. Connect to pro Swimmer", ".2. XXXXXXX",
+        return new String[]{ConsoleColors.BLUE_BRIGHT + "1. Connect to pro Swimmer.", ".2. XXXXXXX.",
                 "9. Main Menu.", "0. Exit program" + ConsoleColors.RESET};
     }
 
     private String[] pointsCashierMenu() {
-        return new String[]{ConsoleColors.BLUE_UNDERLINED + "1. View finances", "2. XXXXXX",
+        return new String[]{ConsoleColors.BLUE_BRIGHT + "1. View finances.", "2. Show members in arrears.",
                 "9. Main Menu.", "0. Exit program." + ConsoleColors.RESET};
     }
 
     private String[] pointsChooseChangeMenu() {
         return new String[]{ConsoleColors.BLUE_BOLD + "1. Change regular swimmer to pro.",
-                "2. Change pro swimmer to regular.", "3. Change swim diciplin for pro swimmer.",
+                "2. Change pro swimmer to regular.", "3. Change swim discipline for pro swimmer.",
                 "4. Change activity status.", "5. Change email of member.",
                 "6. Change address of member", "9. Main Menu.", "0. Exit program" + ConsoleColors.RESET};
     }

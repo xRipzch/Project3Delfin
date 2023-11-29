@@ -33,7 +33,7 @@ public class Landing {
 
     public void sleep() {
         try {
-            TimeUnit.SECONDS.sleep(2);
+            TimeUnit.MILLISECONDS.sleep(350);
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }

@@ -1,13 +1,15 @@
+import java.lang.reflect.Member;
 import java.util.ArrayList;
 
 public class Delfinen {
     private static ArrayList<ProSwimmer> proSwimmers = new ArrayList<ProSwimmer>();
     private static ArrayList<Swimmer> regularSwimmers = new ArrayList<Swimmer>();
+    private static ArrayList<Subscription> finances = new ArrayList<>();
 
-    static FileHandling fileHandling = new FileHandling(proSwimmers, regularSwimmers);
-    static Chairman chairman = new Chairman(fileHandling, proSwimmers, regularSwimmers);
-    static MenuMaker menuMaker = new MenuMaker(chairman);
-
+    static FileHandling fileHandling = new FileHandling(proSwimmers, regularSwimmers, finances);
+    static Cashier cashier = new Cashier(fileHandling, finances);
+    static Chairman chairman = new Chairman(fileHandling, cashier, proSwimmers, regularSwimmers);
+    static MenuMaker menuMaker = new MenuMaker(chairman, cashier);
     static Landing landing = new Landing();
 
 
@@ -19,9 +21,11 @@ public class Delfinen {
     private void run() {
         chairman.initProMember();
         chairman.initRegularMember();
+        cashier.initSubscription();
         landing.intro1();
         menuMaker.executeMenu();
-        fileHandling.writeToProSwimmersFile(proSwimmers);
-        fileHandling.writeToRegularSwimmersFile(regularSwimmers);
+        fileHandling.writeToProSwimmersFile();
+        fileHandling.writeToRegularSwimmersFile();
+        fileHandling.writeToFinancesFile();
     }
 }

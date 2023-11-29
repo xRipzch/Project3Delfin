@@ -8,10 +8,12 @@ public class Chairman {
     private ArrayList<Swimmer> regularSwimmers;
     UI ui = new UI();
     FileHandling fileHandling;
-    Subscription subscription = new Subscription();
+    Cashier cashier;
+    Coach coach;
 
-    public Chairman(FileHandling filehandling, ArrayList<ProSwimmer> proSwimmers, ArrayList<Swimmer> regularSwimmers) {
+    public Chairman(FileHandling filehandling, Cashier cashier, ArrayList<ProSwimmer> proSwimmers, ArrayList<Swimmer> regularSwimmers) {
             this.fileHandling = filehandling;
+            this.cashier = cashier;
             this.proSwimmers = proSwimmers;
             this.regularSwimmers = regularSwimmers;
         }
@@ -23,28 +25,24 @@ public class Chairman {
 
     public void createProMember() {
         ProSwimmer proswimmer = new ProSwimmer(ui.typeFirstName(), ui.typeLastName(),
-                ui.typeYearOfBirth(), ui.typeEmailAdress(), ui.typeAdress(),
+                ui.typeYearOfBirth(), ui.typeEmailAddress(), ui.typeAddress(),
                 ui.isActive(), ui.isPaid(), ui.chooseSwimDisciplin());
 
         proSwimmers.add(proswimmer);
-        ui.ConfirmationMessage();
-        sortByAge();
-        if (proswimmer.getIsPaid()) {
-            subscription.calculateSubscriptionPrice(proswimmer);
-        } // todo make sure filewriting works
+        ui.memberCreatedConfirmationMessage();
+        cashier.createSubscription(proswimmer);
+        coach.addSwimmerToArrayList();
+        coach.sortAllArrayLists();
     }
 
     public void createRegularMember() {
-        Swimmer Swimmer = new Swimmer(ui.typeFirstName(), ui.typeLastName(),
-                ui.typeYearOfBirth(), ui.typeEmailAdress(), ui.typeAdress(), ui.isActive(), ui.isPaid());
+        Swimmer swimmer = new Swimmer(ui.typeFirstName(), ui.typeLastName(),
+                ui.typeYearOfBirth(), ui.typeEmailAddress(), ui.typeAddress(), ui.isActive(), ui.isPaid());
 
-        regularSwimmers.add(Swimmer);
-        ui.ConfirmationMessage();
-        sortByAge();
+        regularSwimmers.add(swimmer);
+        ui.memberCreatedConfirmationMessage();
+        cashier.createSubscription(swimmer);
 
-        if (Swimmer.getIsPaid()) {
-            subscription.calculateSubscriptionPrice(Swimmer);
-        } // todo make sure filewriting works
     }
 
 
@@ -107,9 +105,9 @@ public class Chairman {
                     "Name: " + proSwimmers.get(i).getFirstName() + " " + proSwimmers.get(i).getLastName() +
                     " Age: " + (LocalDateTime.now().getYear() - proSwimmers.get(i).getYearOfBirth()) +
                     " Email: " + proSwimmers.get(i).getEmail() +
-                    " Adress: " + proSwimmers.get(i).getAdress() +
+                    " Address: " + proSwimmers.get(i).getAddress() +
                     " Is active: " + proSwimmers.get(i).isActive() +
-                    " Has paid: " + proSwimmers.get(i).getIsPaid() +
+                    " Has paid: " + proSwimmers.get(i).isPaid() +
                     " Disciplin: " + proSwimmers.get(i).getSwimDisciplin());
 
 
@@ -122,9 +120,9 @@ public class Chairman {
                     "Name: " + regularSwimmers.get(i).getFirstName() + "," + regularSwimmers.get(i).getLastName() +
                     "Age: " + (LocalDateTime.now().getYear() - regularSwimmers.get(i).getYearOfBirth() +
                     "Email: " + regularSwimmers.get(i).getEmail() +
-                    "Adress: " + regularSwimmers.get(i).getAdress() +
+                    "Address: " + regularSwimmers.get(i).getAddress() +
                     "Is active:" + regularSwimmers.get(i).isActive() +
-                    "Has paid: " + regularSwimmers.get(i).getIsPaid())));
+                    "Has paid: " + regularSwimmers.get(i).isPaid())));
         }
     }
     public void changeActivityStatus() {
@@ -188,9 +186,9 @@ public class Chairman {
                 regularSwimmers.get(chosenMember).getLastName(),
                 regularSwimmers.get(chosenMember).getYearOfBirth(),
                 regularSwimmers.get(chosenMember).getEmail(),
-                regularSwimmers.get(chosenMember).getAdress(),
+                regularSwimmers.get(chosenMember).getAddress(),
                 regularSwimmers.get(chosenMember).isActive(),
-                regularSwimmers.get(chosenMember).getIsPaid(),
+                regularSwimmers.get(chosenMember).isPaid(),
                 ui.chooseSwimDisciplin());
 
         proSwimmers.add(regularToProSwimmer);
@@ -206,19 +204,19 @@ public class Chairman {
                 proSwimmers.get(chosenMember).getLastName(),
                 proSwimmers.get(chosenMember).getYearOfBirth(),
                 proSwimmers.get(chosenMember).getEmail(),
-                proSwimmers.get(chosenMember).getAdress(),
+                proSwimmers.get(chosenMember).getAddress(),
                 proSwimmers.get(chosenMember).isActive(),
-                proSwimmers.get(chosenMember).getIsPaid());
+                proSwimmers.get(chosenMember).isPaid());
 
         regularSwimmers.add(proToRegularSwimmer);
         removeProMember(proSwimmers.get(chosenMember));
-        System.out.println("Pro swimmer changed to pro!");
+        System.out.println("Pro swimmer changed to regular!");
     }
 
 
 
 
-    public void sortByAge() { 
+    public void sortByAge() { //Ikke sikkert den her metode skal bruges.
         ArrayList<Swimmer> juniorSwimmers = new ArrayList<>();
         ArrayList<Swimmer> seniorSwimmers = new ArrayList<>();
         ArrayList<Swimmer> membersAbove60 = new ArrayList<>();
