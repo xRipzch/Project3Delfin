@@ -1,4 +1,3 @@
-import java.io.Console;
 import java.util.Scanner;
 
 public class MenuMaker {
@@ -27,7 +26,8 @@ public class MenuMaker {
                 case 1 -> chooseFromChairmanMenu();
                 case 2 -> chooseFromCoachMenu();
                 case 3 -> chooseFromCashierMenu();
-                default -> System.out.println("Invalid choice. Try again.");
+                default ->
+                        System.out.println(ConsoleColors.RED_BOLD_BRIGHT + "Invalid choice. Try again." + ConsoleColors.RESET);
             }
         } while (userChoice != 0);
     }
@@ -99,32 +99,46 @@ changeMemberMenu.printMenu();
     }
 
     private String[] pointsMainMenu() {
-        return new String[]{ConsoleColors.BLUE_BRIGHT + "1. Chairman menu.", "2. Coach menu.",
-                "3. Cashier menu.", "0. Exit program." + ConsoleColors.RESET};
+        return new String[]{ConsoleColors.PURPLE_BOLD_BRIGHT + "1." + ConsoleColors.BLUE_BOLD + " Chairman menu.",
+                ConsoleColors.PURPLE_BOLD_BRIGHT + "2." + ConsoleColors.BLUE_BOLD + " Coach menu.",
+                ConsoleColors.PURPLE_BOLD_BRIGHT + "3." + ConsoleColors.BLUE_BOLD + " Cashier menu.",
+                ConsoleColors.PURPLE_BOLD_BRIGHT + "0." + ConsoleColors.BLUE_BOLD + " Exit program" + ConsoleColors.RESET};
     }
 
     private String[] pointsChairmanMenu() {
-        return new String[]{ConsoleColors.BLUE_BOLD + "1. Add new pro member to Delfinen.",
-                "2. Add new regular member.","3. Remove  regular member from Delfinen" +
-                "\n4. Remove pro member from Delfinen.", "5. Display regular member list.",
-                "6. Display pro member list.", "7. Edit member.", "9. Main Menu.",
-                "0. Exit program" + ConsoleColors.RESET};
+        return new String[]{ConsoleColors.PURPLE_BOLD_BRIGHT + "1." + ConsoleColors.BLUE_BOLD + " Add new pro member to Delfinen.",
+                ConsoleColors.PURPLE_BOLD_BRIGHT + "2." + ConsoleColors.BLUE_BOLD + " Add new regular member.",
+                ConsoleColors.PURPLE_BOLD_BRIGHT + "3." + ConsoleColors.BLUE_BOLD + " Remove  regular member from Delfinen",
+                ConsoleColors.PURPLE_BOLD_BRIGHT + "4." + ConsoleColors.BLUE_BOLD + " Remove pro member from Delfinen.",
+                ConsoleColors.PURPLE_BOLD_BRIGHT + "5." + ConsoleColors.BLUE_BOLD + " Display regular member list.",
+                ConsoleColors.PURPLE_BOLD_BRIGHT + "6." + ConsoleColors.BLUE_BOLD + " Display pro member list.",
+                ConsoleColors.PURPLE_BOLD_BRIGHT + "7." + ConsoleColors.BLUE_BOLD + " Edit member.",
+                ConsoleColors.PURPLE_BOLD_BRIGHT + "9." + ConsoleColors.BLUE_BOLD + " Main Menu.",
+                ConsoleColors.PURPLE_BOLD_BRIGHT + "0." + ConsoleColors.BLUE_BOLD + " Exit program" + ConsoleColors.RESET};
     }
 
     private String[] pointsCoachMenu() {
-        return new String[]{ConsoleColors.BLUE_BRIGHT + "1. Connect to pro Swimmer.", ".2. XXXXXXX.",
-                "9. Main Menu.", "0. Exit program" + ConsoleColors.RESET};
+        return new String[]{ConsoleColors.PURPLE_BOLD_BRIGHT + "1." + ConsoleColors.BLUE_BOLD + " Connect to pro Swimmer.",
+                ConsoleColors.PURPLE_BOLD_BRIGHT + "2." + ConsoleColors.BLUE_BOLD + " XXXXXXX.",
+                ConsoleColors.PURPLE_BOLD_BRIGHT + "9." + ConsoleColors.BLUE_BOLD + " Main Menu.",
+                ConsoleColors.PURPLE_BOLD_BRIGHT + "0." + ConsoleColors.BLUE_BOLD + " Exit program" + ConsoleColors.RESET};
     }
 
     private String[] pointsCashierMenu() {
-        return new String[]{ConsoleColors.BLUE_BRIGHT + "1. View finances.", "2. Show members in arrears.",
-                "9. Main Menu.", "0. Exit program." + ConsoleColors.RESET};
+        return new String[]{ConsoleColors.PURPLE_BOLD_BRIGHT + "1." + ConsoleColors.BLUE_BRIGHT + " View finances.",
+                ConsoleColors.PURPLE_BOLD_BRIGHT + "2." + ConsoleColors.BLUE_BOLD + " Show members in arrears.",
+                ConsoleColors.PURPLE_BOLD_BRIGHT + "9." + ConsoleColors.BLUE_BOLD + " Main Menu.",
+                ConsoleColors.PURPLE_BOLD_BRIGHT + "0." + ConsoleColors.BLUE_BOLD + " Exit program" + ConsoleColors.RESET};
     }
 
     private String[] pointsChooseChangeMenu() {
-        return new String[]{ConsoleColors.BLUE_BOLD + "1. Change regular swimmer to pro.",
-                "2. Change pro swimmer to regular.", "3. Change swim discipline for pro swimmer.",
-                "4. Change activity status.", "5. Change email of member.",
-                "6. Change address of member", "9. Main Menu.", "0. Exit program" + ConsoleColors.RESET};
+        return new String[]{ConsoleColors.PURPLE_BOLD_BRIGHT + "1." + ConsoleColors.BLUE_BRIGHT + " Change regular swimmer to pro.",
+                ConsoleColors.PURPLE_BOLD_BRIGHT + "2." + ConsoleColors.BLUE_BRIGHT + " Change pro swimmer to regular.",
+                ConsoleColors.PURPLE_BOLD_BRIGHT + "3." + ConsoleColors.BLUE_BRIGHT + " Change swim discipline for pro swimmer.",
+                ConsoleColors.PURPLE_BOLD_BRIGHT + "4." + ConsoleColors.BLUE_BRIGHT + " Change activity status.",
+                ConsoleColors.PURPLE_BOLD_BRIGHT + "5." + ConsoleColors.BLUE_BRIGHT + " Change email of member.",
+                ConsoleColors.PURPLE_BOLD_BRIGHT + "6." + ConsoleColors.BLUE_BRIGHT + " Change address of member",
+                ConsoleColors.PURPLE_BOLD_BRIGHT + "9." + ConsoleColors.BLUE_BOLD + " Main Menu.",
+                ConsoleColors.PURPLE_BOLD_BRIGHT + "0." + ConsoleColors.BLUE_BOLD + " Exit program" + ConsoleColors.RESET};
     }
 }

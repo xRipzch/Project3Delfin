@@ -85,7 +85,7 @@ public class Cashier {
     public void printMembersInArrears() {
         for (int i = 0; i < finances.size(); i++) {
             if (!finances.get(i).isPaid()){
-            System.out.println(ConsoleColors.PURPLE_BOLD_BRIGHT + (i+1) + ConsoleColors.WHITE_BOLD_BRIGHT +
+            System.out.println(ConsoleColors.PURPLE_BOLD_BRIGHT + (i+1) + ConsoleColors.YELLOW_BOLD_BRIGHT +
                     ". " + "Name: " + finances.get(i).getFirstName() + " " + finances.get(i).getLastName() +
                     " Age: " + (LocalDateTime.now().getYear() - finances.get(i).getYearOfBirth()) +
                     " Email: " + finances.get(i).getEmail() + " Is active: " + finances.get(i).isActive() +

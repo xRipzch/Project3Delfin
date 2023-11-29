@@ -23,6 +23,12 @@ public class Delfinen {
         chairman.initRegularMember();
         cashier.initSubscription();
         landing.intro1();
+
+        System.out.println("FORSLAG:");
+        chairman.displayRegularMember();
+        System.out.println("HJÆÆÆÆÆÆÆÆÆLP DRENGE!! HVORDAN FIKSER MAN DET SIDSTE \"|\" SÅ DET STÅR LIGEEE!!?" );
+
+
         menuMaker.executeMenu();
         fileHandling.writeToProSwimmersFile();
         fileHandling.writeToRegularSwimmersFile();

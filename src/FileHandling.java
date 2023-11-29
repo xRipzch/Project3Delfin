@@ -1,4 +1,7 @@
-import java.io.*;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.PrintStream;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -50,10 +53,10 @@ public class FileHandling {
                         get(i).isPaid());
             }
         } catch (FileNotFoundException e) {
-            System.out.println("File not found.");
+            System.out.println(ConsoleColors.RED_BOLD_BRIGHT + "File not found." + ConsoleColors.RESET);
 
         } catch (Exception e) {
-            System.out.println("Error occurred.");
+            System.out.println(ConsoleColors.RED_BOLD_BRIGHT + "Error occurred." + ConsoleColors.RESET);
         }
         ps.close();
     }
@@ -75,9 +78,9 @@ public class FileHandling {
             }
 
         } catch (FileNotFoundException e) {
-            System.out.println("File not found");
+            System.out.println(ConsoleColors.RED_BOLD_BRIGHT + "File not found" + ConsoleColors.RESET);
         } catch (Exception e){
-            System.out.println("Error occurred.");
+            System.out.println(ConsoleColors.RED_BOLD_BRIGHT + "Error occurred." + ConsoleColors.RESET);
         }
     }
 
@@ -127,7 +130,13 @@ public class FileHandling {
                 memberAddress = parts[4];
                 isActive = Boolean.parseBoolean(parts[5]);
                 isPaid = Boolean.parseBoolean(parts[6]);
-                swimDisciplin = SwimDiscipline.valueOf(parts[7]);
+
+                try {
+                    swimDisciplin = SwimDiscipline.valueOf(parts[7]);
+                } catch (IllegalArgumentException e) {
+                    System.out.println(ConsoleColors.CYAN_BOLD_BRIGHT + parts[7] +
+                            ConsoleColors.RED_BOLD_BRIGHT + " is an invalid swim discipline" + ConsoleColors.RESET);
+                }
 
 
                 ProSwimmer proSwimmer = new ProSwimmer(memberFirstName,memberLastName,memberYearOfBirth,

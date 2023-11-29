@@ -12,15 +12,19 @@ public class Chairman {
     Coach coach;
 
     public Chairman(FileHandling filehandling, Cashier cashier, ArrayList<ProSwimmer> proSwimmers, ArrayList<Swimmer> regularSwimmers) {
-            this.fileHandling = filehandling;
-            this.cashier = cashier;
-            this.proSwimmers = proSwimmers;
-            this.regularSwimmers = regularSwimmers;
-        }
-    public void initRegularMember () {regularSwimmers = fileHandling.loadRegularMembersFromFile();}
+        this.fileHandling = filehandling;
+        this.cashier = cashier;
+        this.proSwimmers = proSwimmers;
+        this.regularSwimmers = regularSwimmers;
+    }
+
+    public void initRegularMember() {
+        regularSwimmers = fileHandling.loadRegularMembersFromFile();
+    }
+
     public void initProMember() {
-            proSwimmers = fileHandling.loadProMembersFromFile();
-        }
+        proSwimmers = fileHandling.loadProMembersFromFile();
+    }
 
 
     public void createProMember() {
@@ -31,7 +35,7 @@ public class Chairman {
         proSwimmers.add(proswimmer);
         ui.memberCreatedConfirmationMessage();
         cashier.createSubscription(proswimmer);
-        coach.addSwimmerToArrayList();
+//        coach.addSwimmerToArrayList();
         coach.sortAllArrayLists();
     }
 
@@ -63,7 +67,7 @@ public class Chairman {
         if (isValidIndexPro(memberIndexToRemove, proSwimmers)) {
             ProSwimmer proSwimmerToRemove = getProMembers().get(memberIndexToRemove);
             removeProMember(proSwimmerToRemove);
-            System.out.println(ConsoleColors.RED_BOLD + proSwimmerToRemove.getFirstName() + " " + proSwimmerToRemove.getLastName() +
+            System.out.println(ConsoleColors.RED_BOLD_BRIGHT + proSwimmerToRemove.getFirstName() + " " + proSwimmerToRemove.getLastName() +
                     " has been removed from Delfinen." + ConsoleColors.RESET);
             scanner.nextLine();
         }
@@ -78,6 +82,7 @@ public class Chairman {
     public void removeRegularMember(Swimmer regularSwimmer) {
         regularSwimmers.remove(regularSwimmer);
     }
+
     public ArrayList<Swimmer> getRegularSwimmers() {
         return new ArrayList<>(regularSwimmers);
     }
@@ -87,59 +92,74 @@ public class Chairman {
         int memberIndexToRemove = ui.chooseMember();
         if (isValidIndexRegular(memberIndexToRemove, regularSwimmers)) {
 
-          Swimmer regularSwimmerToRemove = getRegularSwimmers().get(memberIndexToRemove);
+            Swimmer regularSwimmerToRemove = getRegularSwimmers().get(memberIndexToRemove);
             removeRegularMember(regularSwimmerToRemove);
-            System.out.println(regularSwimmerToRemove.getFirstName() + " " + regularSwimmerToRemove.getLastName() +
-                    " has been removed from Delfinen.");
+            System.out.println(ConsoleColors.RED_BOLD_BRIGHT + regularSwimmerToRemove.getFirstName() + " " +
+                    regularSwimmerToRemove.getLastName() + " has been removed from Delfinen." + ConsoleColors.RESET);
             scanner.nextLine();
         }
     }
+
     private boolean isValidIndexRegular(int index, ArrayList<Swimmer> regularSwimmers) {
         return index >= 0 && index < getRegularSwimmers().size();
     }
 
 
-    public void displayProMember () {
+    public void displayProMember() {
         for (int i = 0; i < proSwimmers.size(); i++) {
-            System.out.println((i+1) + ". " +
-                    "Name: " + proSwimmers.get(i).getFirstName() + " " + proSwimmers.get(i).getLastName() +
-                    " Age: " + (LocalDateTime.now().getYear() - proSwimmers.get(i).getYearOfBirth()) +
+            System.out.println(ConsoleColors.PURPLE_BOLD_BRIGHT + ((i + 1) + ". " + ConsoleColors.YELLOW_BOLD_BRIGHT +
+                    "Name: " + ConsoleColors.CYAN_BOLD_BRIGHT + proSwimmers.get(i).getFirstName() + " " +
+                    proSwimmers.get(i).getLastName() + ConsoleColors.YELLOW_BOLD_BRIGHT +
+                    " Age: " + (LocalDateTime.now().getYear() - proSwimmers.get(i).getYearOfBirth() +
                     " Email: " + proSwimmers.get(i).getEmail() +
                     " Address: " + proSwimmers.get(i).getAddress() +
-                    " Is active: " + proSwimmers.get(i).isActive() +
-                    " Has paid: " + proSwimmers.get(i).isPaid() +
-                    " Disciplin: " + proSwimmers.get(i).getSwimDisciplin());
+                    " Active member: " + ConsoleColors.CYAN_BOLD_BRIGHT + proSwimmers.get(i).isActive() +
+                    ConsoleColors.YELLOW_BOLD_BRIGHT + " Has paid: " + ConsoleColors.CYAN_BOLD_BRIGHT +
+                    proSwimmers.get(i).isPaid() + ConsoleColors.RESET)));
 
 
         }
 
     }
-    public void displayRegularMember () {
-        for (int i = 0; i < regularSwimmers.size(); i++) {
-            System.out.println(((i+1) + ". " +
-                    "Name: " + regularSwimmers.get(i).getFirstName() + "," + regularSwimmers.get(i).getLastName() +
-                    "Age: " + (LocalDateTime.now().getYear() - regularSwimmers.get(i).getYearOfBirth() +
-                    "Email: " + regularSwimmers.get(i).getEmail() +
-                    "Address: " + regularSwimmers.get(i).getAddress() +
-                    "Is active:" + regularSwimmers.get(i).isActive() +
-                    "Has paid: " + regularSwimmers.get(i).isPaid())));
+
+    public void displayRegularMember() {
+        System.out.println(ConsoleColors.PURPLE_BOLD_BRIGHT + "\n   NAME--------------------------AGE      EMAIL" +
+                "                               ADDRESS                         MEMBER   PAID");
+
+        for (int i = 0; i < regularSwimmers.size(); i++) { // HVORFOR ER DER 2 tomme felter inden nanvnet printes?? TODO
+            String indexColored = ConsoleColors.PURPLE_BOLD_BRIGHT + (i + 1) + "." + ConsoleColors.RESET;
+            System.out.printf("%s %-28s %s %-3d %s | %s  %-35s %-30s %s %-10s | %s %-11s%n",
+                    indexColored + ConsoleColors.CYAN_BOLD_BRIGHT,
+                    regularSwimmers.get(i).getFirstName() + " " + regularSwimmers.get(i).getLastName(),
+                    ConsoleColors.YELLOW_BOLD_BRIGHT,
+                    (LocalDateTime.now().getYear() - regularSwimmers.get(i).getYearOfBirth()),
+                    ConsoleColors.PURPLE_BOLD_BRIGHT,
+                    ConsoleColors.YELLOW_BOLD_BRIGHT,
+                    regularSwimmers.get(i).getEmail(),
+                    regularSwimmers.get(i).getAddress(),
+                    ConsoleColors.CYAN_BOLD_BRIGHT,
+                    regularSwimmers.get(i).isActive() + ConsoleColors.PURPLE_BOLD_BRIGHT,
+                    ConsoleColors.CYAN_BOLD_BRIGHT,
+                    regularSwimmers.get(i).isPaid() + ConsoleColors.RESET);
+
         }
     }
+
     public void changeActivityStatus() {
-       int swimmerType = ui.chooseSwimmerType();
+        int swimmerType = ui.chooseSwimmerType();
 
         if (swimmerType == 1) {
             changeActivityStatusPro();
         } else if (swimmerType == 2) {
-           changeActivityStatusRegular();
+            changeActivityStatusRegular();
         }
     }
 
     private void changeActivityStatusPro() {
         displayProMember();
         int chosenMember = ui.chooseMember();
-        int statusChoice =ui.chooseStatus();
-        boolean validChoice= false;
+        int statusChoice = ui.chooseStatus();
+        boolean validChoice = false;
 
         do {
             if (statusChoice == 1) {
@@ -149,19 +169,18 @@ public class Chairman {
                 proSwimmers.get(chosenMember).setActive(false);
                 validChoice = true;
             } else {
-                System.out.println("Invalid input. Try again.");
+                System.out.println(ConsoleColors.RED_BOLD_BRIGHT + "Invalid input. Try again." + ConsoleColors.RESET);
             }
-        }while(!validChoice);
+        } while (!validChoice);
         scanner.close();
     }
-
 
 
     private void changeActivityStatusRegular() {
         displayRegularMember();
         int chosenMember = ui.chooseMember();
-        int statusChoice =ui.chooseStatus();
-        boolean validChoice= false;
+        int statusChoice = ui.chooseStatus();
+        boolean validChoice = false;
 
         do {
             if (statusChoice == 1) {
@@ -171,9 +190,9 @@ public class Chairman {
                 regularSwimmers.get(chosenMember).setActive(false);
                 validChoice = true;
             } else {
-                System.out.println("Invalid input. Try again.");
+                System.out.println(ConsoleColors.RED_BOLD_BRIGHT + "Invalid input. Try again." + ConsoleColors.RESET);
             }
-        }while(!validChoice);
+        } while (!validChoice);
         scanner.close();
     }
 
@@ -193,7 +212,7 @@ public class Chairman {
 
         proSwimmers.add(regularToProSwimmer);
         removeRegularMember(regularSwimmers.get(chosenMember));
-        System.out.println("Regular swimmer changed to pro!");
+        System.out.println(ConsoleColors.GREEN_BOLD_BRIGHT + "Regular swimmer changed to pro!" + ConsoleColors.RESET);
     }
 
     public void changeProSwimmerToRegular() {
@@ -210,10 +229,8 @@ public class Chairman {
 
         regularSwimmers.add(proToRegularSwimmer);
         removeProMember(proSwimmers.get(chosenMember));
-        System.out.println("Pro swimmer changed to regular!");
+        System.out.println(ConsoleColors.GREEN_BOLD_BRIGHT + "Pro swimmer changed to regular!" + ConsoleColors.RESET);
     }
-
-
 
 
     public void sortByAge() { //Ikke sikkert den her metode skal bruges.

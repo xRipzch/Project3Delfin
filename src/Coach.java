@@ -1,6 +1,6 @@
 import java.util.ArrayList;
-import java.util.Comparator;
 import java.util.Collections;
+import java.util.Comparator;
 
 public abstract class Coach implements Comparator {
 
@@ -58,7 +58,7 @@ public abstract class Coach implements Comparator {
                 "junior" + ConsoleColors.PURPLE_BOLD_BRIGHT + " swimmers in the " + ConsoleColors.CYAN_BOLD_BRIGHT
                 + "crawl" + ConsoleColors.PURPLE_BOLD_BRIGHT + " discipline:" + ConsoleColors.RESET);
         for (int i = 0; i < 5; i++) {
-            System.out.println(crawlJunior.get(i).getQuickestTime());
+            System.out.println(ConsoleColors.YELLOW_BOLD_BRIGHT + crawlJunior.get(i).getQuickestTime() + ConsoleColors.RESET);
 
         }
 
@@ -68,7 +68,7 @@ public abstract class Coach implements Comparator {
         System.out.println(ConsoleColors.PURPLE_BOLD_BRIGHT + "Quickest 5 " + ConsoleColors.CYAN_BOLD_BRIGHT +
                 "swimmers" + ConsoleColors.PURPLE_BOLD_BRIGHT + " in Delfinen " + ConsoleColors.RESET);
         for (int i = 0; i < 5; i++) {
-            System.out.println(allProSwimmersDelfinen.get(i).getQuickestTime());
+//            System.out.println(CONSOLECOLORS.YELLOWallProSwimmersDelfinen.get(i).getQuickestTime());
         }
     }
 
@@ -78,7 +78,7 @@ public abstract class Coach implements Comparator {
                 + "crawl" + ConsoleColors.PURPLE_BOLD_BRIGHT + " discipline:" + ConsoleColors.RESET);
 
         for (int i = 0; i < 5; i++) {
-            System.out.println(crawlSenior.get(i).getQuickestTime());
+            System.out.println(ConsoleColors.YELLOW_BOLD_BRIGHT + crawlSenior.get(i).getQuickestTime() + ConsoleColors.RESET);
         }
     }
 
@@ -88,7 +88,7 @@ public abstract class Coach implements Comparator {
                 + "backstroke" + ConsoleColors.PURPLE_BOLD_BRIGHT + " discipline:" + ConsoleColors.RESET);
 
         for (int i = 0; i < 5; i++) {
-            System.out.println(backstrokeJunior.get(i).getQuickestTime());
+            System.out.println(ConsoleColors.YELLOW_BOLD_BRIGHT + backstrokeJunior.get(i).getQuickestTime() + ConsoleColors.RESET);
         }
     }
 
@@ -98,7 +98,7 @@ public abstract class Coach implements Comparator {
                 + "backstroke" + ConsoleColors.PURPLE_BOLD_BRIGHT + " discipline:" + ConsoleColors.RESET);
 
         for (int i = 0; i < 5; i++) {
-            System.out.println(backstrokeSenior.get(i).getQuickestTime());
+            System.out.println(ConsoleColors.YELLOW_BOLD_BRIGHT + backstrokeSenior.get(i).getQuickestTime() + ConsoleColors.RESET);
 
         }
     }
@@ -109,7 +109,7 @@ public abstract class Coach implements Comparator {
                 + "breaststroke" + ConsoleColors.PURPLE_BOLD_BRIGHT + " discipline:" + ConsoleColors.RESET);
 
         for (int i = 0; i < 5; i++) {
-            System.out.println(breaststrokeJunior.get(i).getQuickestTime());
+            System.out.println(ConsoleColors.YELLOW_BOLD_BRIGHT + breaststrokeJunior.get(i).getQuickestTime() + ConsoleColors.RESET);
         }
     }
 
@@ -119,7 +119,7 @@ public abstract class Coach implements Comparator {
                 + "breaststroke" + ConsoleColors.PURPLE_BOLD_BRIGHT + " discipline:" + ConsoleColors.RESET);
 
         for (int i = 0; i < 5; i++) {
-            System.out.println(breaststrokeSenior.get(i).getQuickestTime());
+            System.out.println(ConsoleColors.YELLOW_BOLD_BRIGHT + breaststrokeSenior.get(i).getQuickestTime() + ConsoleColors.RESET);
         }
     }
 
@@ -129,23 +129,27 @@ public abstract class Coach implements Comparator {
                 + "butterfly" + ConsoleColors.PURPLE_BOLD_BRIGHT + " discipline:" + ConsoleColors.RESET);
 
         for (int i = 0; i < 5; i++) {
-            System.out.println(butterflyJunior.get(i).getQuickestTime());
+            System.out.println(ConsoleColors.YELLOW_BOLD_BRIGHT + butterflyJunior.get(i).getQuickestTime() + ConsoleColors.RESET);
         }
     }
 
     public void printBestFiveSeniorSwimmersButterfly() {
-        System.out.println(ConsoleColors.PURPLE_BOLD_BRIGHT + "Quickest 5 " + ConsoleColors.CYAN_BOLD_BRIGHT + "senior" + ConsoleColors.PURPLE_BOLD_BRIGHT + " swimmers in the " + ConsoleColors.CYAN_BOLD_BRIGHT + "butterfly" + ConsoleColors.PURPLE_BOLD_BRIGHT + " discipline:" + ConsoleColors.RESET);
+        System.out.println(ConsoleColors.PURPLE_BOLD_BRIGHT + "Quickest 5 " + ConsoleColors.CYAN_BOLD_BRIGHT +
+                "senior" + ConsoleColors.PURPLE_BOLD_BRIGHT + " swimmers in the " + ConsoleColors.CYAN_BOLD_BRIGHT +
+                "butterfly" + ConsoleColors.PURPLE_BOLD_BRIGHT + " discipline:" + ConsoleColors.RESET);
 
         for (int i = 0; i < 5; i++) {
-            System.out.println(butterflySenior.get(i).getQuickestTime());
+            System.out.println(ConsoleColors.YELLOW_BOLD_BRIGHT + butterflySenior.get(i).getQuickestTime() + ConsoleColors.RESET);
         }
     }
 
     public void printBestFiveJuniorSwimmersMedley() {
-        System.out.println(ConsoleColors.PURPLE_BOLD_BRIGHT + "Quickest 5 " + ConsoleColors.CYAN_BOLD_BRIGHT + "junior" + ConsoleColors.PURPLE_BOLD_BRIGHT + " swimmers in the " + ConsoleColors.CYAN_BOLD_BRIGHT + "medley" + ConsoleColors.PURPLE_BOLD_BRIGHT + " discipline:" + ConsoleColors.RESET);
+        System.out.println(ConsoleColors.PURPLE_BOLD_BRIGHT + "Quickest 5 " + ConsoleColors.CYAN_BOLD_BRIGHT +
+                "junior" + ConsoleColors.PURPLE_BOLD_BRIGHT + " swimmers in the " + ConsoleColors.CYAN_BOLD_BRIGHT +
+                "medley" + ConsoleColors.PURPLE_BOLD_BRIGHT + " discipline:" + ConsoleColors.RESET);
 
         for (int i = 0; i < 5; i++) {
-            System.out.println(medleyJunior.get(i).getQuickestTime());
+            System.out.println(ConsoleColors.YELLOW_BOLD_BRIGHT + medleyJunior.get(i).getQuickestTime() + ConsoleColors.RESET);
         }
     }
 
@@ -155,7 +159,7 @@ public abstract class Coach implements Comparator {
                 + "medley" + ConsoleColors.PURPLE_BOLD_BRIGHT + " discipline:" + ConsoleColors.RESET);
 
         for (int i = 0; i < 5; i++) {
-            System.out.println(medleySenior.get(i).getQuickestTime());
+            System.out.println(ConsoleColors.YELLOW_BOLD_BRIGHT + medleySenior.get(i).getQuickestTime() + ConsoleColors.RESET);
         }
     }
 
