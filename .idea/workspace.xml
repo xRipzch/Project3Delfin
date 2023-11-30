@@ -5,49 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1a7dfa2b-dcc2-4474-948f-4ef6cd864b54" name="Changes" comment="Second commit fr">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Coach.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Results.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Project3_delfin/Chairman.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Project3_delfin/Chairman.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Project3_delfin/ConsoleColors.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Project3_delfin/ConsoleColors.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Project3_delfin/Delfinen.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Project3_delfin/Delfinen.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Project3_delfin/FileHandling.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Project3_delfin/FileHandling.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Project3_delfin/Landing.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Project3_delfin/Landing.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Project3_delfin/MenuMaker.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Project3_delfin/MenuMaker.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Project3_delfin/ProSwimmer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Project3_delfin/ProSwimmer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Project3_delfin/Subscription.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Project3_delfin/Subscription.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Project3_delfin/Swimmer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Project3_delfin/Swimmer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Project3_delfin/UI.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Project3_delfin/UI.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Project3_delfin/regular_swimmers.csv" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Project3_delfin/regular_swimmers.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Chairman.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Chairman.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/FileHandling.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/FileHandling.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Landing.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Landing.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ProSwimmer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ProSwimmer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/SwimDisciplin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SwimDiscipline.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Swimmer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Swimmer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Coach.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Coach.java" afterDir="false" />
     </list>
-    <list id="e764c490-f053-49a9-bad0-852e42607d12" name="Changes by LENOVO" comment="Changes by LENOVO">
-      <change beforePath="$PROJECT_DIR$/src/Chairman.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Chairman.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Delfinen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Delfinen.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/FileHandling.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/FileHandling.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MenuMaker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MenuMaker.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Subscription.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Swimmer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Swimmer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI.java" afterDir="false" />
-    </list>
-    <list id="4d616dc7-1ce6-4141-a620-02a668497665" name="Changes by Magne" comment="">
-      <change beforePath="$PROJECT_DIR$/src/Chairman.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Chairman.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ConsoleColors.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ConsoleColors.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Delfinen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Delfinen.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/FileHandling.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/FileHandling.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MenuMaker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MenuMaker.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ProSwimmer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ProSwimmer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Swimmer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Swimmer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI.java" afterDir="false" />
-    </list>
+    <list id="4d616dc7-1ce6-4141-a620-02a668497665" name="Changes by Magne" comment="" />
     <list id="37d53e69-8a3f-4c5a-9ea7-3c814c972658" name="Changes by ottob" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,154 +24,6 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="LineStatusTrackerManager">
-    <file path="$PROJECT_DIR$/src/UI.java">
-      <ranges>
-        <range start1="7" end1="8" start2="7" end2="7" changelist="4d616dc7-1ce6-4141-a620-02a668497665" />
-        <range start1="16" end1="17" start2="15" end2="16" changelist="4d616dc7-1ce6-4141-a620-02a668497665" />
-        <range start1="19" end1="20" start2="18" end2="19" changelist="4d616dc7-1ce6-4141-a620-02a668497665" />
-        <range start1="28" end1="29" start2="27" end2="28" changelist="4d616dc7-1ce6-4141-a620-02a668497665" />
-        <range start1="31" end1="32" start2="30" end2="31" changelist="4d616dc7-1ce6-4141-a620-02a668497665" />
-        <range start1="41" end1="42" start2="40" end2="42" changelist="4d616dc7-1ce6-4141-a620-02a668497665" />
-        <range start1="46" end1="47" start2="46" end2="48" changelist="4d616dc7-1ce6-4141-a620-02a668497665" />
-        <range start1="52" end1="53" start2="53" end2="55" changelist="4d616dc7-1ce6-4141-a620-02a668497665" />
-        <range start1="55" end1="56" start2="57" end2="59" changelist="4d616dc7-1ce6-4141-a620-02a668497665" />
-        <range start1="68" end1="69" start2="71" end2="72" changelist="4d616dc7-1ce6-4141-a620-02a668497665" />
-        <range start1="71" end1="72" start2="74" end2="75" changelist="4d616dc7-1ce6-4141-a620-02a668497665" />
-        <range start1="75" end1="76" start2="78" end2="79" changelist="4d616dc7-1ce6-4141-a620-02a668497665" />
-        <range start1="77" end1="78" start2="80" end2="81" changelist="4d616dc7-1ce6-4141-a620-02a668497665" />
-        <range start1="96" end1="104" start2="99" end2="107" changelist="4d616dc7-1ce6-4141-a620-02a668497665" />
-        <range start1="106" end1="107" start2="109" end2="110" changelist="4d616dc7-1ce6-4141-a620-02a668497665" />
-        <range start1="115" end1="116" start2="118" end2="119" changelist="4d616dc7-1ce6-4141-a620-02a668497665" />
-        <range start1="117" end1="118" start2="120" end2="121" changelist="4d616dc7-1ce6-4141-a620-02a668497665" />
-        <range start1="129" end1="130" start2="132" end2="133" changelist="4d616dc7-1ce6-4141-a620-02a668497665" />
-        <range start1="142" end1="143" start2="145" end2="146" changelist="4d616dc7-1ce6-4141-a620-02a668497665" />
-        <range start1="144" end1="145" start2="147" end2="148" changelist="4d616dc7-1ce6-4141-a620-02a668497665" />
-        <range start1="155" end1="156" start2="158" end2="159" changelist="4d616dc7-1ce6-4141-a620-02a668497665" />
-        <range start1="158" end1="159" start2="161" end2="162" changelist="4d616dc7-1ce6-4141-a620-02a668497665" />
-        <range start1="166" end1="167" start2="169" end2="170" changelist="1a7dfa2b-dcc2-4474-948f-4ef6cd864b54" />
-        <range start1="168" end1="169" start2="171" end2="172" changelist="4d616dc7-1ce6-4141-a620-02a668497665" />
-        <range start1="173" end1="174" start2="176" end2="177" changelist="4d616dc7-1ce6-4141-a620-02a668497665" />
-        <range start1="177" end1="178" start2="180" end2="181" changelist="1a7dfa2b-dcc2-4474-948f-4ef6cd864b54" />
-        <range start1="180" end1="181" start2="183" end2="184" changelist="1a7dfa2b-dcc2-4474-948f-4ef6cd864b54" />
-        <range start1="183" end1="184" start2="186" end2="187" changelist="1a7dfa2b-dcc2-4474-948f-4ef6cd864b54" />
-        <range start1="186" end1="187" start2="189" end2="190" changelist="1a7dfa2b-dcc2-4474-948f-4ef6cd864b54" />
-        <range start1="189" end1="190" start2="192" end2="193" changelist="1a7dfa2b-dcc2-4474-948f-4ef6cd864b54" />
-        <range start1="192" end1="193" start2="195" end2="196" changelist="4d616dc7-1ce6-4141-a620-02a668497665" />
-        <range start1="199" end1="200" start2="202" end2="203" changelist="e764c490-f053-49a9-bad0-852e42607d12" />
-        <range start1="201" end1="216" start2="204" end2="204" changelist="4d616dc7-1ce6-4141-a620-02a668497665" />
-        <range start1="218" end1="219" start2="206" end2="207" changelist="4d616dc7-1ce6-4141-a620-02a668497665" />
-        <range start1="222" end1="224" start2="210" end2="212" changelist="4d616dc7-1ce6-4141-a620-02a668497665" />
-        <range start1="234" end1="236" start2="222" end2="224" changelist="4d616dc7-1ce6-4141-a620-02a668497665" />
-        <range start1="252" end1="253" start2="240" end2="241" changelist="4d616dc7-1ce6-4141-a620-02a668497665" />
-        <range start1="261" end1="262" start2="249" end2="250" changelist="4d616dc7-1ce6-4141-a620-02a668497665" />
-        <range start1="263" end1="264" start2="251" end2="252" changelist="4d616dc7-1ce6-4141-a620-02a668497665" />
-        <range start1="271" end1="272" start2="259" end2="260" changelist="e764c490-f053-49a9-bad0-852e42607d12" />
-        <range start1="273" end1="278" start2="261" end2="280" changelist="e764c490-f053-49a9-bad0-852e42607d12" />
-      </ranges>
-    </file>
-    <file path="$PROJECT_DIR$/src/Swimmer.java">
-      <ranges>
-        <range start1="1" end1="1" start2="1" end2="3" changelist="1a7dfa2b-dcc2-4474-948f-4ef6cd864b54" />
-        <range start1="2" end1="4" start2="4" end2="6" changelist="1a7dfa2b-dcc2-4474-948f-4ef6cd864b54" />
-        <range start1="5" end1="6" start2="7" end2="8" changelist="1a7dfa2b-dcc2-4474-948f-4ef6cd864b54" />
-        <range start1="11" end1="12" start2="13" end2="14" changelist="4d616dc7-1ce6-4141-a620-02a668497665" />
-        <range start1="16" end1="17" start2="18" end2="19" changelist="4d616dc7-1ce6-4141-a620-02a668497665" />
-        <range start1="20" end1="20" start2="22" end2="23" changelist="1a7dfa2b-dcc2-4474-948f-4ef6cd864b54" />
-        <range start1="32" end1="34" start2="35" end2="37" changelist="4d616dc7-1ce6-4141-a620-02a668497665" />
-        <range start1="36" end1="37" start2="39" end2="39" changelist="4d616dc7-1ce6-4141-a620-02a668497665" />
-        <range start1="49" end1="50" start2="51" end2="52" changelist="e764c490-f053-49a9-bad0-852e42607d12" />
-      </ranges>
-    </file>
-    <file path="$PROJECT_DIR$/src/MenuMaker.java">
-      <ranges>
-        <range start1="8" end1="8" start2="8" end2="9" changelist="e764c490-f053-49a9-bad0-852e42607d12" />
-        <range start1="14" end1="15" start2="15" end2="16" changelist="e764c490-f053-49a9-bad0-852e42607d12" />
-        <range start1="16" end1="16" start2="17" end2="18" changelist="e764c490-f053-49a9-bad0-852e42607d12" />
-        <range start1="37" end1="39" start2="39" end2="42" changelist="4d616dc7-1ce6-4141-a620-02a668497665" />
-        <range start1="77" end1="78" start2="80" end2="81" changelist="4d616dc7-1ce6-4141-a620-02a668497665" />
-        <range start1="80" end1="81" start2="83" end2="84" changelist="4d616dc7-1ce6-4141-a620-02a668497665" />
-        <range start1="98" end1="99" start2="101" end2="102" changelist="4d616dc7-1ce6-4141-a620-02a668497665" />
-        <range start1="103" end1="106" start2="106" end2="111" changelist="4d616dc7-1ce6-4141-a620-02a668497665" />
-        <range start1="109" end1="110" start2="114" end2="115" changelist="4d616dc7-1ce6-4141-a620-02a668497665" />
-        <range start1="114" end1="115" start2="119" end2="120" changelist="4d616dc7-1ce6-4141-a620-02a668497665" />
-        <range start1="120" end1="121" start2="125" end2="126" changelist="4d616dc7-1ce6-4141-a620-02a668497665" />
-      </ranges>
-    </file>
-    <file path="$PROJECT_DIR$/src/Delfinen.java">
-      <ranges>
-        <range start1="0" end1="0" start2="0" end2="1" changelist="4d616dc7-1ce6-4141-a620-02a668497665" />
-        <range start1="5" end1="5" start2="6" end2="7" changelist="4d616dc7-1ce6-4141-a620-02a668497665" />
-        <range start1="6" end1="10" start2="8" end2="12" changelist="e764c490-f053-49a9-bad0-852e42607d12" />
-        <range start1="21" end1="21" start2="23" end2="24" changelist="e764c490-f053-49a9-bad0-852e42607d12" />
-        <range start1="23" end1="25" start2="26" end2="29" changelist="e764c490-f053-49a9-bad0-852e42607d12" />
-      </ranges>
-    </file>
-    <file path="$PROJECT_DIR$/src/ProSwimmer.java">
-      <ranges>
-        <range start1="0" end1="0" start2="0" end2="2" changelist="1a7dfa2b-dcc2-4474-948f-4ef6cd864b54" />
-        <range start1="1" end1="2" start2="3" end2="5" changelist="1a7dfa2b-dcc2-4474-948f-4ef6cd864b54" />
-        <range start1="5" end1="7" start2="8" end2="11" changelist="4d616dc7-1ce6-4141-a620-02a668497665" />
-        <range start1="10" end1="11" start2="14" end2="16" changelist="1a7dfa2b-dcc2-4474-948f-4ef6cd864b54" />
-        <range start1="14" end1="15" start2="19" end2="20" changelist="1a7dfa2b-dcc2-4474-948f-4ef6cd864b54" />
-        <range start1="17" end1="17" start2="22" end2="33" changelist="1a7dfa2b-dcc2-4474-948f-4ef6cd864b54" />
-      </ranges>
-    </file>
-    <file path="$PROJECT_DIR$/src/FileHandling.java">
-      <ranges>
-        <range start1="6" end1="6" start2="6" end2="11" changelist="e764c490-f053-49a9-bad0-852e42607d12" />
-        <range start1="9" end1="9" start2="14" end2="15" changelist="4d616dc7-1ce6-4141-a620-02a668497665" />
-        <range start1="13" end1="14" start2="19" end2="20" changelist="4d616dc7-1ce6-4141-a620-02a668497665" />
-        <range start1="16" end1="17" start2="22" end2="24" changelist="e764c490-f053-49a9-bad0-852e42607d12" />
-        <range start1="18" end1="19" start2="25" end2="26" changelist="e764c490-f053-49a9-bad0-852e42607d12" />
-        <range start1="20" end1="24" start2="27" end2="28" changelist="4d616dc7-1ce6-4141-a620-02a668497665" />
-        <range start1="25" end1="26" start2="29" end2="31" changelist="e764c490-f053-49a9-bad0-852e42607d12" />
-        <range start1="28" end1="28" start2="33" end2="34" changelist="e764c490-f053-49a9-bad0-852e42607d12" />
-        <range start1="29" end1="30" start2="35" end2="35" changelist="4d616dc7-1ce6-4141-a620-02a668497665" />
-        <range start1="31" end1="32" start2="36" end2="37" changelist="e764c490-f053-49a9-bad0-852e42607d12" />
-        <range start1="42" end1="43" start2="47" end2="48" changelist="4d616dc7-1ce6-4141-a620-02a668497665" />
-        <range start1="44" end1="45" start2="49" end2="50" changelist="4d616dc7-1ce6-4141-a620-02a668497665" />
-        <range start1="50" end1="51" start2="55" end2="56" changelist="4d616dc7-1ce6-4141-a620-02a668497665" />
-        <range start1="55" end1="56" start2="60" end2="61" changelist="e764c490-f053-49a9-bad0-852e42607d12" />
-        <range start1="65" end1="66" start2="70" end2="71" changelist="1a7dfa2b-dcc2-4474-948f-4ef6cd864b54" />
-        <range start1="67" end1="68" start2="72" end2="73" changelist="1a7dfa2b-dcc2-4474-948f-4ef6cd864b54" />
-        <range start1="74" end1="75" start2="79" end2="80" changelist="4d616dc7-1ce6-4141-a620-02a668497665" />
-        <range start1="93" end1="94" start2="98" end2="99" changelist="4d616dc7-1ce6-4141-a620-02a668497665" />
-        <range start1="98" end1="99" start2="103" end2="104" changelist="1a7dfa2b-dcc2-4474-948f-4ef6cd864b54" />
-        <range start1="121" end1="122" start2="126" end2="127" changelist="1a7dfa2b-dcc2-4474-948f-4ef6cd864b54" />
-        <range start1="124" end1="125" start2="129" end2="130" changelist="1a7dfa2b-dcc2-4474-948f-4ef6cd864b54" />
-        <range start1="128" end1="129" start2="133" end2="134" changelist="1a7dfa2b-dcc2-4474-948f-4ef6cd864b54" />
-        <range start1="136" end1="136" start2="141" end2="171" changelist="e764c490-f053-49a9-bad0-852e42607d12" />
-        <range start1="137" end1="138" start2="172" end2="173" changelist="4d616dc7-1ce6-4141-a620-02a668497665" />
-        <range start1="140" end1="141" start2="175" end2="176" changelist="4d616dc7-1ce6-4141-a620-02a668497665" />
-        <range start1="143" end1="144" start2="178" end2="179" changelist="4d616dc7-1ce6-4141-a620-02a668497665" />
-        <range start1="146" end1="148" start2="181" end2="183" changelist="4d616dc7-1ce6-4141-a620-02a668497665" />
-        <range start1="151" end1="151" start2="186" end2="206" changelist="4d616dc7-1ce6-4141-a620-02a668497665" />
-      </ranges>
-    </file>
-    <file path="$PROJECT_DIR$/src/Chairman.java">
-      <ranges>
-        <range start1="10" end1="11" start2="10" end2="12" changelist="1a7dfa2b-dcc2-4474-948f-4ef6cd864b54" />
-        <range start1="12" end1="13" start2="13" end2="14" changelist="e764c490-f053-49a9-bad0-852e42607d12" />
-        <range start1="14" end1="14" start2="15" end2="16" changelist="e764c490-f053-49a9-bad0-852e42607d12" />
-        <range start1="25" end1="26" start2="27" end2="28" changelist="1a7dfa2b-dcc2-4474-948f-4ef6cd864b54" />
-        <range start1="29" end1="34" start2="31" end2="35" changelist="1a7dfa2b-dcc2-4474-948f-4ef6cd864b54" />
-        <range start1="37" end1="39" start2="38" end2="40" changelist="e764c490-f053-49a9-bad0-852e42607d12" />
-        <range start1="40" end1="43" start2="41" end2="44" changelist="e764c490-f053-49a9-bad0-852e42607d12" />
-        <range start1="44" end1="47" start2="45" end2="45" changelist="1a7dfa2b-dcc2-4474-948f-4ef6cd864b54" />
-        <range start1="109" end1="110" start2="107" end2="108" changelist="1a7dfa2b-dcc2-4474-948f-4ef6cd864b54" />
-        <range start1="111" end1="112" start2="109" end2="110" changelist="4d616dc7-1ce6-4141-a620-02a668497665" />
-        <range start1="124" end1="125" start2="122" end2="123" changelist="1a7dfa2b-dcc2-4474-948f-4ef6cd864b54" />
-        <range start1="126" end1="127" start2="124" end2="125" changelist="e764c490-f053-49a9-bad0-852e42607d12" />
-        <range start1="190" end1="191" start2="188" end2="189" changelist="1a7dfa2b-dcc2-4474-948f-4ef6cd864b54" />
-        <range start1="192" end1="193" start2="190" end2="191" changelist="e764c490-f053-49a9-bad0-852e42607d12" />
-        <range start1="208" end1="209" start2="206" end2="207" changelist="1a7dfa2b-dcc2-4474-948f-4ef6cd864b54" />
-        <range start1="210" end1="211" start2="208" end2="209" changelist="e764c490-f053-49a9-bad0-852e42607d12" />
-        <range start1="214" end1="215" start2="212" end2="213" changelist="e764c490-f053-49a9-bad0-852e42607d12" />
-        <range start1="220" end1="221" start2="218" end2="219" changelist="e764c490-f053-49a9-bad0-852e42607d12" />
-      </ranges>
-    </file>
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 0
@@ -272,7 +85,8 @@
       <workItem from="1701070367097" duration="12746000" />
       <workItem from="1701158472470" duration="148000" />
       <workItem from="1701158628094" duration="10808000" />
-      <workItem from="1701245772102" duration="13283000" />
+      <workItem from="1701245772102" duration="13338000" />
+      <workItem from="1701330818413" duration="836000" />
     </task>
     <task id="LOCAL-00001" summary="Second commit fr">
       <option name="closed" value="true" />
