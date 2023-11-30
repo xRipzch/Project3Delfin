@@ -1,4 +1,27 @@
-Anders,Ravn,1994,test@test.dk,test 23,true,false
-Otto,Rønhof,2003,gay@ya.dk,haystreet 69,true,false
-Anders,Ravn,2002,123@13.dk,yesirman 88,true,false
-Boh,man,2000,asdj@dsjad.dk,yes 23,true,false
+Anders,Ravn,1994,ash@aksd.dk,asdj 23,false,true
+Anders,Ravn,1994,ash@aksd.dk,asdj 23,false,true
+Anders,Ravn,1994,ash@aksd.dk,asdj 23,false,true
+Magne,Skov,2000,Lol@lol.dk,Lololo 2990,false,false
+Magne,Skov,1999,Lol@lol.dk,Lololo 2990,false,true
+Magne,Skov,1999,Lol@lol.dk,Lololo 2990,true,false
+Magne,Skov,1925,Lol@lol.dk,Lololo 2990,false,true
+Poul Magne Musen,Skovtrold,1965,bigboyEU@monsterloverinlife.cum,Homeboystreet 6969,true,true
+test1,test1,2000,ander@bot.dk,gade 66,true,false
+Anders,Ravn,1994,yes@boss.dk,gade 12,true,false
+Anders,Ravn,1994,hes@hes.dk,gade 23,true,false
+test1,test1,2000,test1@test1.dk,test1 23,true,true
+test2,test2,2000,test2@test2.dk,gade 11,true,false
+Anders,Ravn,1994,ash@aksd.dk,asdj 23,false,true
+Anders,Ravn,1994,ash@aksd.dk,asdj 23,false,true
+Anders,Ravn,1994,ash@aksd.dk,asdj 23,false,true
+Magne,Skov,2000,Lol@lol.dk,Lololo 2990,false,false
+Magne,Skov,1999,Lol@lol.dk,Lololo 2990,false,true
+Magne,Skov,1999,Lol@lol.dk,Lololo 2990,true,false
+Magne,Skov,1925,Lol@lol.dk,Lololo 2990,false,true
+Poul Magne Musen,Skovtrold,1965,bigboyEU@monsterloverinlife.cum,Homeboystreet 6969,true,true
+test1,test1,2000,ander@bot.dk,gade 66,true,false
+Anders,Ravn,1994,yes@boss.dk,gade 12,true,false
+Anders,Ravn,1994,hes@hes.dk,gade 23,true,false
+test1,test1,2000,test1@test1.dk,test1 23,true,true
+test2,test2,2000,test2@test2.dk,gade 11,true,false
+test1,test1,2000,test1@test.dk,test1,true,false

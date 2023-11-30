@@ -1,70 +1,62 @@
-import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Chairman {
     private Scanner scanner = new Scanner(System.in);
-    private ArrayList<ProSwimmer> proSwimmers = new ArrayList<ProSwimmer>();
-    private ArrayList<Member> regularSwimmers = new ArrayList<Member>();
     UI ui = new UI();
-    FileHandling fileHandling = new FileHandling();
-    Subscription subscription = new Subscription();
-        public Chairman() {
-            this.fileHandling = new FileHandling();
-        }
-        public void initRegularMember () {
-            regularSwimmers = fileHandling.loadRegularMembersFromFile();
-        }
+    FileHandling fileHandling;
+    Cashier cashier;
+    Coach coach;
 
-        public void initProMember () {
-            proSwimmers = fileHandling.loadProMembersFromFile();
-        }
-
+    public Chairman(FileHandling filehandling, Cashier cashier) {
+        this.fileHandling = filehandling;
+        this.cashier = cashier;
+    }
 
     public void createProMember() {
-            initProMember();
         ProSwimmer proswimmer = new ProSwimmer(ui.typeFirstName(), ui.typeLastName(),
-                ui.typeYearOfBirth(), ui.typeEmailAdress(), ui.typeAdress(),
-                ui.isActive(), ui.hasPaid(), ui.chooseSwimDisciplin());
-        proSwimmers.add(proswimmer);
-        ui.ConfirmationMessage();
-        fileHandling.writeToProSwimmersFile(proSwimmers);
-        sortByAge();
-        if (proswimmer.getHasPaid()) {
-            subscription.calculateSubscriptionPrice(proswimmer);
-            ui.printConfirmationForPayment();
-        } // todo make sure filewriting works
+                ui.typeYearOfBirth(), ui.typeEmailAddress(), ui.typeAddress(),
+                ui.isActive(), ui.isPaid(), ui.chooseSwimDisciplin());
+
+        fileHandling.getProSwimmers().add(proswimmer);
+        ui.memberCreatedConfirmationMessage();
+        cashier.createSubscription(proswimmer);
+        // coach.addSwimmerToArrayList();
+       // coach.sortAllArrayLists();
+    }
+
+    public void createRegularMember() {
+        Swimmer swimmer = new Swimmer(ui.typeFirstName(), ui.typeLastName(),
+                ui.typeYearOfBirth(), ui.typeEmailAddress(), ui.typeAddress(), ui.isActive(), ui.isPaid());
+
+        fileHandling.getRegularSwimmers().add(swimmer);
+        ui.memberCreatedConfirmationMessage();
+        cashier.createSubscription(swimmer);
 
     }
 
 
-
     public void removeProMember(ProSwimmer proSwimmer) {
-        proSwimmers.remove(proSwimmer);
-        //todo update file after removing
+        fileHandling.getProSwimmers().remove(proSwimmer);
     }
 
 
     public ArrayList<ProSwimmer> getProMembers() {
-        return new ArrayList<>(proSwimmers);
+        return new ArrayList<>(fileHandling.getProSwimmers());
     }
 
 
-    public void removeProMemberFromDelfinen() {
-           initProMember();
-        UI ui = new UI();
-        System.out.println("Choose member to remove from Delfinen.");
-        //todo make a display promember and call it here
-        int memberIndexToRemove = ui.getUserInputInt();
-        if (isValidIndexPro(memberIndexToRemove, proSwimmers)) {
+    public void chooseProSwimmerToRemove() {
+        displayProMember();
+        int memberIndexToRemove = ui.chooseMember();
 
+        if (isValidIndexPro(memberIndexToRemove, fileHandling.getProSwimmers())) {
             ProSwimmer proSwimmerToRemove = getProMembers().get(memberIndexToRemove);
             removeProMember(proSwimmerToRemove);
-            System.out.println(proSwimmerToRemove.getFirstName() + " " + proSwimmerToRemove.getLastName() +
-                    " has been removed from Delfinen.");
+            System.out.println(ConsoleColors.RED_BOLD_BRIGHT + proSwimmerToRemove.getFirstName() + " " + proSwimmerToRemove.getLastName() +
+                    " has been removed from Delfinen." + ConsoleColors.RESET);
             scanner.nextLine();
-
         }
     }
 
@@ -73,176 +65,194 @@ public class Chairman {
         return index >= 0 && index < getProMembers().size();
     }
 
-    public void createRegularMember() {
-            initRegularMember();
-        Member Member = new Member(ui.typeFirstName(), ui.typeLastName(),
-                ui.typeYearOfBirth(), ui.typeEmailAdress(), ui.typeAdress(), ui.isActive(), ui.hasPaid());
-        regularSwimmers.add(Member);
-        ui.ConfirmationMessage();
-        sortByAge();
-        fileHandling.writeToRegularSwimmersFile(regularSwimmers);
-        if (Member.getHasPaid()) {
-            subscription.calculateSubscriptionPrice(Member);
-            ui.printConfirmationForPayment();
-        } // todo make sure filewriting works
 
+    public void removeRegularMember(Swimmer regularSwimmer) {
+        fileHandling.getRegularSwimmers().remove(regularSwimmer);
     }
-    public void removeRegularMember(Member regularMember) {
-        regularSwimmers.remove(regularMember);
-        //todo update file after removing
-    }
-    public ArrayList<Member> getRegularSwimmers() {
-        return new ArrayList<>(regularSwimmers);
-    }
-    public void removeRegularMemberFromDelfinen() {
-            initRegularMember();
-        UI ui = new UI();
-        System.out.println("Choose member to remove from Delfinen.");
-        //todo make a display promember and call it here
-        int memberIndexToRemove = ui.getUserInputInt();
-        if (isValidIndexRegular(memberIndexToRemove, regularSwimmers)) {
 
-          Member regularMemberToRemove = getRegularSwimmers().get(memberIndexToRemove);
-            removeRegularMember(regularMemberToRemove);
-            System.out.println(regularMemberToRemove.getFirstName() + " " + regularMemberToRemove.getLastName() +
-                    " has been removed from Delfinen.");
+    public ArrayList<Swimmer> getRegularSwimmers() {
+        return new ArrayList<>(fileHandling.getRegularSwimmers());
+    }
+
+    public void chooseRegularSwimmerToRemove() {
+        displayRegularMember();
+        int memberIndexToRemove = ui.chooseMember();
+        if (isValidIndexRegular(memberIndexToRemove, fileHandling.getRegularSwimmers())) {
+
+            Swimmer regularSwimmerToRemove = getRegularSwimmers().get(memberIndexToRemove);
+            removeRegularMember(regularSwimmerToRemove);
+            System.out.println(ConsoleColors.RED_BOLD_BRIGHT + regularSwimmerToRemove.getFirstName() + " " +
+                    regularSwimmerToRemove.getLastName() + " has been removed from Delfinen." + ConsoleColors.RESET);
             scanner.nextLine();
         }
     }
-    private boolean isValidIndexRegular(int index, ArrayList<Member> regularSwimmers) {
+
+    private boolean isValidIndexRegular(int index, ArrayList<Swimmer> regularSwimmers) {
         return index >= 0 && index < getRegularSwimmers().size();
     }
 
 
-    public void displayProMember () {
-        initProMember();
-        for (int i = 0; i < proSwimmers.size(); i++) {
-            System.out.println((i+1) + ". " +
-                    "Name: " + proSwimmers.get(i).getFirstName() + " " + proSwimmers.get(i).getLastName() +
-                    " Age: " + (LocalDateTime.now().getYear() - proSwimmers.get(i).getYearOfBirth()) +
-                    " Email: " + proSwimmers.get(i).getEmail() +
-                    " Adress: " + proSwimmers.get(i).getAdress() +
-                    " Is active: " + proSwimmers.get(i).isActive() +
-                    " Has paid: " + proSwimmers.get(i).getHasPaid());
-            //skal displaye diciplin
+    public void displayProMember() {
+        printHeaderForMembers();
 
-        }
-
-    }
-    public void displayRegularMember () {
-        initRegularMember();
-        for (int i = 0; i < regularSwimmers.size(); i++) {
-            System.out.println(((i+1) + ". " +
-                    "Name: " + regularSwimmers.get(i).getFirstName() + "," + regularSwimmers.get(i).getLastName() +
-                    "Age: " + (LocalDateTime.now().getYear() - regularSwimmers.get(i).getYearOfBirth() +
-                    "Email: " + regularSwimmers.get(i).getEmail() +
-                    "Adress: " + regularSwimmers.get(i).getAdress() +
-                    "Is active:" + regularSwimmers.get(i).isActive() +
-                    "Has paid: " + (regularSwimmers.get(i).getHasPaid()))));
+        for (int i = 0; i < fileHandling.getProSwimmers().size(); i++) {
+            String indexColored = ConsoleColors.PURPLE_BOLD_BRIGHT + (i + 1) + "." + ConsoleColors.RESET;
+            System.out.printf("%s %-28s %s %-3d %s | %s  %-35s %-30s %s %-5s %s  %s %s %-11s%n",
+                    indexColored + ConsoleColors.CYAN_BOLD_BRIGHT,
+                    fileHandling.getProSwimmers().get(i).getFirstName() + " " + fileHandling.getProSwimmers().get(i).getLastName(),
+                    ConsoleColors.YELLOW_BOLD_BRIGHT,
+                    (LocalDateTime.now().getYear() - fileHandling.getProSwimmers().get(i).getYearOfBirth()),
+                    ConsoleColors.PURPLE_BOLD_BRIGHT,
+                    ConsoleColors.YELLOW_BOLD_BRIGHT,
+                    fileHandling.getProSwimmers().get(i).getEmail(),
+                    fileHandling.getProSwimmers().get(i).getAddress(),
+                    ConsoleColors.CYAN_BOLD_BRIGHT,
+                    fileHandling.getProSwimmers().get(i).isActive(),
+                    ConsoleColors.PURPLE_BOLD_BRIGHT,
+                    "|",
+                    ConsoleColors.CYAN_BOLD_BRIGHT,
+                    fileHandling.getProSwimmers().get(i).isPaid() + ConsoleColors.RESET);
         }
     }
+
+    public void printHeaderForMembers(){
+        System.out.println(ConsoleColors.PURPLE_BOLD_BRIGHT + "\n   NAME                          AGE      EMAIL" +
+                "                               ADDRESS                         MEMBER     ARREARS");
+    }
+
+    public void displayRegularMember() {
+        printHeaderForMembers();
+
+        for (int i = 0; i < fileHandling.getRegularSwimmers().size(); i++) {
+            String indexColored = ConsoleColors.PURPLE_BOLD_BRIGHT + (i + 1) + "." + ConsoleColors.RESET;
+            System.out.printf("%s %-28s %s %-3d %s | %s  %-35s %-30s %s %-5s %s  %s %s %-11s%n",
+                    indexColored + ConsoleColors.CYAN_BOLD_BRIGHT,
+                    fileHandling.getRegularSwimmers().get(i).getFirstName() + " " + fileHandling.getRegularSwimmers().get(i).getLastName(),
+                    ConsoleColors.YELLOW_BOLD_BRIGHT,
+                    (LocalDateTime.now().getYear() - fileHandling.getRegularSwimmers().get(i).getYearOfBirth()),
+                    ConsoleColors.PURPLE_BOLD_BRIGHT,
+                    ConsoleColors.YELLOW_BOLD_BRIGHT,
+                    fileHandling.getRegularSwimmers().get(i).getEmail(),
+                    fileHandling.getRegularSwimmers().get(i).getAddress(),
+                    ConsoleColors.CYAN_BOLD_BRIGHT,
+                    fileHandling.getRegularSwimmers().get(i).isActive(),
+                    ConsoleColors.PURPLE_BOLD_BRIGHT,
+                    "|",
+                    ConsoleColors.CYAN_BOLD_BRIGHT,
+                    fileHandling.getRegularSwimmers().get(i).isPaid() + ConsoleColors.RESET);
+        }
+    }
+
     public void changeActivityStatus() {
-       int swimmerType = ui.chooseSwimmerType();
+        int swimmerType = ui.chooseSwimmerType();
 
         if (swimmerType == 1) {
             changeActivityStatusPro();
-            displayProMember();
         } else if (swimmerType == 2) {
-           changeActivityStatusRegular();
-           displayRegularMember();
+            changeActivityStatusRegular();
         }
     }
 
     private void changeActivityStatusPro() {
+        displayProMember();
         int chosenMember = ui.chooseMember();
-        int statusChoice =ui.chooseStatus();
-        boolean validChoice= false;
+        int statusChoice = ui.chooseStatus();
+        boolean validChoice = false;
 
         do {
             if (statusChoice == 1) {
-                proSwimmers.get(chosenMember).setActive(true);
+                fileHandling.getProSwimmers().get(chosenMember).setActive(true);
                 validChoice = true;
             } else if (statusChoice == 2) {
-                proSwimmers.get(chosenMember).setActive(false);
+                fileHandling.getProSwimmers().get(chosenMember).setActive(false);
                 validChoice = true;
             } else {
-                System.out.println("Invalid input. Try again.");
+                System.out.println(ConsoleColors.RED_BOLD_BRIGHT + "Invalid input. Try again." + ConsoleColors.RESET);
             }
-        }while(!validChoice);
+        } while (!validChoice);
         scanner.close();
     }
-
 
 
     private void changeActivityStatusRegular() {
+        displayRegularMember();
         int chosenMember = ui.chooseMember();
-        int statusChoice =ui.chooseStatus();
-        boolean validChoice= false;
+        int statusChoice = ui.chooseStatus();
+        boolean validChoice = false;
 
         do {
             if (statusChoice == 1) {
-                regularSwimmers.get(chosenMember).setActive(true);
+                fileHandling.getRegularSwimmers().get(chosenMember).setActive(true);
                 validChoice = true;
             } else if (statusChoice == 2) {
-                regularSwimmers.get(chosenMember).setActive(false);
+                fileHandling.getRegularSwimmers().get(chosenMember).setActive(false);
                 validChoice = true;
             } else {
-                System.out.println("Invalid input. Try again.");
+                System.out.println(ConsoleColors.RED_BOLD_BRIGHT + "Invalid input. Try again." + ConsoleColors.RESET);
             }
-        }while(!validChoice);
+        } while (!validChoice);
         scanner.close();
     }
 
 
-
-
-
-
-
-
-
     public void changeRegularSwimmerToPro() {
-        //Skal først soute arraylisten
-        //Så lade brugeren vælge medlem
-        //Så spørge om hvilken diciplin der ønskes
-        //Der skal laves et nyt proswimmer objekt
-        //Det skal tilføjes til proswimmer arraylisten
-        //Den originale regularswimmer skal slettes
+        displayRegularMember();
+        int chosenMember = ui.chooseMember();
+        ProSwimmer regularToProSwimmer = new ProSwimmer(
+                fileHandling.getRegularSwimmers().get(chosenMember).getFirstName(),
+                fileHandling.getRegularSwimmers().get(chosenMember).getLastName(),
+                fileHandling.getRegularSwimmers().get(chosenMember).getYearOfBirth(),
+                fileHandling.getRegularSwimmers().get(chosenMember).getEmail(),
+                fileHandling.getRegularSwimmers().get(chosenMember).getAddress(),
+                fileHandling.getRegularSwimmers().get(chosenMember).isActive(),
+                fileHandling.getRegularSwimmers().get(chosenMember).isPaid(),
+                ui.chooseSwimDisciplin());
+
+        fileHandling.getProSwimmers().add(regularToProSwimmer);
+        removeRegularMember(fileHandling.getRegularSwimmers().get(chosenMember));
+        System.out.println(ConsoleColors.GREEN_BOLD_BRIGHT + "Regular swimmer changed to pro!" + ConsoleColors.RESET);
     }
 
     public void changeProSwimmerToRegular() {
-        //Skal først soute arraylisten
-        //Så lade brugeren vælge medlem
-        //Der skal laves et nyt regularswimmer objekt
-        //Det skal tilføjes til regularswimmer arraylisten
-        //Den originale proswimmer skal slettes
+        displayProMember();
+        int chosenMember = ui.chooseMember();
+        Swimmer proToRegularSwimmer = new Swimmer(
+                fileHandling.getProSwimmers().get(chosenMember).getFirstName(),
+                fileHandling.getProSwimmers().get(chosenMember).getLastName(),
+                fileHandling.getProSwimmers().get(chosenMember).getYearOfBirth(),
+                fileHandling.getProSwimmers().get(chosenMember).getEmail(),
+                fileHandling.getProSwimmers().get(chosenMember).getAddress(),
+                fileHandling.getProSwimmers().get(chosenMember).isActive(),
+                fileHandling.getProSwimmers().get(chosenMember).isPaid());
+
+        fileHandling.getRegularSwimmers().add(proToRegularSwimmer);
+        removeProMember(fileHandling.getProSwimmers().get(chosenMember));
+        System.out.println(ConsoleColors.GREEN_BOLD_BRIGHT + "Pro swimmer changed to regular!" + ConsoleColors.RESET);
     }
 
 
-
-
-    public void sortByAge() { 
-        ArrayList<Member> juniorMembers = new ArrayList<>();
-        ArrayList<Member> seniorMembers = new ArrayList<>();
-        ArrayList<Member> membersAbove60 = new ArrayList<>();
-        if (!proSwimmers.isEmpty()) {
-            for (ProSwimmer proSwimmer : proSwimmers) {
+    public void sortByAge() { //Ikke sikkert den her metode skal bruges.
+        ArrayList<Swimmer> juniorSwimmers = new ArrayList<>();
+        ArrayList<Swimmer> seniorSwimmers = new ArrayList<>();
+        ArrayList<Swimmer> membersAbove60 = new ArrayList<>();
+        if (!fileHandling.getProSwimmers().isEmpty()) {
+            for (ProSwimmer proSwimmer : fileHandling.getProSwimmers()) {
                 if (proSwimmer.getYearOfBirth() < 18) {
-                    juniorMembers.add(proSwimmer);
+                    juniorSwimmers.add(proSwimmer);
                 } else if (proSwimmer.getYearOfBirth() >= 18 && proSwimmer.getYearOfBirth() < 60) {
-                    seniorMembers.add(proSwimmer);
+                    seniorSwimmers.add(proSwimmer);
                 } else if (proSwimmer.getYearOfBirth() >= 60) {
                     membersAbove60.add(proSwimmer);
                 }
             }
-            if (!regularSwimmers.isEmpty()) {
-                for (Member Member : regularSwimmers) {
-                    if (Member.getYearOfBirth() < 18) {
-                        juniorMembers.add(Member);
-                    } else if (Member.getYearOfBirth() >= 18 && Member.getYearOfBirth() < 60) {
-                        seniorMembers.add(Member);
-                    } else if (Member.getYearOfBirth() >= 60) {
-                        membersAbove60.add(Member);
+            if (!fileHandling.getRegularSwimmers().isEmpty()) {
+                for (Swimmer Swimmer : fileHandling.getRegularSwimmers()) {
+                    if (Swimmer.getYearOfBirth() < 18) {
+                        juniorSwimmers.add(Swimmer);
+                    } else if (Swimmer.getYearOfBirth() >= 18 && Swimmer.getYearOfBirth() < 60) {
+                        seniorSwimmers.add(Swimmer);
+                    } else if (Swimmer.getYearOfBirth() >= 60) {
+                        membersAbove60.add(Swimmer);
                     }
                 }
             }

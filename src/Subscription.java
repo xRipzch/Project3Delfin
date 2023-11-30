@@ -1,36 +1,48 @@
-import java.time.LocalDate;
-
 public class Subscription {
-    UI ui = new UI();
+    private String firstName;
+    private  String lastName;
+    private  int yearOfBirth;
+    private String email;
+    private boolean isActive;
+    private boolean isPaid;
+    private int price;
 
 
-
-
-
-    //Calculate the price of the subscription based on age.
-    public void calculateSubscriptionPrice(Member member) {
-        int currentYear = LocalDate.now().getYear();
-        int age = currentYear - member.getYearOfBirth();
-        int subscriptionPrice = 0;
-
-        if (member.isActive()) {
-            if (age < 18) {
-                subscriptionPrice = 1000;
-            } else if (age >= 18 && age < 60) {
-                subscriptionPrice = 1600;
-            } else if (age >= 60) {
-                subscriptionPrice = 1200;
-            }
-        } else {
-            subscriptionPrice = 500; // passive subscription
-        }
-
-        System.out.println("You're subscription fee is:  " + subscriptionPrice + "$$$.");
+    public Subscription (String firstName, String lastName, String email,
+                         boolean isActive, boolean isPaid, int subscriptionPrice ){
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.yearOfBirth = yearOfBirth;
+        this.email = email;
+        this.isActive = isActive;
+        this.isPaid = isPaid;
+        this.price = subscriptionPrice;
+    }
+    public String getFirstName() {
+        return firstName;
     }
 
+    public String getLastName() {
+        return lastName;
+    }
 
-    public void processPayment(Member member) {
-        ui.printConfirmationForPayment();
-        //metode der bruger setter
+    public int getYearOfBirth() {
+        return yearOfBirth;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public boolean isActive() {
+        return isActive;
+    }
+
+    public boolean isPaid() {
+        return isPaid;
+    }
+
+    public int getPrice() {
+        return price;
     }
 }

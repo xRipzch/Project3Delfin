@@ -1,23 +1,26 @@
-public class Member {
+public class Swimmer {
+
+
     private String firstName;
-    private  String lastName;
-    private  int yearOfBirth;
+    private String lastName;
+    private int yearOfBirth;
     private String email;
-    private  String adress;
+    private String address;
     private boolean isActive;
     private boolean isPaid;
 
 
-    public Member (String firstName, String lastName, int yearOfBirth,
-                   String email, String adress, boolean isActive, boolean hasPaid) {
+    public Swimmer(String firstName, String lastName, int yearOfBirth,
+                   String email, String address, boolean isActive, boolean isPaid) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.yearOfBirth = yearOfBirth;
         this.email = email;
-        this.adress = adress;
+        this.address = address;
         this.isActive = isActive;
-        this.isPaid = false;
+        this.isPaid = isPaid;
     }
+
     public String getFirstName() {
         return firstName;
     }
@@ -30,10 +33,9 @@ public class Member {
         return email;
     }
 
-    public String getAdress() {
-        return adress;
+    public String getAddress() {
+        return address;
     }
-
 
     public int getYearOfBirth() {
         return yearOfBirth;
@@ -47,11 +49,11 @@ public class Member {
         isActive = active;
     }
 
-    public boolean getHasPaid() {
+    public boolean isPaid() {
         return isPaid;
     }
 
-    public void setHasPaid(boolean hasPaid) {
-        this.isPaid = hasPaid;
+    public void setIsPaid(boolean isPaid) {
+        this.isPaid = isPaid;
     }
 }
