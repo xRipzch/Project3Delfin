@@ -3,8 +3,7 @@ import java.util.concurrent.TimeUnit;
 public class Landing {
 
     public void intro1() {
-        System.out.println(ConsoleColors.BLUE_BACKGROUND);
-        System.out.println(ConsoleColors.WHITE_BOLD_BRIGHT);
+        System.out.println(ConsoleColors.CYAN_BOLD_BRIGHT);
         System.out.println();
         System.out.println();
         System.out.println("                      Dolphin Swimclub!                      ");

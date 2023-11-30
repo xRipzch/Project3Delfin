@@ -5,10 +5,11 @@ public class Delfinen {
     private static ArrayList<ProSwimmer> proSwimmers = new ArrayList<ProSwimmer>();
     private static ArrayList<Swimmer> regularSwimmers = new ArrayList<Swimmer>();
     private static ArrayList<Subscription> finances = new ArrayList<>();
+    private static ArrayList<Coach> coaches = new ArrayList<>();
 
     static FileHandling fileHandling = new FileHandling(proSwimmers, regularSwimmers, finances);
     static Cashier cashier = new Cashier(fileHandling, finances);
-    static Chairman chairman = new Chairman(fileHandling, cashier, proSwimmers, regularSwimmers);
+    static Chairman chairman = new Chairman(fileHandling, cashier);
     static MenuMaker menuMaker = new MenuMaker(chairman, cashier);
     static Landing landing = new Landing();
 
@@ -19,17 +20,13 @@ public class Delfinen {
     }
 
     private void run() {
-        chairman.initProMember();
-        chairman.initRegularMember();
-        cashier.initSubscription();
+        proSwimmers = fileHandling.loadProMembersFromFile();
+        regularSwimmers = fileHandling.loadRegularMembersFromFile();
+        finances = fileHandling.loadSubscriptionsFromFile();
+
         landing.intro1();
-
-        System.out.println("FORSLAG:");
-        chairman.displayRegularMember();
-        System.out.println("HJÆÆÆÆÆÆÆÆÆLP DRENGE!! HVORDAN FIKSER MAN DET SIDSTE \"|\" SÅ DET STÅR LIGEEE!!?" );
-
-
         menuMaker.executeMenu();
+
         fileHandling.writeToProSwimmersFile();
         fileHandling.writeToRegularSwimmersFile();
         fileHandling.writeToFinancesFile();

@@ -2,7 +2,6 @@ public class ConsoleColors {
     // Reset
     public static final String RESET = "\033[0m";  // Text Reset
     public static final String BLUE_BOLD = "\033[1;34m";   // MENUTEXT
-    public static final String BLUE_BACKGROUND = "\033[44m";   // BLUE
     public static final String GREEN_UNDERLINED = "\033[4;32m";  // GREEN
 
     // High Intensity

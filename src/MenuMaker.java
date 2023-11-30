@@ -11,6 +11,7 @@ public class MenuMaker {
     Menu coachMenu = new Menu("Coach Menu:", pointsCoachMenu());
     Menu cashierMenu = new Menu("Cashier Menu:", pointsCashierMenu());
     Menu changeMemberMenu = new Menu("Change member menu", pointsChooseChangeMenu());
+    Coach coach = new Coach("name", 1);
 
     public MenuMaker(Chairman chairman, Cashier cashier) {
         this.chairman = chairman;
@@ -116,7 +117,6 @@ changeMemberMenu.printMenu();
                 ConsoleColors.PURPLE_BOLD_BRIGHT + "9." + ConsoleColors.BLUE_BOLD + " Main Menu.",
                 ConsoleColors.PURPLE_BOLD_BRIGHT + "0." + ConsoleColors.BLUE_BOLD + " Exit program" + ConsoleColors.RESET};
     }
-
     private String[] pointsCoachMenu() {
         return new String[]{ConsoleColors.PURPLE_BOLD_BRIGHT + "1." + ConsoleColors.BLUE_BOLD + " Connect to pro Swimmer.",
                 ConsoleColors.PURPLE_BOLD_BRIGHT + "2." + ConsoleColors.BLUE_BOLD + " XXXXXXX.",
@@ -124,20 +124,21 @@ changeMemberMenu.printMenu();
                 ConsoleColors.PURPLE_BOLD_BRIGHT + "0." + ConsoleColors.BLUE_BOLD + " Exit program" + ConsoleColors.RESET};
     }
 
+
     private String[] pointsCashierMenu() {
-        return new String[]{ConsoleColors.PURPLE_BOLD_BRIGHT + "1." + ConsoleColors.BLUE_BRIGHT + " View finances.",
+        return new String[]{ConsoleColors.PURPLE_BOLD_BRIGHT + "1." + ConsoleColors.BLUE_BOLD + " View finances.",
                 ConsoleColors.PURPLE_BOLD_BRIGHT + "2." + ConsoleColors.BLUE_BOLD + " Show members in arrears.",
                 ConsoleColors.PURPLE_BOLD_BRIGHT + "9." + ConsoleColors.BLUE_BOLD + " Main Menu.",
                 ConsoleColors.PURPLE_BOLD_BRIGHT + "0." + ConsoleColors.BLUE_BOLD + " Exit program" + ConsoleColors.RESET};
     }
 
     private String[] pointsChooseChangeMenu() {
-        return new String[]{ConsoleColors.PURPLE_BOLD_BRIGHT + "1." + ConsoleColors.BLUE_BRIGHT + " Change regular swimmer to pro.",
-                ConsoleColors.PURPLE_BOLD_BRIGHT + "2." + ConsoleColors.BLUE_BRIGHT + " Change pro swimmer to regular.",
-                ConsoleColors.PURPLE_BOLD_BRIGHT + "3." + ConsoleColors.BLUE_BRIGHT + " Change swim discipline for pro swimmer.",
-                ConsoleColors.PURPLE_BOLD_BRIGHT + "4." + ConsoleColors.BLUE_BRIGHT + " Change activity status.",
-                ConsoleColors.PURPLE_BOLD_BRIGHT + "5." + ConsoleColors.BLUE_BRIGHT + " Change email of member.",
-                ConsoleColors.PURPLE_BOLD_BRIGHT + "6." + ConsoleColors.BLUE_BRIGHT + " Change address of member",
+        return new String[]{ConsoleColors.PURPLE_BOLD_BRIGHT + "1." + ConsoleColors.BLUE_BOLD + " Change regular swimmer to pro.",
+                ConsoleColors.PURPLE_BOLD_BRIGHT + "2." + ConsoleColors.BLUE_BOLD + " Change pro swimmer to regular.",
+                ConsoleColors.PURPLE_BOLD_BRIGHT + "3." + ConsoleColors.BLUE_BOLD + " Change swim discipline for pro swimmer.",
+                ConsoleColors.PURPLE_BOLD_BRIGHT + "4." + ConsoleColors.BLUE_BOLD + " Change activity status.",
+                ConsoleColors.PURPLE_BOLD_BRIGHT + "5." + ConsoleColors.BLUE_BOLD + " Change email of member.",
+                ConsoleColors.PURPLE_BOLD_BRIGHT + "6." + ConsoleColors.BLUE_BOLD + " Change address of member",
                 ConsoleColors.PURPLE_BOLD_BRIGHT + "9." + ConsoleColors.BLUE_BOLD + " Main Menu.",
                 ConsoleColors.PURPLE_BOLD_BRIGHT + "0." + ConsoleColors.BLUE_BOLD + " Exit program" + ConsoleColors.RESET};
     }

@@ -4,46 +4,33 @@ import java.util.Scanner;
 
 public class Chairman {
     private Scanner scanner = new Scanner(System.in);
-    private ArrayList<ProSwimmer> proSwimmers;
-    private ArrayList<Swimmer> regularSwimmers;
     UI ui = new UI();
     FileHandling fileHandling;
     Cashier cashier;
     Coach coach;
 
-    public Chairman(FileHandling filehandling, Cashier cashier, ArrayList<ProSwimmer> proSwimmers, ArrayList<Swimmer> regularSwimmers) {
+    public Chairman(FileHandling filehandling, Cashier cashier) {
         this.fileHandling = filehandling;
         this.cashier = cashier;
-        this.proSwimmers = proSwimmers;
-        this.regularSwimmers = regularSwimmers;
     }
-
-    public void initRegularMember() {
-        regularSwimmers = fileHandling.loadRegularMembersFromFile();
-    }
-
-    public void initProMember() {
-        proSwimmers = fileHandling.loadProMembersFromFile();
-    }
-
 
     public void createProMember() {
         ProSwimmer proswimmer = new ProSwimmer(ui.typeFirstName(), ui.typeLastName(),
                 ui.typeYearOfBirth(), ui.typeEmailAddress(), ui.typeAddress(),
                 ui.isActive(), ui.isPaid(), ui.chooseSwimDisciplin());
 
-        proSwimmers.add(proswimmer);
+        fileHandling.getProSwimmers().add(proswimmer);
         ui.memberCreatedConfirmationMessage();
         cashier.createSubscription(proswimmer);
-//        coach.addSwimmerToArrayList();
-        coach.sortAllArrayLists();
+        // coach.addSwimmerToArrayList();
+       // coach.sortAllArrayLists();
     }
 
     public void createRegularMember() {
         Swimmer swimmer = new Swimmer(ui.typeFirstName(), ui.typeLastName(),
                 ui.typeYearOfBirth(), ui.typeEmailAddress(), ui.typeAddress(), ui.isActive(), ui.isPaid());
 
-        regularSwimmers.add(swimmer);
+        fileHandling.getRegularSwimmers().add(swimmer);
         ui.memberCreatedConfirmationMessage();
         cashier.createSubscription(swimmer);
 
@@ -51,12 +38,12 @@ public class Chairman {
 
 
     public void removeProMember(ProSwimmer proSwimmer) {
-        proSwimmers.remove(proSwimmer);
+        fileHandling.getProSwimmers().remove(proSwimmer);
     }
 
 
     public ArrayList<ProSwimmer> getProMembers() {
-        return new ArrayList<>(proSwimmers);
+        return new ArrayList<>(fileHandling.getProSwimmers());
     }
 
 
@@ -64,7 +51,7 @@ public class Chairman {
         displayProMember();
         int memberIndexToRemove = ui.chooseMember();
 
-        if (isValidIndexPro(memberIndexToRemove, proSwimmers)) {
+        if (isValidIndexPro(memberIndexToRemove, fileHandling.getProSwimmers())) {
             ProSwimmer proSwimmerToRemove = getProMembers().get(memberIndexToRemove);
             removeProMember(proSwimmerToRemove);
             System.out.println(ConsoleColors.RED_BOLD_BRIGHT + proSwimmerToRemove.getFirstName() + " " + proSwimmerToRemove.getLastName() +
@@ -80,17 +67,17 @@ public class Chairman {
 
 
     public void removeRegularMember(Swimmer regularSwimmer) {
-        regularSwimmers.remove(regularSwimmer);
+        fileHandling.getRegularSwimmers().remove(regularSwimmer);
     }
 
     public ArrayList<Swimmer> getRegularSwimmers() {
-        return new ArrayList<>(regularSwimmers);
+        return new ArrayList<>(fileHandling.getRegularSwimmers());
     }
 
     public void chooseRegularSwimmerToRemove() {
         displayRegularMember();
         int memberIndexToRemove = ui.chooseMember();
-        if (isValidIndexRegular(memberIndexToRemove, regularSwimmers)) {
+        if (isValidIndexRegular(memberIndexToRemove, fileHandling.getRegularSwimmers())) {
 
             Swimmer regularSwimmerToRemove = getRegularSwimmers().get(memberIndexToRemove);
             removeRegularMember(regularSwimmerToRemove);
@@ -106,42 +93,53 @@ public class Chairman {
 
 
     public void displayProMember() {
-        for (int i = 0; i < proSwimmers.size(); i++) {
-            System.out.println(ConsoleColors.PURPLE_BOLD_BRIGHT + ((i + 1) + ". " + ConsoleColors.YELLOW_BOLD_BRIGHT +
-                    "Name: " + ConsoleColors.CYAN_BOLD_BRIGHT + proSwimmers.get(i).getFirstName() + " " +
-                    proSwimmers.get(i).getLastName() + ConsoleColors.YELLOW_BOLD_BRIGHT +
-                    " Age: " + (LocalDateTime.now().getYear() - proSwimmers.get(i).getYearOfBirth() +
-                    " Email: " + proSwimmers.get(i).getEmail() +
-                    " Address: " + proSwimmers.get(i).getAddress() +
-                    " Active member: " + ConsoleColors.CYAN_BOLD_BRIGHT + proSwimmers.get(i).isActive() +
-                    ConsoleColors.YELLOW_BOLD_BRIGHT + " Has paid: " + ConsoleColors.CYAN_BOLD_BRIGHT +
-                    proSwimmers.get(i).isPaid() + ConsoleColors.RESET)));
+        printHeaderForMembers();
 
-
+        for (int i = 0; i < fileHandling.getProSwimmers().size(); i++) {
+            String indexColored = ConsoleColors.PURPLE_BOLD_BRIGHT + (i + 1) + "." + ConsoleColors.RESET;
+            System.out.printf("%s %-28s %s %-3d %s | %s  %-35s %-30s %s %-5s %s  %s %s %-11s%n",
+                    indexColored + ConsoleColors.CYAN_BOLD_BRIGHT,
+                    fileHandling.getProSwimmers().get(i).getFirstName() + " " + fileHandling.getProSwimmers().get(i).getLastName(),
+                    ConsoleColors.YELLOW_BOLD_BRIGHT,
+                    (LocalDateTime.now().getYear() - fileHandling.getProSwimmers().get(i).getYearOfBirth()),
+                    ConsoleColors.PURPLE_BOLD_BRIGHT,
+                    ConsoleColors.YELLOW_BOLD_BRIGHT,
+                    fileHandling.getProSwimmers().get(i).getEmail(),
+                    fileHandling.getProSwimmers().get(i).getAddress(),
+                    ConsoleColors.CYAN_BOLD_BRIGHT,
+                    fileHandling.getProSwimmers().get(i).isActive(),
+                    ConsoleColors.PURPLE_BOLD_BRIGHT,
+                    "|",
+                    ConsoleColors.CYAN_BOLD_BRIGHT,
+                    fileHandling.getProSwimmers().get(i).isPaid() + ConsoleColors.RESET);
         }
+    }
 
+    public void printHeaderForMembers(){
+        System.out.println(ConsoleColors.PURPLE_BOLD_BRIGHT + "\n   NAME                          AGE      EMAIL" +
+                "                               ADDRESS                         MEMBER     ARREARS");
     }
 
     public void displayRegularMember() {
-        System.out.println(ConsoleColors.PURPLE_BOLD_BRIGHT + "\n   NAME--------------------------AGE      EMAIL" +
-                "                               ADDRESS                         MEMBER   PAID");
+        printHeaderForMembers();
 
-        for (int i = 0; i < regularSwimmers.size(); i++) { // HVORFOR ER DER 2 tomme felter inden nanvnet printes?? TODO
+        for (int i = 0; i < fileHandling.getRegularSwimmers().size(); i++) {
             String indexColored = ConsoleColors.PURPLE_BOLD_BRIGHT + (i + 1) + "." + ConsoleColors.RESET;
-            System.out.printf("%s %-28s %s %-3d %s | %s  %-35s %-30s %s %-10s | %s %-11s%n",
+            System.out.printf("%s %-28s %s %-3d %s | %s  %-35s %-30s %s %-5s %s  %s %s %-11s%n",
                     indexColored + ConsoleColors.CYAN_BOLD_BRIGHT,
-                    regularSwimmers.get(i).getFirstName() + " " + regularSwimmers.get(i).getLastName(),
+                    fileHandling.getRegularSwimmers().get(i).getFirstName() + " " + fileHandling.getRegularSwimmers().get(i).getLastName(),
                     ConsoleColors.YELLOW_BOLD_BRIGHT,
-                    (LocalDateTime.now().getYear() - regularSwimmers.get(i).getYearOfBirth()),
+                    (LocalDateTime.now().getYear() - fileHandling.getRegularSwimmers().get(i).getYearOfBirth()),
                     ConsoleColors.PURPLE_BOLD_BRIGHT,
                     ConsoleColors.YELLOW_BOLD_BRIGHT,
-                    regularSwimmers.get(i).getEmail(),
-                    regularSwimmers.get(i).getAddress(),
+                    fileHandling.getRegularSwimmers().get(i).getEmail(),
+                    fileHandling.getRegularSwimmers().get(i).getAddress(),
                     ConsoleColors.CYAN_BOLD_BRIGHT,
-                    regularSwimmers.get(i).isActive() + ConsoleColors.PURPLE_BOLD_BRIGHT,
+                    fileHandling.getRegularSwimmers().get(i).isActive(),
+                    ConsoleColors.PURPLE_BOLD_BRIGHT,
+                    "|",
                     ConsoleColors.CYAN_BOLD_BRIGHT,
-                    regularSwimmers.get(i).isPaid() + ConsoleColors.RESET);
-
+                    fileHandling.getRegularSwimmers().get(i).isPaid() + ConsoleColors.RESET);
         }
     }
 
@@ -163,10 +161,10 @@ public class Chairman {
 
         do {
             if (statusChoice == 1) {
-                proSwimmers.get(chosenMember).setActive(true);
+                fileHandling.getProSwimmers().get(chosenMember).setActive(true);
                 validChoice = true;
             } else if (statusChoice == 2) {
-                proSwimmers.get(chosenMember).setActive(false);
+                fileHandling.getProSwimmers().get(chosenMember).setActive(false);
                 validChoice = true;
             } else {
                 System.out.println(ConsoleColors.RED_BOLD_BRIGHT + "Invalid input. Try again." + ConsoleColors.RESET);
@@ -184,10 +182,10 @@ public class Chairman {
 
         do {
             if (statusChoice == 1) {
-                regularSwimmers.get(chosenMember).setActive(true);
+                fileHandling.getRegularSwimmers().get(chosenMember).setActive(true);
                 validChoice = true;
             } else if (statusChoice == 2) {
-                regularSwimmers.get(chosenMember).setActive(false);
+                fileHandling.getRegularSwimmers().get(chosenMember).setActive(false);
                 validChoice = true;
             } else {
                 System.out.println(ConsoleColors.RED_BOLD_BRIGHT + "Invalid input. Try again." + ConsoleColors.RESET);
@@ -201,17 +199,17 @@ public class Chairman {
         displayRegularMember();
         int chosenMember = ui.chooseMember();
         ProSwimmer regularToProSwimmer = new ProSwimmer(
-                regularSwimmers.get(chosenMember).getFirstName(),
-                regularSwimmers.get(chosenMember).getLastName(),
-                regularSwimmers.get(chosenMember).getYearOfBirth(),
-                regularSwimmers.get(chosenMember).getEmail(),
-                regularSwimmers.get(chosenMember).getAddress(),
-                regularSwimmers.get(chosenMember).isActive(),
-                regularSwimmers.get(chosenMember).isPaid(),
+                fileHandling.getRegularSwimmers().get(chosenMember).getFirstName(),
+                fileHandling.getRegularSwimmers().get(chosenMember).getLastName(),
+                fileHandling.getRegularSwimmers().get(chosenMember).getYearOfBirth(),
+                fileHandling.getRegularSwimmers().get(chosenMember).getEmail(),
+                fileHandling.getRegularSwimmers().get(chosenMember).getAddress(),
+                fileHandling.getRegularSwimmers().get(chosenMember).isActive(),
+                fileHandling.getRegularSwimmers().get(chosenMember).isPaid(),
                 ui.chooseSwimDisciplin());
 
-        proSwimmers.add(regularToProSwimmer);
-        removeRegularMember(regularSwimmers.get(chosenMember));
+        fileHandling.getProSwimmers().add(regularToProSwimmer);
+        removeRegularMember(fileHandling.getRegularSwimmers().get(chosenMember));
         System.out.println(ConsoleColors.GREEN_BOLD_BRIGHT + "Regular swimmer changed to pro!" + ConsoleColors.RESET);
     }
 
@@ -219,16 +217,16 @@ public class Chairman {
         displayProMember();
         int chosenMember = ui.chooseMember();
         Swimmer proToRegularSwimmer = new Swimmer(
-                proSwimmers.get(chosenMember).getFirstName(),
-                proSwimmers.get(chosenMember).getLastName(),
-                proSwimmers.get(chosenMember).getYearOfBirth(),
-                proSwimmers.get(chosenMember).getEmail(),
-                proSwimmers.get(chosenMember).getAddress(),
-                proSwimmers.get(chosenMember).isActive(),
-                proSwimmers.get(chosenMember).isPaid());
+                fileHandling.getProSwimmers().get(chosenMember).getFirstName(),
+                fileHandling.getProSwimmers().get(chosenMember).getLastName(),
+                fileHandling.getProSwimmers().get(chosenMember).getYearOfBirth(),
+                fileHandling.getProSwimmers().get(chosenMember).getEmail(),
+                fileHandling.getProSwimmers().get(chosenMember).getAddress(),
+                fileHandling.getProSwimmers().get(chosenMember).isActive(),
+                fileHandling.getProSwimmers().get(chosenMember).isPaid());
 
-        regularSwimmers.add(proToRegularSwimmer);
-        removeProMember(proSwimmers.get(chosenMember));
+        fileHandling.getRegularSwimmers().add(proToRegularSwimmer);
+        removeProMember(fileHandling.getProSwimmers().get(chosenMember));
         System.out.println(ConsoleColors.GREEN_BOLD_BRIGHT + "Pro swimmer changed to regular!" + ConsoleColors.RESET);
     }
 
@@ -237,8 +235,8 @@ public class Chairman {
         ArrayList<Swimmer> juniorSwimmers = new ArrayList<>();
         ArrayList<Swimmer> seniorSwimmers = new ArrayList<>();
         ArrayList<Swimmer> membersAbove60 = new ArrayList<>();
-        if (!proSwimmers.isEmpty()) {
-            for (ProSwimmer proSwimmer : proSwimmers) {
+        if (!fileHandling.getProSwimmers().isEmpty()) {
+            for (ProSwimmer proSwimmer : fileHandling.getProSwimmers()) {
                 if (proSwimmer.getYearOfBirth() < 18) {
                     juniorSwimmers.add(proSwimmer);
                 } else if (proSwimmer.getYearOfBirth() >= 18 && proSwimmer.getYearOfBirth() < 60) {
@@ -247,8 +245,8 @@ public class Chairman {
                     membersAbove60.add(proSwimmer);
                 }
             }
-            if (!regularSwimmers.isEmpty()) {
-                for (Swimmer Swimmer : regularSwimmers) {
+            if (!fileHandling.getRegularSwimmers().isEmpty()) {
+                for (Swimmer Swimmer : fileHandling.getRegularSwimmers()) {
                     if (Swimmer.getYearOfBirth() < 18) {
                         juniorSwimmers.add(Swimmer);
                     } else if (Swimmer.getYearOfBirth() >= 18 && Swimmer.getYearOfBirth() < 60) {

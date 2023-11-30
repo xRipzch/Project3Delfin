@@ -8,7 +8,7 @@ public class Subscription {
     private int price;
 
 
-    public Subscription (String firstName, String lastName, int yearOfBirth, String email,
+    public Subscription (String firstName, String lastName, String email,
                          boolean isActive, boolean isPaid, int subscriptionPrice ){
         this.firstName = firstName;
         this.lastName = lastName;

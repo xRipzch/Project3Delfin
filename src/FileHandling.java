@@ -27,9 +27,6 @@ public class FileHandling {
     SwimDiscipline swimDisciplin;
 
 
-
-
-
     public FileHandling(ArrayList<ProSwimmer> proSwimmers, ArrayList<Swimmer> regularSwimmers,
                         ArrayList<Subscription> finances) {
         this.proSwimmers = proSwimmers;
@@ -38,12 +35,12 @@ public class FileHandling {
     }
 
     public void writeToRegularSwimmersFile() {
-        PrintStream ps=null;
+        PrintStream ps = null;
         try {
-            ps = new PrintStream(new FileOutputStream(regularSwimmersFile), true);
+            ps = new PrintStream(new FileOutputStream(regularSwimmersFile, true), true);
 
             for (int i = 0; i < regularSwimmers.size(); i++) {
-                ps.println ( regularSwimmers.
+                ps.println(regularSwimmers.
                         get(i).getFirstName() + "," + regularSwimmers.
                         get(i).getLastName() + "," + regularSwimmers.
                         get(i).getYearOfBirth() + "," + regularSwimmers.
@@ -60,11 +57,11 @@ public class FileHandling {
         }
         ps.close();
     }
-    
+
     public void writeToProSwimmersFile() {
         PrintStream ps = null;
         try {
-            ps = new PrintStream(new FileOutputStream(proSwimmersFile), true);
+            ps = new PrintStream(new FileOutputStream(proSwimmersFile, true), true);
 
             for (int i = 0; i < proSwimmers.size(); i++) {
                 ps.println(proSwimmers.get(i).getFirstName() + "," +
@@ -73,52 +70,24 @@ public class FileHandling {
                         proSwimmers.get(i).getEmail() + "," +
                         proSwimmers.get(i).getAddress() + "," +
                         proSwimmers.get(i).isActive() + "," +
-                        proSwimmers.get(i).isPaid() +"," +
+                        proSwimmers.get(i).isPaid() + "," +
                         proSwimmers.get(i).getSwimDisciplin());
             }
 
         } catch (FileNotFoundException e) {
             System.out.println(ConsoleColors.RED_BOLD_BRIGHT + "File not found" + ConsoleColors.RESET);
-        } catch (Exception e){
+        } catch (Exception e) {
             System.out.println(ConsoleColors.RED_BOLD_BRIGHT + "Error occurred." + ConsoleColors.RESET);
         }
     }
 
-   public ArrayList<Swimmer> loadRegularMembersFromFile() {
-        Scanner fileScanner;
-        String line;
-        String[] parts;
-       try {
-           fileScanner = new Scanner(regularSwimmersFile);
-        regularSwimmers.clear();
-       while (fileScanner.hasNextLine()) {
-            line = fileScanner.nextLine();
-
-            parts = line.split(",");
-            memberFirstName = parts[0];
-            memberLastName = parts[1];
-            memberYearOfBirth = Integer.parseInt(parts[2]);
-            memberEmail = parts[3];
-            memberAddress = parts[4];
-            isActive = Boolean.parseBoolean(parts[5]);
-            isPaid = Boolean.parseBoolean(parts[6]);
-
-            Swimmer swimmer = new Swimmer(memberFirstName,memberLastName,memberYearOfBirth,
-                    memberEmail,memberAddress,isActive, isPaid);
-            regularSwimmers.add(swimmer);
-
-        } return  regularSwimmers;
-       } catch (FileNotFoundException e) {
-           throw new RuntimeException(e);
-       }
-    }
-    public ArrayList<ProSwimmer> loadProMembersFromFile() {
+    public ArrayList<Swimmer> loadRegularMembersFromFile() {
         Scanner fileScanner;
         String line;
         String[] parts;
         try {
-            fileScanner = new Scanner(proSwimmersFile);
-          
+            fileScanner = new Scanner(regularSwimmersFile);
+            regularSwimmers.clear();
             while (fileScanner.hasNextLine()) {
                 line = fileScanner.nextLine();
 
@@ -131,7 +100,36 @@ public class FileHandling {
                 isActive = Boolean.parseBoolean(parts[5]);
                 isPaid = Boolean.parseBoolean(parts[6]);
 
-                try {
+                Swimmer swimmer = new Swimmer(memberFirstName, memberLastName, memberYearOfBirth,
+                        memberEmail, memberAddress, isActive, isPaid);
+                regularSwimmers.add(swimmer);
+
+            }
+            return regularSwimmers;
+        } catch (FileNotFoundException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    public ArrayList<ProSwimmer> loadProMembersFromFile() {
+        Scanner fileScanner;
+        String line;
+        String[] parts;
+        try {
+            fileScanner = new Scanner(proSwimmersFile);
+
+            while (fileScanner.hasNextLine()) {
+                line = fileScanner.nextLine();
+                parts = line.split(",");
+                memberFirstName = parts[0];
+                memberLastName = parts[1];
+                memberYearOfBirth = Integer.parseInt(parts[2]);
+                memberEmail = parts[3];
+                memberAddress = parts[4];
+                isActive = Boolean.parseBoolean(parts[5]);
+                isPaid = Boolean.parseBoolean(parts[6]);
+
+                try { // SPØRG PATRICK??!?!? TODO
                     swimDisciplin = SwimDiscipline.valueOf(parts[7]);
                 } catch (IllegalArgumentException e) {
                     System.out.println(ConsoleColors.CYAN_BOLD_BRIGHT + parts[7] +
@@ -139,47 +137,51 @@ public class FileHandling {
                 }
 
 
-                ProSwimmer proSwimmer = new ProSwimmer(memberFirstName,memberLastName,memberYearOfBirth,
-                        memberEmail,memberAddress,isActive, isPaid, swimDisciplin);
+                ProSwimmer proSwimmer = new ProSwimmer(memberFirstName, memberLastName, memberYearOfBirth,
+                        memberEmail, memberAddress, isActive, isPaid, swimDisciplin);
                 proSwimmers.add(proSwimmer);
 
-            } return  proSwimmers;
+            }
+            return proSwimmers;
         } catch (FileNotFoundException e) {
             throw new RuntimeException(e);
         }
     }
 
-    public ArrayList<Subscription> loadSubscriptionsFromFile(){
+    public ArrayList<Subscription> loadSubscriptionsFromFile() {
         Scanner fileScanner;
         String line;
         String[] parts;
-    try{
-        fileScanner = new Scanner(financesFile);
+        try {
+            fileScanner = new Scanner(financesFile);
 
-        while(fileScanner.hasNextLine()){
-            line = fileScanner.nextLine();
-            parts = line.split(",");
-            memberFirstName = parts[0];
-            memberLastName = parts[1];
-            memberYearOfBirth = Integer.parseInt(parts[2]);
-            memberEmail = parts[3];
-            isActive = Boolean.parseBoolean(parts[4]);
-            isPaid = Boolean.parseBoolean(parts[5]);
-            subscriptionPrice = Integer.parseInt(parts[6]);
+            while (fileScanner.hasNextLine()) {
+                line = fileScanner.nextLine();
+                parts = line.split(",");
+                memberFirstName = parts[0];
+                memberLastName = parts[1];
+                memberEmail = parts[2];
+                isActive = Boolean.parseBoolean(parts[3]);
+                isPaid = Boolean.parseBoolean(parts[4]);
+                subscriptionPrice = Integer.parseInt(parts[5]);
 
-        } return finances;
-    }catch (FileNotFoundException e) {
-        throw new RuntimeException(e);
-        //System.out.println(ConsoleColors.RED_BOLD_BRIGHT + "File not found." + ConsoleColors.RESET);
-    //} catch (Exception e){
-        //throw new RuntimeException(e);
-        //System.out.println(ConsoleColors.RED_BOLD_BRIGHT + "Error occurred." + ConsoleColors.RESET);
-        // HVAD ER BEDST throw new eller catch Exception?
+                Subscription subscription = new Subscription(memberFirstName, memberLastName, memberEmail,
+                        isActive, isPaid, subscriptionPrice);
+                finances.add(subscription);
+            }
+            return finances;
+        } catch (FileNotFoundException e) {
+            throw new RuntimeException(e);
+            //System.out.println(ConsoleColors.RED_BOLD_BRIGHT + "File not found." + ConsoleColors.RESET);
+            //} catch (Exception e){;
+            //throw new RuntimeException(e);
+            //System.out.println(ConsoleColors.RED_BOLD_BRIGHT + "Error occurred." + ConsoleColors.RESET);
+            // HVAD ER BEDST throw new eller catch Exception?
+        }
+
     }
 
-    }
-
-    public void printFinancesArrayList ()  {
+    public void printFinancesArrayList() {
         Scanner fileScanner;
         try {
             fileScanner = new Scanner(financesFile);
@@ -188,29 +190,35 @@ public class FileHandling {
                 System.out.println(ConsoleColors.YELLOW_BOLD_BRIGHT + fileText + " " + ConsoleColors.RESET);
             }
         } catch (FileNotFoundException e) {
-          System.out.println(ConsoleColors.RED_BOLD_BRIGHT + "File not found." + ConsoleColors.RESET);
-          throw new RuntimeException(e);
+            System.out.println(ConsoleColors.RED_BOLD_BRIGHT + "File not found." + ConsoleColors.RESET);
+            throw new RuntimeException(e);
         }
         fileScanner.close();
     }
 
-    public void writeToFinancesFile(){
+    public void writeToFinancesFile() {
         PrintStream ps = null;
-                try{
-                    ps = new PrintStream(new FileOutputStream(financesFile), true);
-                    for (int i = 0; i < finances.size(); i++) {
-                        ps.println(finances.get(i).getFirstName() + "," + finances.get(i).getLastName() + "," +
-                                finances.get(i).getYearOfBirth() + "," + finances.get(i).getEmail() + "," +
-                                finances.get(i).isActive() + "," + finances.get(i).isPaid() + "," +
-                                finances.get(i).getPrice());
-                    }
-                    for (int i = 0; i < proSwimmers.size(); i++) {
-                        ps.println(proSwimmers.get(i).getFirstName());
+        try {
+            ps = new PrintStream(new FileOutputStream(financesFile, true), true);
+            for (int i = 0; i < finances.size(); i++) {
+                ps.println(finances.get(i).getFirstName() + "," + finances.get(i).getLastName() + "," +
+                        finances.get(i).getEmail() + "," +
+                        finances.get(i).isActive() + "," + finances.get(i).isPaid() + "," +
+                        finances.get(i).getPrice());
+            }
+            ps.close();
+        } catch (FileNotFoundException e) {
+            System.out.println(ConsoleColors.RED_BOLD_BRIGHT + "File not found." + ConsoleColors.RESET);
+        }
+    }
 
-                    }
-                    ps.close();
-    }catch (FileNotFoundException e){
-        System.out.println(ConsoleColors.RED_BOLD_BRIGHT + "File not found." + ConsoleColors.RESET);
-                }
+    public ArrayList<Swimmer> getRegularSwimmers(){
+        return  regularSwimmers;
+    }
+
+
+    public ArrayList<ProSwimmer> getProSwimmers() {
+        return proSwimmers;
+    }
 }
-}
+

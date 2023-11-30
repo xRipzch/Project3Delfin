@@ -117,8 +117,8 @@ public class UI {
 
         do {
             System.out.println(ConsoleColors.BLUE_BRIGHT + "Does the member want an active membership?");
-            System.out.println("1. Yes");
-            System.out.println("2. No" + ConsoleColors.RESET);
+            System.out.println(ConsoleColors.PURPLE_BOLD_BRIGHT+"1." + ConsoleColors.BLUE_BRIGHT+" Yes");
+            System.out.println(ConsoleColors.PURPLE_BOLD_BRIGHT+"2."+ConsoleColors.BLUE_BRIGHT+" No" + ConsoleColors.RESET);
 
             choice = scanner.nextInt();
             scanner.nextLine();
@@ -144,8 +144,8 @@ public class UI {
 
             do {
                 System.out.println(ConsoleColors.BLUE_BRIGHT + "Has the member paid?");
-                System.out.println("1. Yes");
-                System.out.println("2. No" + ConsoleColors.RESET);
+                System.out.println(ConsoleColors.PURPLE_BOLD_BRIGHT+"1."+ConsoleColors.BLUE_BRIGHT+" Yes");
+                System.out.println(ConsoleColors.PURPLE_BOLD_BRIGHT+"2."+ConsoleColors.BLUE_BRIGHT+" No" + ConsoleColors.RESET);
 
                 choice = scanner.nextInt();
                 scanner.nextLine();
@@ -169,12 +169,12 @@ public class UI {
 
         public SwimDiscipline chooseSwimDisciplin () {
             int choice = 0;
-            System.out.println(ConsoleColors.BLUE_BRIGHT + "\nPlease choose a swimming discipline:");
-            System.out.println("1. Crawl");
-            System.out.println("2. Butterfly");
-            System.out.println("3. Breaststroke");
-            System.out.println("4. Backcrawl");
-            System.out.println("5. Medley" + ConsoleColors.RESET);
+            System.out.println(ConsoleColors.PURPLE_BOLD_BRIGHT + "\nPlease choose a swimming discipline:");
+            System.out.println(ConsoleColors.PURPLE_BOLD_BRIGHT+"1."+ConsoleColors.BLUE_BOLD+" Crawl.");
+            System.out.println(ConsoleColors.PURPLE_BOLD_BRIGHT+"2."+ConsoleColors.BLUE_BOLD+" Butterfly.");
+            System.out.println(ConsoleColors.PURPLE_BOLD_BRIGHT+"3."+ConsoleColors.BLUE_BOLD+" Breaststroke.");
+            System.out.println(ConsoleColors.PURPLE_BOLD_BRIGHT+"4."+ConsoleColors.BLUE_BOLD+" Backstroke.");
+            System.out.println(ConsoleColors.PURPLE_BOLD_BRIGHT+"5."+ConsoleColors.BLUE_BOLD+" Medley." + ConsoleColors.RESET);
             choice = scanner.nextInt();
             switch (choice) {
                 case 1 -> {
@@ -248,8 +248,8 @@ public class UI {
 
     public int chooseStatus() {
         System.out.println(ConsoleColors.BLUE_BRIGHT + "Change the status to:");
-        System.out.println("1. Active.");
-        System.out.println("2. Passive." + ConsoleColors.RESET);
+        System.out.println(ConsoleColors.PURPLE_BOLD_BRIGHT + "1." +ConsoleColors.BLUE_BRIGHT +" Active.");
+        System.out.println(ConsoleColors.PURPLE_BOLD_BRIGHT+"2." + ConsoleColors.BLUE_BRIGHT +" Passive." + ConsoleColors.RESET);
         scanner.nextLine();
         int choice = scanner.nextInt();
         return choice;
@@ -267,16 +267,17 @@ public class UI {
             TimeUnit.SECONDS.sleep(1);
             System.out.print(".");
             TimeUnit.SECONDS.sleep(1);
-            System.out.print("." + ConsoleColors.RESET);
+            System.out.println("." + ConsoleColors.RESET);
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }
-        System.out.println(ConsoleColors.GREEN_BOLD_BRIGHT + "Payment received!" + ConsoleColors.RESET);
+        System.out.println(ConsoleColors.GREEN_BOLD_BRIGHT + "Payment Received!" + ConsoleColors.RESET);
     }
 
     public void printSubscriptionPrice(int subscriptionPrice){
-        System.out.println(ConsoleColors.GREEN_BOLD_BRIGHT + "You're subscription fee is:  " +
-                ConsoleColors.GREEN_UNDERLINED + subscriptionPrice + ConsoleColors.GREEN_BOLD_BRIGHT + " DKK,-" + ConsoleColors.RESET);
+        System.out.println(ConsoleColors.GREEN_BOLD_BRIGHT + "You're subscription fee is: " +ConsoleColors.GREEN_BOLD_BRIGHT+
+                ConsoleColors.GREEN_UNDERLINED + subscriptionPrice +ConsoleColors.RESET+
+                ConsoleColors.GREEN_BOLD_BRIGHT + " DKK,-" + ConsoleColors.RESET);
     }
 
 }

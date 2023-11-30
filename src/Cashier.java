@@ -15,21 +15,15 @@ public class Cashier {
 
     }
 
-    public void initSubscription(){
-        finances = fileHandling.loadSubscriptionsFromFile();
-    }
+
 
 
     public void createSubscription(Swimmer swimmer){
         Subscription subscription = new Subscription(swimmer.getFirstName(), swimmer.getLastName(),
-                swimmer.getYearOfBirth(), swimmer.getEmail(), swimmer.isActive(), swimmer.isPaid(),
+                swimmer.getEmail(), swimmer.isActive(), swimmer.isPaid(),
                 calculateSubscriptionPrice(swimmer));
 
         ui.printSubscriptionPrice(subscription.getPrice());
-
-        if (swimmer.isPaid()) {
-            ui.printConfirmationForPayment();
-        }
         addSubscriptionToFinancesArray(subscription);
     }
 
@@ -61,12 +55,26 @@ public class Cashier {
 
 
     public void showFinances() {
+        System.out.println("   NAME                          EMAIL                                 PRICE    MEMBER     ARREARS");
+
         for (int i = 0; i < finances.size(); i++) {
-            System.out.println(ConsoleColors.PURPLE_BOLD_BRIGHT + (i + 1) + ConsoleColors.WHITE_BOLD_BRIGHT +  ". Name: " +
-                    finances.get(i).getFirstName() + " " + finances.get(i).getLastName() + " Age: " +
-                    (LocalDateTime.now().getYear() - finances.get(i).getYearOfBirth()) + " Email: " +
-                    finances.get(i).getEmail() + " Is active: " + finances.get(i).isActive() + " Has paid: " +
-                    finances.get(i).isPaid() + "Price: " + finances.get(i).getPrice() + ConsoleColors.RESET);
+            String indexColored = ConsoleColors.PURPLE_BOLD_BRIGHT + (i + 1) + "." + ConsoleColors.RESET;
+            System.out.printf("%s %-28s %s %-35s %s %s %-4d %s %s %s %-6s %s %s %s %s%n",
+                    indexColored + ConsoleColors.YELLOW_BOLD_BRIGHT,
+                    finances.get(i).getFirstName() + " " + finances.get(i).getLastName(),
+                    ConsoleColors.YELLOW_BOLD_BRIGHT,
+                    finances.get(i).getEmail(),
+                    ConsoleColors.PURPLE_BOLD_BRIGHT,
+                    ConsoleColors.CYAN_BOLD_BRIGHT,
+                    finances.get(i).getPrice(),
+                    ConsoleColors.PURPLE_BOLD_BRIGHT,
+                    "|",
+                    ConsoleColors.CYAN_BOLD_BRIGHT,
+                    finances.get(i).isActive(),
+                    ConsoleColors.PURPLE_BOLD_BRIGHT,
+                    "|",
+                    ConsoleColors.CYAN_BOLD_BRIGHT,
+                    finances.get(i).isPaid() + ConsoleColors.RESET);
         }
     }
 
@@ -91,7 +99,7 @@ public class Cashier {
                     " Email: " + finances.get(i).getEmail() + " Is active: " + finances.get(i).isActive() +
                     " Has paid: " + finances.get(i).isPaid() + "Price: " +
                     finances.get(i).getPrice() + ConsoleColors.RESET);
-        }
+            }
         }
     }
 }
