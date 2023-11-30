@@ -4,20 +4,24 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1a7dfa2b-dcc2-4474-948f-4ef6cd864b54" name="Changes" comment="Second commit fr">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+    <list default="true" id="1a7dfa2b-dcc2-4474-948f-4ef6cd864b54" name="Changes" comment="Updates Magne">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Cashier.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Cashier.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Chairman.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Chairman.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Coach.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Coach.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ConsoleColors.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ConsoleColors.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Delfinen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Delfinen.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/FileHandling.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/FileHandling.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Landing.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Landing.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MenuMaker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MenuMaker.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/regular_swimmers.csv" beforeDir="false" afterPath="$PROJECT_DIR$/src/regular_swimmers.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Project3_delfin/Cashier.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Project3_delfin/Cashier.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Project3_delfin/Chairman.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Project3_delfin/Chairman.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Project3_delfin/Coach.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Project3_delfin/Coach.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Project3_delfin/ConsoleColors.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Project3_delfin/ConsoleColors.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Project3_delfin/Delfinen.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Project3_delfin/Delfinen.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Project3_delfin/FileHandling.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Project3_delfin/FileHandling.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Project3_delfin/Landing.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Project3_delfin/Landing.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Project3_delfin/Menu.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Project3_delfin/Menu.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Project3_delfin/MenuMaker.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Project3_delfin/MenuMaker.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Project3_delfin/ProSwimmer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Project3_delfin/ProSwimmer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Project3_delfin/Result.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Project3_delfin/Subscription.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Project3_delfin/Subscription.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Project3_delfin/SwimDisciplin.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Project3_delfin/Swimmer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Project3_delfin/Swimmer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Project3_delfin/UI.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Project3_delfin/UI.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Project3_delfin/regular_swimmers.csv" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Project3_delfin/regular_swimmers.csv" afterDir="false" />
     </list>
     <list id="e764c490-f053-49a9-bad0-852e42607d12" name="Changes by LENOVO" comment="Changes by LENOVO" />
     <list id="4d616dc7-1ce6-4141-a620-02a668497665" name="Changes by Magne" comment="" />
@@ -98,7 +102,7 @@
       <workItem from="1701158472470" duration="148000" />
       <workItem from="1701158628094" duration="10808000" />
       <workItem from="1701245772102" duration="13283000" />
-      <workItem from="1701289747400" duration="11688000" />
+      <workItem from="1701289747400" duration="12487000" />
     </task>
     <task id="LOCAL-00001" summary="Second commit fr">
       <option name="closed" value="true" />
@@ -108,7 +112,15 @@
       <option name="project" value="LOCAL" />
       <updated>1700818828108</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Updates Magne">
+      <option name="closed" value="true" />
+      <created>1701302311740</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1701302311741</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -137,6 +149,7 @@
     </ignored-roots>
     <MESSAGE value="Second commit fr" />
     <MESSAGE value="Changes by LENOVO" />
-    <option name="LAST_COMMIT_MESSAGE" value="Changes by LENOVO" />
+    <MESSAGE value="Updates Magne" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updates Magne" />
   </component>
 </project>
