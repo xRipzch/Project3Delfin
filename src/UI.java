@@ -1,7 +1,7 @@
+import java.time.LocalDate;
 import java.util.Scanner;
 import java.util.concurrent.TimeUnit;
 import java.util.regex.Pattern;
-import java.time.LocalDate;
 
 public class UI {
 
@@ -230,7 +230,7 @@ public class UI {
             } else if (choice == 2) {
                 validInput = true;
             } else {
-                System.out.println("Invalid choice. Try again.");
+                System.out.println(ConsoleColors.RED_BOLD_BRIGHT + "Invalid choice. Try again.");
             }
         } while (!validInput);
 
@@ -261,7 +261,7 @@ public class UI {
 
     public void printConfirmationForPayment () {
         try {
-            System.out.print(ConsoleColors.RED_BRIGHT + "Processing Payment");
+            System.out.print(ConsoleColors.GREEN_BOLD_BRIGHT + "Processing Payment");
             TimeUnit.SECONDS.sleep(1);
             System.out.print(".");
             TimeUnit.SECONDS.sleep(1);
@@ -275,8 +275,8 @@ public class UI {
     }
 
     public void printSubscriptionPrice(int subscriptionPrice){
-        System.out.println(ConsoleColors.GREEN_BRIGHT + "You're subscription fee is:  " +
-                ConsoleColors.GREEN_BOLD_BRIGHT + subscriptionPrice + " DKK,-" + ConsoleColors.RESET);
+        System.out.println(ConsoleColors.GREEN_BOLD_BRIGHT + "You're subscription fee is:  " +
+                ConsoleColors.GREEN_UNDERLINED + subscriptionPrice + ConsoleColors.GREEN_BOLD_BRIGHT + " DKK,-" + ConsoleColors.RESET);
     }
 
 }
