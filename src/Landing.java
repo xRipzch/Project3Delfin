@@ -6,7 +6,7 @@ public class Landing {
         System.out.println(ConsoleColors.CYAN_BOLD_BRIGHT);
         System.out.println();
         System.out.println();
-        System.out.println("                      Dolphin Swimclub!                      ");
+        System.out.println("                      Delfinen Swimclub!                      ");
         System.out.println("                         Please hold.                        ");
         System.out.println();
         sleep();
