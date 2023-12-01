@@ -53,7 +53,11 @@ public class MenuMaker {
         userChoice = scanner.nextInt();
         switch (userChoice) {
             case 0 -> exitProgram();
-            case 1 -> coach.searchProSwimmerByName();
+
+            case 1 -> {
+                coach.searchProSwimmerByName();
+                System.out.println(proSwimmer.getTrainingResults());
+            }
            // case 2 -> proSwimmer.searchProSwimmerByName1();
 //            case 3 -> Ui.chooseSeniorOrJunior();
   //          case 4 -> coach.printBestFiveInDelfinen();
