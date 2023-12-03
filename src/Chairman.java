@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Chairman {
     private Scanner scanner = new Scanner(System.in);
-    UI ui = new UI();
+    UI ui;
     FileHandling fileHandling;
     Cashier cashier;
     Coach coach;
@@ -12,6 +12,7 @@ public class Chairman {
     public Chairman(FileHandling filehandling, Cashier cashier) {
         this.fileHandling = filehandling;
         this.cashier = cashier;
+        this.ui = ui;
     }
 
     public void createProMember() {
@@ -22,6 +23,7 @@ public class Chairman {
         fileHandling.getProSwimmers().add(proswimmer);
         ui.memberCreatedConfirmationMessage();
         cashier.createSubscription(proswimmer);
+
         // coach.addSwimmerToArrayList();
        // coach.sortAllArrayLists();
     }
@@ -31,6 +33,7 @@ public class Chairman {
                 ui.typeYearOfBirth(), ui.typeEmailAddress(), ui.typeAddress(), ui.isActive(), ui.isPaid());
 
         fileHandling.getRegularSwimmers().add(swimmer);
+        System.out.println(ConsoleColors.GREEN_BOLD_BRIGHT +"\n"+swimmer.getFirstName() + ConsoleColors.RESET);
         ui.memberCreatedConfirmationMessage();
         cashier.createSubscription(swimmer);
 
@@ -93,12 +96,14 @@ public class Chairman {
 
 
     public void displayProMember() {
-        printHeaderForMembers();
-
+        System.out.println(ConsoleColors.PURPLE_BOLD_BRIGHT + "\n        NAME                          AGE      EMAIL" +
+                "                               ADDRESS                        DISCIPLINE      MEMBER    ARREARS");
         for (int i = 0; i < fileHandling.getProSwimmers().size(); i++) {
-            String indexColored = ConsoleColors.PURPLE_BOLD_BRIGHT + (i + 1) + "." + ConsoleColors.RESET;
-            System.out.printf("%s %-28s %s %-3d %s | %s  %-35s %-30s %s %-5s %s  %s %s %-11s%n",
-                    indexColored + ConsoleColors.CYAN_BOLD_BRIGHT,
+            System.out.printf("%s %-4s %s %s %-28s %s %-3d %s | %s  %-35s %-30s %s %-20s %-5s %s | %s %-5s %s %s%n",
+                    ConsoleColors.PURPLE_BOLD_BRIGHT,
+                    (i + 1) + ".",
+                    ConsoleColors.RESET,
+                    ConsoleColors.CYAN_BOLD_BRIGHT,
                     fileHandling.getProSwimmers().get(i).getFirstName() + " " + fileHandling.getProSwimmers().get(i).getLastName(),
                     ConsoleColors.YELLOW_BOLD_BRIGHT,
                     (LocalDateTime.now().getYear() - fileHandling.getProSwimmers().get(i).getYearOfBirth()),
@@ -107,26 +112,25 @@ public class Chairman {
                     fileHandling.getProSwimmers().get(i).getEmail(),
                     fileHandling.getProSwimmers().get(i).getAddress(),
                     ConsoleColors.CYAN_BOLD_BRIGHT,
+                    fileHandling.getProSwimmers().get(i).getSwimDisciplin(),
                     fileHandling.getProSwimmers().get(i).isActive(),
                     ConsoleColors.PURPLE_BOLD_BRIGHT,
-                    "|",
                     ConsoleColors.CYAN_BOLD_BRIGHT,
-                    fileHandling.getProSwimmers().get(i).isPaid() + ConsoleColors.RESET);
+                    fileHandling.getProSwimmers().get(i).isPaid(),
+                    ConsoleColors.PURPLE_BOLD_BRIGHT,
+                    "|" + ConsoleColors.RESET);
         }
     }
 
-    public void printHeaderForMembers(){
-        System.out.println(ConsoleColors.PURPLE_BOLD_BRIGHT + "\n   NAME                          AGE      EMAIL" +
-                "                               ADDRESS                         MEMBER     ARREARS");
-    }
-
     public void displayRegularMember() {
-        printHeaderForMembers();
-
+        System.out.println(ConsoleColors.PURPLE_BOLD_BRIGHT + "\n        NAME                          AGE      EMAIL" +
+                "                               ADDRESS                         MEMBER    ARREARS");
         for (int i = 0; i < fileHandling.getRegularSwimmers().size(); i++) {
-            String indexColored = ConsoleColors.PURPLE_BOLD_BRIGHT + (i + 1) + "." + ConsoleColors.RESET;
-            System.out.printf("%s %-28s %s %-3d %s | %s  %-35s %-30s %s %-5s %s  %s %s %-11s%n",
-                    indexColored + ConsoleColors.CYAN_BOLD_BRIGHT,
+            System.out.printf("%s %-4s %s %s %-28s %s %-3d %s | %s  %-35s %-30s %s %-5s %s | %-5s %-5s %s %s%n",
+                    ConsoleColors.PURPLE_BOLD_BRIGHT,
+                    (i + 1) + ".",
+                    ConsoleColors.RESET,
+                    ConsoleColors.CYAN_BOLD_BRIGHT,
                     fileHandling.getRegularSwimmers().get(i).getFirstName() + " " + fileHandling.getRegularSwimmers().get(i).getLastName(),
                     ConsoleColors.YELLOW_BOLD_BRIGHT,
                     (LocalDateTime.now().getYear() - fileHandling.getRegularSwimmers().get(i).getYearOfBirth()),
@@ -137,9 +141,10 @@ public class Chairman {
                     ConsoleColors.CYAN_BOLD_BRIGHT,
                     fileHandling.getRegularSwimmers().get(i).isActive(),
                     ConsoleColors.PURPLE_BOLD_BRIGHT,
-                    "|",
                     ConsoleColors.CYAN_BOLD_BRIGHT,
-                    fileHandling.getRegularSwimmers().get(i).isPaid() + ConsoleColors.RESET);
+                    fileHandling.getRegularSwimmers().get(i).isPaid(),
+                    ConsoleColors.PURPLE_BOLD_BRIGHT,
+                    "|" + ConsoleColors.RESET);
         }
     }
 

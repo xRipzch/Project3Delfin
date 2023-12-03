@@ -16,12 +16,11 @@ public class Cashier {
     }
 
 
-
-
     public void createSubscription(Swimmer swimmer){
         Subscription subscription = new Subscription(swimmer.getFirstName(), swimmer.getLastName(),
                 swimmer.getEmail(), swimmer.isActive(), swimmer.isPaid(),
                 calculateSubscriptionPrice(swimmer));
+
 
         ui.printSubscriptionPrice(subscription.getPrice());
         addSubscriptionToFinancesArray(subscription);
@@ -58,9 +57,10 @@ public class Cashier {
         System.out.println("   NAME                          EMAIL                                 PRICE    MEMBER     ARREARS");
 
         for (int i = 0; i < finances.size(); i++) {
-            String indexColored = ConsoleColors.PURPLE_BOLD_BRIGHT + (i + 1) + "." + ConsoleColors.RESET;
-            System.out.printf("%s %-28s %s %-35s %s %s %-4d %s %s %s %-6s %s %s %s %s%n",
-                    indexColored + ConsoleColors.YELLOW_BOLD_BRIGHT,
+            System.out.printf("%s %-4s %s %-28s %s %-35s %s %s %-4d %s %s %s %-6s %s %s %s %s%n",
+                    ConsoleColors.PURPLE_BOLD_BRIGHT,
+                    (i + 1) + ".",
+                    ConsoleColors.RESET,
                     finances.get(i).getFirstName() + " " + finances.get(i).getLastName(),
                     ConsoleColors.YELLOW_BOLD_BRIGHT,
                     finances.get(i).getEmail(),
@@ -91,14 +91,27 @@ public class Cashier {
     }
 
     public void printMembersInArrears() {
+        System.out.println(ConsoleColors.PURPLE_BOLD_BRIGHT + "\n        NAME                                EMAIL" +
+                "                            PRICE         MEMBER    ARREARS");
         for (int i = 0; i < finances.size(); i++) {
             if (!finances.get(i).isPaid()){
-            System.out.println(ConsoleColors.PURPLE_BOLD_BRIGHT + (i+1) + ConsoleColors.YELLOW_BOLD_BRIGHT +
-                    ". " + "Name: " + finances.get(i).getFirstName() + " " + finances.get(i).getLastName() +
-                    " Age: " + (LocalDateTime.now().getYear() - finances.get(i).getYearOfBirth()) +
-                    " Email: " + finances.get(i).getEmail() + " Is active: " + finances.get(i).isActive() +
-                    " Has paid: " + finances.get(i).isPaid() + "Price: " +
-                    finances.get(i).getPrice() + ConsoleColors.RESET);
+                System.out.printf("%s %-4s %s %s %-28s %s | %s %-35s %s %-10s %-5s %s | %s %-5s %s %s%n",
+                        ConsoleColors.PURPLE_BOLD_BRIGHT,
+                        (i + 1) + ".",
+                        ConsoleColors.RESET,
+                        ConsoleColors.CYAN_BOLD_BRIGHT,
+                        finances.get(i).getFirstName() + " " + finances.get(i).getLastName(),
+                        ConsoleColors.PURPLE_BOLD_BRIGHT,
+                        ConsoleColors.YELLOW_BOLD_BRIGHT,
+                        finances.get(i).getEmail(),
+                        ConsoleColors.CYAN_BOLD_BRIGHT,
+                        finances.get(i).getPrice(),
+                        finances.get(i).isActive(),
+                        ConsoleColors.PURPLE_BOLD_BRIGHT,
+                        ConsoleColors.CYAN_BOLD_BRIGHT,
+                        finances.get(i).isPaid(),
+                        ConsoleColors.PURPLE_BOLD_BRIGHT,
+                        "|" + ConsoleColors.RESET);
             }
         }
     }

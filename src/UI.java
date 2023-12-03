@@ -6,6 +6,12 @@ import java.util.regex.Pattern;
 public class UI {
 
     Scanner scanner = new Scanner(System.in);
+    Coach coach = new Coach(" ", 1, Delfinen.chairman);
+    ProSwimmer proSwimmer = new ProSwimmer("first", "last", 1994, " email", "address", true, true, SwimDiscipline.BACKSTROKE);
+
+
+
+
 
 
     ///////////////////////////////////////////FIRST AND LAST NAME///////////////////////////////////////////
@@ -13,7 +19,7 @@ public class UI {
     public String typeFirstName() {
         String firstName = "";
         while (firstName.isEmpty()) {
-            System.out.println(ConsoleColors.BLUE_BRIGHT +"Please enter the new members first name:" + ConsoleColors.RESET);
+            System.out.println(ConsoleColors.BLUE_BRIGHT + "Please enter the new members first name:" + ConsoleColors.RESET);
             firstName = scanner.nextLine().trim();
             if (firstName.isEmpty()) {
                 System.out.println(ConsoleColors.RED_BOLD_BRIGHT + "Field can't be empty. try again" + ConsoleColors.RESET);
@@ -33,13 +39,14 @@ public class UI {
         }
         return lastName;
     }
-/////////////////////////////////////////////Year of Birth////////////////////////////////////////////////////
+
+    /////////////////////////////////////////////Year of Birth////////////////////////////////////////////////////
     public int typeYearOfBirth() {
         int yearOfBirth = 0;
 
         while (yearOfBirth == 0 || !isValidYearOfBirth(yearOfBirth)) {
             System.out.println(ConsoleColors.BLUE_BRIGHT + "Please enter the new member's year of birth: [YYYY]"
-            + ConsoleColors.RESET);
+                    + ConsoleColors.RESET);
             try {
                 String input = scanner.nextLine().trim();
 
@@ -62,33 +69,33 @@ public class UI {
 
         return yearOfBirth;
     }
-    
-    public boolean isValidYearOfBirth (int yearOfBirth) { //sikre at YOB er mellem 1900 og nuværende år
+
+    public boolean isValidYearOfBirth(int yearOfBirth) { //sikre at YOB er mellem 1900 og nuværende år
         int currentYear = LocalDate.now().getYear();
         return yearOfBirth > 1900 && yearOfBirth <= currentYear;
     }
 
-//////////////////////////////////////////EMAIL///////////////////////////////////////////
+    //////////////////////////////////////////EMAIL///////////////////////////////////////////
     public String typeEmailAddress() {
-           String email= "";
-           while (email.isEmpty() || !isValid(email)) {
-               System.out.println(ConsoleColors.BLUE_BRIGHT + "Please enter the new members email:" + ConsoleColors.RESET);
-               email = scanner.nextLine().trim();
+        String email = "";
+        while (email.isEmpty() || !isValid(email)) {
+            System.out.println(ConsoleColors.BLUE_BRIGHT + "Please enter the new members email:" + ConsoleColors.RESET);
+            email = scanner.nextLine().trim();
 
-               if (email.isEmpty()) {  // Sikre at emailen er i korrekt format, ellers skal den prompte igen
-                   System.out.println(ConsoleColors.RED_BOLD_BRIGHT + "Field can't be empty. Try again!" + ConsoleColors.RESET);
-                } else if (!isValid(email)) {
-                   System.out.println(ConsoleColors.RED_BOLD_BRIGHT + "Invalid email. Try again!" + ConsoleColors.RESET);
-               }
-           }
-              return email;
+            if (email.isEmpty()) {  // Sikre at emailen er i korrekt format, ellers skal den prompte igen
+                System.out.println(ConsoleColors.RED_BOLD_BRIGHT + "Field can't be empty. Try again!" + ConsoleColors.RESET);
+            } else if (!isValid(email)) {
+                System.out.println(ConsoleColors.RED_BOLD_BRIGHT + "Invalid email. Try again!" + ConsoleColors.RESET);
+            }
+        }
+        return email;
     }
 
     private boolean isValid(String email) {     // Logik til at tjekke om emailen er i korrekt format
         String emailRegex = "^[a-zA-Z0-9_+&*-]+(?:\\." +
-                             "[a-zA-Z0-9_+&*-]+)*@" +
-                             "(?:[a-zA-Z0-9-]+\\.)+[a-z" +
-                             "A-Z]{2,7}$";
+                "[a-zA-Z0-9_+&*-]+)*@" +
+                "(?:[a-zA-Z0-9-]+\\.)+[a-z" +
+                "A-Z]{2,7}$";
 
         Pattern pat = Pattern.compile(emailRegex);
         if (email == null) {
@@ -97,7 +104,7 @@ public class UI {
         return pat.matcher(email).matches();
     }
 
-////////////////////////////////////////////Address////////////////////////////////////////////////////
+    ////////////////////////////////////////////Address////////////////////////////////////////////////////
     public String typeAddress() { //Skal der tilføjes noget ift. nummer?
         String address = "";
         while (address.isEmpty()) {
@@ -117,8 +124,8 @@ public class UI {
 
         do {
             System.out.println(ConsoleColors.BLUE_BRIGHT + "Does the member want an active membership?");
-            System.out.println(ConsoleColors.PURPLE_BOLD_BRIGHT+"1." + ConsoleColors.BLUE_BRIGHT+" Yes");
-            System.out.println(ConsoleColors.PURPLE_BOLD_BRIGHT+"2."+ConsoleColors.BLUE_BRIGHT+" No" + ConsoleColors.RESET);
+            System.out.println(ConsoleColors.PURPLE_BOLD_BRIGHT + "1." + ConsoleColors.BLUE_BRIGHT + " Yes");
+            System.out.println(ConsoleColors.PURPLE_BOLD_BRIGHT + "2." + ConsoleColors.BLUE_BRIGHT + " No" + ConsoleColors.RESET);
 
             choice = scanner.nextInt();
             scanner.nextLine();
@@ -137,80 +144,80 @@ public class UI {
     }
 
 
-        public boolean isPaid () {
-            int choice = 0;
-            boolean isPaid = false;
-            boolean validInput = false;
+    public boolean isPaid() {
+        int choice = 0;
+        boolean isPaid = false;
+        boolean validInput = false;
 
-            do {
-                System.out.println(ConsoleColors.BLUE_BRIGHT + "Has the member paid?");
-                System.out.println(ConsoleColors.PURPLE_BOLD_BRIGHT+"1."+ConsoleColors.BLUE_BRIGHT+" Yes");
-                System.out.println(ConsoleColors.PURPLE_BOLD_BRIGHT+"2."+ConsoleColors.BLUE_BRIGHT+" No" + ConsoleColors.RESET);
+        do {
+            System.out.println(ConsoleColors.BLUE_BRIGHT + "Has the member paid?");
+            System.out.println(ConsoleColors.PURPLE_BOLD_BRIGHT + "1." + ConsoleColors.BLUE_BRIGHT + " Yes");
+            System.out.println(ConsoleColors.PURPLE_BOLD_BRIGHT + "2." + ConsoleColors.BLUE_BRIGHT + " No" + ConsoleColors.RESET);
 
-                choice = scanner.nextInt();
-                scanner.nextLine();
-
-                if (choice == 1) {
-                    isPaid = true;
-                    printConfirmationForPayment();
-                    validInput = true;
-                } else if (choice == 2) {
-                    isPaid = false;
-                    System.out.println(ConsoleColors.BLUE_BRIGHT + "Please provide payment in the next 30 days" + ConsoleColors.RESET);
-                    validInput = true;
-                } else {
-                    System.out.println(ConsoleColors.RED_BOLD_BRIGHT + "Invalid choice. Try again." + ConsoleColors.RESET);
-                }
-
-            } while (!validInput);
-                return isPaid;
-        }
-
-
-        public SwimDiscipline chooseSwimDisciplin () {
-            int choice = 0;
-            System.out.println(ConsoleColors.PURPLE_BOLD_BRIGHT + "\nPlease choose a swimming discipline:");
-            System.out.println(ConsoleColors.PURPLE_BOLD_BRIGHT+"1."+ConsoleColors.BLUE_BOLD+" Crawl.");
-            System.out.println(ConsoleColors.PURPLE_BOLD_BRIGHT+"2."+ConsoleColors.BLUE_BOLD+" Butterfly.");
-            System.out.println(ConsoleColors.PURPLE_BOLD_BRIGHT+"3."+ConsoleColors.BLUE_BOLD+" Breaststroke.");
-            System.out.println(ConsoleColors.PURPLE_BOLD_BRIGHT+"4."+ConsoleColors.BLUE_BOLD+" Backstroke.");
-            System.out.println(ConsoleColors.PURPLE_BOLD_BRIGHT+"5."+ConsoleColors.BLUE_BOLD+" Medley." + ConsoleColors.RESET);
             choice = scanner.nextInt();
-            switch (choice) {
-                case 1 -> {
-                    return SwimDiscipline.CRAWL;
-                }
-                case 2 -> {
-                    return SwimDiscipline.BUTTERFLY;
-                }
-                case 3 -> {
-                    return SwimDiscipline.BREASTSTROKE;
-                }
-                case 4 -> {
-                    return SwimDiscipline.BACKSTROKE;
-                }
-                case 5 -> {
-                    return SwimDiscipline.MEDLEY;
-                }
-                default -> {
-                    System.out.println(ConsoleColors.RED_BOLD_BRIGHT + "Invalid choice, try again." + ConsoleColors.RESET);
-                    return null;
-                }
+            scanner.nextLine();
+
+            if (choice == 1) {
+                isPaid = true;
+                printConfirmationForPayment();
+                validInput = true;
+            } else if (choice == 2) {
+                isPaid = false;
+                System.out.println(ConsoleColors.BLUE_BRIGHT + "Please provide payment in the next 30 days" + ConsoleColors.RESET);
+                validInput = true;
+            } else {
+                System.out.println(ConsoleColors.RED_BOLD_BRIGHT + "Invalid choice. Try again." + ConsoleColors.RESET);
+            }
+
+        } while (!validInput);
+        return isPaid;
+    }
+
+
+    public SwimDiscipline chooseSwimDisciplin() {
+        int choice = 0;
+        System.out.println(ConsoleColors.PURPLE_BOLD_BRIGHT + "\nPlease choose a swimming discipline:");
+        System.out.println(ConsoleColors.PURPLE_BOLD_BRIGHT + "1." + ConsoleColors.BLUE_BOLD + " Crawl.");
+        System.out.println(ConsoleColors.PURPLE_BOLD_BRIGHT + "2." + ConsoleColors.BLUE_BOLD + " Butterfly.");
+        System.out.println(ConsoleColors.PURPLE_BOLD_BRIGHT + "3." + ConsoleColors.BLUE_BOLD + " Breaststroke.");
+        System.out.println(ConsoleColors.PURPLE_BOLD_BRIGHT + "4." + ConsoleColors.BLUE_BOLD + " Backstroke.");
+        System.out.println(ConsoleColors.PURPLE_BOLD_BRIGHT + "5." + ConsoleColors.BLUE_BOLD + " Medley." + ConsoleColors.RESET);
+        choice = scanner.nextInt();
+        switch (choice) {
+            case 1 -> {
+                return SwimDiscipline.CRAWL;
+            }
+            case 2 -> {
+                return SwimDiscipline.BUTTERFLY;
+            }
+            case 3 -> {
+                return SwimDiscipline.BREASTSTROKE;
+            }
+            case 4 -> {
+                return SwimDiscipline.BACKSTROKE;
+            }
+            case 5 -> {
+                return SwimDiscipline.MEDLEY;
+            }
+            default -> {
+                System.out.println(ConsoleColors.RED_BOLD_BRIGHT + "Invalid choice, try again." + ConsoleColors.RESET);
+                return null;
             }
         }
+    }
 
 
     ///////////////////////////////////////////MEMBER CREATION MESSAGES///////////////////////////////////////////
 
 
-        public void removeMessage () {
-            System.out.println(ConsoleColors.BLUE_BRIGHT + "Enter the number corresponding to the member you want to remove: "
-                    + ConsoleColors.RESET);
-        }
+    public void removeMessage() {
+        System.out.println(ConsoleColors.BLUE_BRIGHT + "Enter the number corresponding to the member you want to remove: "
+                + ConsoleColors.RESET);
+    }
 
-        public void memberCreatedConfirmationMessage () {
-            System.out.println(ConsoleColors.GREEN_BOLD_BRIGHT + "\nNew member successfully added to system!" + ConsoleColors.RESET);
-        }
+    public void memberCreatedConfirmationMessage() {
+        System.out.println(ConsoleColors.GREEN_BOLD_BRIGHT + " has successfully been added to  the system!" + ConsoleColors.RESET);
+    }
 
 
 ///////////////////////////////////////////EDIT MEMBERS///////////////////////////////////////////
@@ -237,7 +244,7 @@ public class UI {
         return choice;
     }
 
-    public int chooseMember(){
+    public int chooseMember() {
         System.out.println(ConsoleColors.BLUE_BRIGHT + "Please choose member" + ConsoleColors.RESET);//skal sikres så den kan catche et forkert svar
         int choice = scanner.nextInt();
         scanner.nextLine();
@@ -248,18 +255,28 @@ public class UI {
 
     public int chooseStatus() {
         System.out.println(ConsoleColors.BLUE_BRIGHT + "Change the status to:");
-        System.out.println(ConsoleColors.PURPLE_BOLD_BRIGHT + "1." +ConsoleColors.BLUE_BRIGHT +" Active.");
-        System.out.println(ConsoleColors.PURPLE_BOLD_BRIGHT+"2." + ConsoleColors.BLUE_BRIGHT +" Passive." + ConsoleColors.RESET);
+        System.out.println(ConsoleColors.PURPLE_BOLD_BRIGHT + "1." + ConsoleColors.BLUE_BRIGHT + " Active.");
+        System.out.println(ConsoleColors.PURPLE_BOLD_BRIGHT + "2." + ConsoleColors.BLUE_BRIGHT + " Passive." + ConsoleColors.RESET);
         scanner.nextLine();
         int choice = scanner.nextInt();
         return choice;
     }
+        public String askForName() {
+            System.out.println(ConsoleColors.BLUE_BRIGHT + "Enter the name of the member you want to change: " + ConsoleColors.RESET);
+            String name = scanner.nextLine();
 
-
+            return name;
+        }
+        public double askForTime() {
+            System.out.println(ConsoleColors.BLUE_BRIGHT + "Enter the time you want to add: " + ConsoleColors.RESET);
+            double time = scanner.nextDouble();
+            scanner.nextLine(); // scanner bug
+            return time;
+        }
 
     ///////////////////////////////////////////Subscription MESSAGES ///////////////////////////////////////////
 
-    public void printConfirmationForPayment () {
+    public void printConfirmationForPayment() {
         try {
             System.out.print(ConsoleColors.GREEN_BOLD_BRIGHT + "Processing Payment");
             TimeUnit.SECONDS.sleep(1);
@@ -274,10 +291,55 @@ public class UI {
         System.out.println(ConsoleColors.GREEN_BOLD_BRIGHT + "Payment Received!" + ConsoleColors.RESET);
     }
 
-    public void printSubscriptionPrice(int subscriptionPrice){
-        System.out.println(ConsoleColors.GREEN_BOLD_BRIGHT + "You're subscription fee is: " +ConsoleColors.GREEN_BOLD_BRIGHT+
-                ConsoleColors.GREEN_UNDERLINED + subscriptionPrice +ConsoleColors.RESET+
+    public void printSubscriptionPrice(int subscriptionPrice) {
+        System.out.println(ConsoleColors.GREEN_BOLD_BRIGHT + "You're subscription fee is: " + ConsoleColors.GREEN_BOLD_BRIGHT +
+                ConsoleColors.GREEN_UNDERLINED + subscriptionPrice + ConsoleColors.RESET +
                 ConsoleColors.GREEN_BOLD_BRIGHT + " DKK,-" + ConsoleColors.RESET);
     }
+///////////////////////////////////////Coach Menuer/////////////////////////////////////////////////////////////////////////////
+    public void chooseSeniorOrJunior ()   {
 
+        int choice = 0;
+        System.out.println("1. Senior");
+        System.out.println("2. Junior");
+        switch (choice) {
+            case 1 -> displayBestFiveSenior();
+            case 2 -> displayBestFiveJunior();
+        }
+    }
+
+
+    public void displayBestFiveSenior() {
+        System.out.println(ConsoleColors.PURPLE_BOLD_BRIGHT + "1. " + ConsoleColors.RESET + "Show best 5 senior swimmers in Crawl");
+        System.out.println(ConsoleColors.PURPLE_BOLD_BRIGHT + "2. " + ConsoleColors.RESET + "Show best 5 senior swimmers in Backstroke");
+        System.out.println(ConsoleColors.PURPLE_BOLD_BRIGHT + "3. " + ConsoleColors.RESET + "Show best 5 senior swimmers in Breaststroke");
+        System.out.println(ConsoleColors.PURPLE_BOLD_BRIGHT + "4. " + ConsoleColors.RESET + "Show best 5 senior swimmers in Butterfly");
+        System.out.println(ConsoleColors.PURPLE_BOLD_BRIGHT + "5. " + ConsoleColors.RESET + "Show best 5 senior swimmers in Medley");
+
+        int choice = 0;
+        switch (choice) {
+            case 1 -> coach.printBestFiveSeniorSwimmersInCrawl();
+            case 2 -> coach.printBestFiveSeniorSwimmersBackstroke();
+            case 3 -> coach.printBestFiveSeniorSwimmersBreaststroke();
+            case 4 -> coach.printBestFiveSeniorSwimmersButterfly();
+            case 5 -> coach.printBestFiveSeniorSwimmersMedley();
+        }
+    }
+
+    public void displayBestFiveJunior() {
+        System.out.println(ConsoleColors.PURPLE_BOLD_BRIGHT + "1. " + ConsoleColors.RESET + "Show best 5 junior swimmers in Crawl");
+        System.out.println(ConsoleColors.PURPLE_BOLD_BRIGHT + "2. " + ConsoleColors.RESET + "Show best 5 junior swimmers in Backstroke");
+        System.out.println(ConsoleColors.PURPLE_BOLD_BRIGHT + "3. " + ConsoleColors.RESET + "Show best 5 junior swimmers in Breaststroke");
+        System.out.println(ConsoleColors.PURPLE_BOLD_BRIGHT + "4. " + ConsoleColors.RESET + "Show best 5 junior swimmers in Butterfly");
+        System.out.println(ConsoleColors.PURPLE_BOLD_BRIGHT + "5. " + ConsoleColors.RESET + "Show best 5 junior swimmers in Medley");
+
+        int choice = 0;
+        switch (choice) {
+            case 1 -> coach.printBestFiveJuniorSwimmersInCrawl();
+            case 2 -> coach.printBestFiveJuniorSwimmersBackstroke();
+            case 3 -> coach.printBestFiveJuniorSwimmersBreaststroke();
+            case 4 -> coach.printBestFiveJuniorSwimmersButterfly();
+            case 5 -> coach.printBestFiveJuniorSwimmersMedley();
+        }
+    }
 }

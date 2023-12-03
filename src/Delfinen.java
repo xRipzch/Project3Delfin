@@ -10,8 +10,10 @@ public class Delfinen {
     static FileHandling fileHandling = new FileHandling(proSwimmers, regularSwimmers, finances);
     static Cashier cashier = new Cashier(fileHandling, finances);
     static Chairman chairman = new Chairman(fileHandling, cashier);
-    static MenuMaker menuMaker = new MenuMaker(chairman, cashier);
+    static Coach coach = new Coach("OttoTheFlotto", 1, chairman);
+    static MenuMaker menuMaker = new MenuMaker(chairman, cashier, coach);
     static Landing landing = new Landing();
+
 
 
 
@@ -23,6 +25,11 @@ public class Delfinen {
         proSwimmers = fileHandling.loadProMembersFromFile();
         regularSwimmers = fileHandling.loadRegularMembersFromFile();
         finances = fileHandling.loadSubscriptionsFromFile();
+
+        chairman.displayProMember();
+        chairman.displayRegularMember();
+        cashier.printMembersInArrears();
+        cashier.showFinances();
 
         landing.intro1();
         menuMaker.executeMenu();

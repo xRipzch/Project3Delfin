@@ -37,7 +37,7 @@ public class FileHandling {
     public void writeToRegularSwimmersFile() {
         PrintStream ps = null;
         try {
-            ps = new PrintStream(new FileOutputStream(regularSwimmersFile, true), true);
+            ps = new PrintStream(new FileOutputStream(regularSwimmersFile));
 
             for (int i = 0; i < regularSwimmers.size(); i++) {
                 ps.println(regularSwimmers.
@@ -61,7 +61,7 @@ public class FileHandling {
     public void writeToProSwimmersFile() {
         PrintStream ps = null;
         try {
-            ps = new PrintStream(new FileOutputStream(proSwimmersFile, true), true);
+            ps = new PrintStream(new FileOutputStream(proSwimmersFile));
 
             for (int i = 0; i < proSwimmers.size(); i++) {
                 ps.println(proSwimmers.get(i).getFirstName() + "," +
@@ -128,13 +128,7 @@ public class FileHandling {
                 memberAddress = parts[4];
                 isActive = Boolean.parseBoolean(parts[5]);
                 isPaid = Boolean.parseBoolean(parts[6]);
-
-                try { // SPØRG PATRICK??!?!? TODO
-                    swimDisciplin = SwimDiscipline.valueOf(parts[7]);
-                } catch (IllegalArgumentException e) {
-                    System.out.println(ConsoleColors.CYAN_BOLD_BRIGHT + parts[7] +
-                            ConsoleColors.RED_BOLD_BRIGHT + " is an invalid swim discipline" + ConsoleColors.RESET);
-                }
+                swimDisciplin = SwimDiscipline.valueOf(parts[7]);
 
 
                 ProSwimmer proSwimmer = new ProSwimmer(memberFirstName, memberLastName, memberYearOfBirth,
@@ -169,17 +163,16 @@ public class FileHandling {
                         isActive, isPaid, subscriptionPrice);
                 finances.add(subscription);
             }
-            return finances;
-        } catch (FileNotFoundException e) {
-            throw new RuntimeException(e);
-            //System.out.println(ConsoleColors.RED_BOLD_BRIGHT + "File not found." + ConsoleColors.RESET);
-            //} catch (Exception e){;
-            //throw new RuntimeException(e);
-            //System.out.println(ConsoleColors.RED_BOLD_BRIGHT + "Error occurred." + ConsoleColors.RESET);
-            // HVAD ER BEDST throw new eller catch Exception?
-        }
 
+        } catch (FileNotFoundException e) {
+            System.out.println(ConsoleColors.RED_BOLD_BRIGHT + "File not found." + ConsoleColors.RESET);
+        } catch (Exception e) {
+            System.out.println(ConsoleColors.RED_BOLD_BRIGHT + "Error occurred." + ConsoleColors.RESET);
+
+        }
+        return finances;
     }
+
 
     public void printFinancesArrayList() {
         Scanner fileScanner;
@@ -199,7 +192,7 @@ public class FileHandling {
     public void writeToFinancesFile() {
         PrintStream ps = null;
         try {
-            ps = new PrintStream(new FileOutputStream(financesFile, true), true);
+            ps = new PrintStream(new FileOutputStream(financesFile));
             for (int i = 0; i < finances.size(); i++) {
                 ps.println(finances.get(i).getFirstName() + "," + finances.get(i).getLastName() + "," +
                         finances.get(i).getEmail() + "," +
@@ -212,8 +205,8 @@ public class FileHandling {
         }
     }
 
-    public ArrayList<Swimmer> getRegularSwimmers(){
-        return  regularSwimmers;
+    public ArrayList<Swimmer> getRegularSwimmers() {
+        return regularSwimmers;
     }
 
 
@@ -221,4 +214,6 @@ public class FileHandling {
         return proSwimmers;
     }
 }
+
+
 
