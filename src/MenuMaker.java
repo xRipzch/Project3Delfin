@@ -6,16 +6,19 @@ public class MenuMaker {
     private int chooseStaffMember = -1;
     Chairman chairman;
     Cashier cashier;
+    Coach coach;
     Menu mainMenu = new Menu("Main Menu:", pointsMainMenu());
     Menu chairmanMenu = new Menu("Chairman Menu:", pointsChairmanMenu());
     Menu coachMenu = new Menu("Coach Menu:", pointsCoachMenu());
     Menu cashierMenu = new Menu("Cashier Menu:", pointsCashierMenu());
     Menu changeMemberMenu = new Menu("Change member menu", pointsChooseChangeMenu());
-    Coach coach = new Coach("name", 1);
+    UI ui = new UI();
+    ProSwimmer proSwimmer = new ProSwimmer("first", "last", 1999, "email", "address", true, true, SwimDiscipline.CRAWL);
 
-    public MenuMaker(Chairman chairman, Cashier cashier) {
+    public MenuMaker(Chairman chairman, Cashier cashier, Coach coach) {
         this.chairman = chairman;
         this.cashier = cashier;
+        this.coach = coach;
     }
 
 
@@ -38,7 +41,7 @@ public class MenuMaker {
         userChoice = scanner.nextInt();
         switch (userChoice) {
             case 0 -> exitProgram();
-              case 1 -> cashier.showFinances();
+            case 1 -> cashier.showFinances();
             case 2 -> cashier.showMembersInArrears();
 //            case 3 -> cashier.
             case 9 -> chooseFromMainMenu();
@@ -50,8 +53,14 @@ public class MenuMaker {
         userChoice = scanner.nextInt();
         switch (userChoice) {
             case 0 -> exitProgram();
-            //    case 1 -> connectCoachToProSwimmer();
-//            case 2 -> HVAD SKAL VI HAVE HER!?
+
+            case 1 -> {
+                coach.searchProSwimmerByName();
+                System.out.println(proSwimmer.getTrainingResults());
+            }
+           // case 2 -> proSwimmer.searchProSwimmerByName1();
+//            case 3 -> Ui.chooseSeniorOrJunior();
+  //          case 4 -> coach.printBestFiveInDelfinen();
             case 9 -> chooseFromMainMenu();
         }
     }
@@ -73,16 +82,16 @@ public class MenuMaker {
     }
 
     private void chooseChangeMenu() {
-changeMemberMenu.printMenu();
+        changeMemberMenu.printMenu();
         userChoice = scanner.nextInt();
         switch (userChoice) {
             case 0 -> exitProgram();
             case 1 -> chairman.changeRegularSwimmerToPro();
             case 2 -> chairman.changeProSwimmerToRegular();
-        //    case 3 -> chairman.changeSwimDiscipline();
+            //    case 3 -> chairman.changeSwimDiscipline();
             case 4 -> chairman.changeActivityStatus();
-        //    case 5 -> chairman.changeEmail();
-        //    case 6 -> chairman.changeAddress();
+            //    case 5 -> chairman.changeEmail();
+            //    case 6 -> chairman.changeAddress();
 
             case 9 -> chooseFromMainMenu();
         }
@@ -117,13 +126,15 @@ changeMemberMenu.printMenu();
                 ConsoleColors.PURPLE_BOLD_BRIGHT + "9." + ConsoleColors.BLUE_BOLD + " Main Menu.",
                 ConsoleColors.PURPLE_BOLD_BRIGHT + "0." + ConsoleColors.BLUE_BOLD + " Exit program" + ConsoleColors.RESET};
     }
+
     private String[] pointsCoachMenu() {
-        return new String[]{ConsoleColors.PURPLE_BOLD_BRIGHT + "1." + ConsoleColors.BLUE_BOLD + " Connect to pro Swimmer.",
-                ConsoleColors.PURPLE_BOLD_BRIGHT + "2." + ConsoleColors.BLUE_BOLD + " XXXXXXX.",
+        return new String[]{ConsoleColors.PURPLE_BOLD_BRIGHT + "1." + ConsoleColors.BLUE_BOLD + " Add time to swimmer." + ConsoleColors.PURPLE_BOLD_BRIGHT + "[" +ConsoleColors.CYAN_BOLD_BRIGHT + "Training" +ConsoleColors.PURPLE_BOLD_BRIGHT +"]",
+                ConsoleColors.PURPLE_BOLD_BRIGHT + "2." + ConsoleColors.BLUE_BOLD + " Add time to swimmer." + ConsoleColors.PURPLE_BOLD_BRIGHT + "[" + ConsoleColors.CYAN_BOLD_BRIGHT +"Competition" + ConsoleColors.PURPLE_BOLD_BRIGHT +"]",
+                ConsoleColors.PURPLE_BOLD_BRIGHT + "3." + ConsoleColors.BLUE_BOLD + " View top 5 for different disciplines.",
+                ConsoleColors.PURPLE_BOLD_BRIGHT + "4." + ConsoleColors.BLUE_BOLD + " View top 5 for all swimmers in Delfinen.",
                 ConsoleColors.PURPLE_BOLD_BRIGHT + "9." + ConsoleColors.BLUE_BOLD + " Main Menu.",
                 ConsoleColors.PURPLE_BOLD_BRIGHT + "0." + ConsoleColors.BLUE_BOLD + " Exit program" + ConsoleColors.RESET};
     }
-
 
     private String[] pointsCashierMenu() {
         return new String[]{ConsoleColors.PURPLE_BOLD_BRIGHT + "1." + ConsoleColors.BLUE_BOLD + " View finances.",
