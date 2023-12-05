@@ -3,7 +3,7 @@ package delfinen.viewer;
 import delfinen.misc.SwimDiscipline;
 
 public class Results {
-
+    
     private String name;
     private double time;
     private String date;

@@ -29,9 +29,13 @@ public class Coach {
     }
 
     public void SetTrainingResultsHigh() {
+        System.out.println("Setting training results to 100 for all swimmers");
         if (coachController != null && coachController.getProSwimmers() != null) {
             for (int i = 0; i < coachController.getProSwimmers().size(); i++) {
-                coachController.getProSwimmers().get(i).addTrainingResult(coachController.getProSwimmers().get(i).getSwimDisciplin(), 100);
+                ProSwimmer currentSwimmer = coachController.getProSwimmers().get(i);
+                System.out.println("Setting training result for: " + currentSwimmer.getFirstName());
+                currentSwimmer.addTrainingResult(currentSwimmer.getSwimDisciplin(), 100);
+                System.out.println(currentSwimmer.getTrainingResults());
             }
         }
     }
@@ -77,7 +81,7 @@ public class Coach {
         System.out.println(ConsoleColors.PURPLE_BOLD_BRIGHT + "Quickest 5 " + ConsoleColors.CYAN_BOLD_BRIGHT + "senior" + ConsoleColors.PURPLE_BOLD_BRIGHT + " swimmers in the " + ConsoleColors.CYAN_BOLD_BRIGHT + "crawl" + ConsoleColors.PURPLE_BOLD_BRIGHT + " discipline:" + ConsoleColors.RESET);
         Collections.sort(Seniors, new ProSwimmerComparator("Crawl"));
         for (int i = 0; i < Math.min(5, Seniors.size()); i++) {
-            System.out.println(Seniors.get(i).getTrainingResults());
+            System.out.println(Seniors.get(i).getQuickestTime("Crawl"));
         }
     }
 

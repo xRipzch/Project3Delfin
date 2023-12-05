@@ -9,8 +9,13 @@ import java.util.Map;
 public class ProSwimmer extends Swimmer {
     private SwimDiscipline swimDisciplin;
     private double quickestTime; // Sikre invarians
-    private Map<SwimDiscipline, Double> trainingResults;
-    Coach coach;
+    //private Map<SwimDiscipline, Double> trainingResults;
+    int[5] trainingResults;
+    Coach coachBreaststroke = new Coach("Brian");
+    Coach coachCrawl = new Coach("Casper");
+    Coach coachMedley = new Coach("Magnus");
+    Coach coachButterfly = new Coach("Bunny");
+    Coach coachBackstroke = new Coach("Baggy");
 
 
     public ProSwimmer(String firstName, String lastName, int yearOfBirth, String email,
@@ -18,17 +23,17 @@ public class ProSwimmer extends Swimmer {
                       SwimDiscipline swimDisciplin) {
         super(firstName, lastName, yearOfBirth, email, address, isActive, isPaid);
         this.swimDisciplin = swimDisciplin;
-        this.trainingResults = new HashMap<>();
+        //this.trainingResults = new HashMap<>();
         if(swimDisciplin == SwimDiscipline.CRAWL)
-            this.coach= new Coach("Casper");
+           getCoachName() = coachCrawl;
         else if (swimDisciplin == SwimDiscipline.BREASTSTROKE)
-            this.coach = new Coach("Brian");
+            coachBackstroke;
         else if (swimDisciplin == SwimDiscipline.MEDLEY)
-            this.coach = new Coach("Magnus");
+            coachMedley
         else if (swimDisciplin == SwimDiscipline.BUTTERFLY)
-            this.coach = new Coach("Bunny");
+            coachButterfly
         else if (swimDisciplin == SwimDiscipline.BACKSTROKE)
-            this.coach = new Coach("Baggy");
+            coachBackstroke
 
     }
 
@@ -50,9 +55,9 @@ public class ProSwimmer extends Swimmer {
         } else System.out.println(ConsoleColors.RED_BOLD_BRIGHT + "Invalid value.");
     }
 
-    public Map<SwimDiscipline, Double> getTrainingResults() {
-        return trainingResults;
-    }
+    //public Map<SwimDiscipline, Double> getTrainingResults() {
+   //     return trainingResults;
+    //}
 
     public double getQuickestTime(String swimDiscipline) {
         return quickestTime;
