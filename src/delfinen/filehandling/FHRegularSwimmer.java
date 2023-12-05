@@ -1,7 +1,7 @@
 package delfinen.filehandling;
 
-import delfinen.ConsoleColors;
-import delfinen.Swimmer;
+import delfinen.misc.ConsoleColors;
+import delfinen.model.Swimmer;
 
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
