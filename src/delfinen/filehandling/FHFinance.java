@@ -1,7 +1,7 @@
 package delfinen.filehandling;
 
-import delfinen.ConsoleColors;
-import delfinen.Subscription;
+import delfinen.misc.ConsoleColors;
+import delfinen.model.Subscription;
 
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;

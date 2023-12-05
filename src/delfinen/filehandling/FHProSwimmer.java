@@ -1,9 +1,9 @@
 package delfinen.filehandling;
 
-import delfinen.ConsoleColors;
-import delfinen.ProSwimmer;
-import delfinen.SwimDiscipline;
-
+import delfinen.misc.ConsoleColors;
+import delfinen.model.ProSwimmer;
+import delfinen.misc.SwimDiscipline;
+import delfinen.model.Coach;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.PrintStream;
@@ -29,7 +29,8 @@ public class FHProSwimmer {
                         newProSwimmers.get(i).getAddress() + "," +
                         newProSwimmers.get(i).isActive() + "," +
                         newProSwimmers.get(i).isPaid() + "," +
-                        newProSwimmers.get(i).getSwimDisciplin());
+                        newProSwimmers.get(i).getSwimDisciplin() + "," +
+                        newProSwimmers.get(i).getCoachName());
             }
         } catch (FileNotFoundException e) {
             System.out.println(ConsoleColors.RED_BOLD_BRIGHT + "File not found" + ConsoleColors.RESET);
@@ -47,6 +48,7 @@ public class FHProSwimmer {
         boolean isActive;
         boolean isPaid;
         SwimDiscipline swimDisciplin;
+        Coach coach;
         Scanner fileScanner;
         String line;
         String[] parts;
