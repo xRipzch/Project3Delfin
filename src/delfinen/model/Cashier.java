@@ -1,22 +1,22 @@
 package delfinen.model;
 
 
-import delfinen.controller.CashierController;
+import delfinen.manager.CashierManager;
 
 public class Cashier {
 
-    private CashierController cashierController = new CashierController();
+    private CashierManager cashierManager = new CashierManager();
 
 
 
     public void displayFinance(){
-        cashierController.displayFinances();
+        cashierManager.displayFinances();
     }
     public void displayMembersInArrears(){
-        cashierController.printMembersInArrears();
+        cashierManager.printMembersInArrears();
     }
     public void recievePayment(){
-        cashierController.processPayment();
+        cashierManager.processPayment();
     }
 
 

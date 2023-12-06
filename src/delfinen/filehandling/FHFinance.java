@@ -44,6 +44,7 @@ public class FHFinance {
         String line;
         String[] parts;
         try {
+            subscriptions.clear();
             fileScanner = new Scanner(financesFile);
             while (fileScanner.hasNextLine()) {
                 line = fileScanner.nextLine();

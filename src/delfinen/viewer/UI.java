@@ -50,8 +50,9 @@ public class UI {
         int yearOfBirth = 0;
 
         while (yearOfBirth == 0 || !isValidYearOfBirth(yearOfBirth)) {
-            System.out.println(ConsoleColors.BLUE_BRIGHT + "Please enter the new member's year of birth: [YYYY]"
-                    + ConsoleColors.RESET);
+            System.out.println(ConsoleColors.BLUE_BRIGHT + "Please enter the new member's year of birth:"+
+                    ConsoleColors.PURPLE_BOLD_BRIGHT + "["+ConsoleColors.CYAN_BOLD_BRIGHT + "YYYY" +
+                    ConsoleColors.PURPLE_BOLD_BRIGHT + "]" + ConsoleColors.RESET);
             try {
                 String input = scanner.nextLine().trim();
 
@@ -277,7 +278,6 @@ public class UI {
             System.out.println(ConsoleColors.BLUE_BRIGHT + "Enter the time you want to add: " + ConsoleColors.RESET);
             double time = scanner.nextDouble();
             scanner.nextLine();
-            proSwimmer.setQuickestTime(time);
             return time;
         }
 

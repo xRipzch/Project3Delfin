@@ -1,4 +1,4 @@
-package delfinen.controller;
+package delfinen.manager;
 
 import delfinen.misc.ConsoleColors;
 import delfinen.model.ProSwimmer;
@@ -9,12 +9,12 @@ import java.util.Scanner;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 
-public class ChairmanProController {
+public class ChairmanProManager {
     UI ui = new UI();
 
     Scanner scanner = new Scanner(System.in);
 
-    private CashierController cashierController = new CashierController();
+    private CashierManager cashierManager = new CashierManager();
     private FHProSwimmer fhProSwimmer = new FHProSwimmer();
     private ArrayList<ProSwimmer> proSwimmers = fhProSwimmer.loadFileProSwimmers();
 
@@ -31,7 +31,7 @@ public class ChairmanProController {
         addProSwimmerToList(proSwimmer);
         System.out.print(ConsoleColors.CYAN_BOLD_BRIGHT + proSwimmer.getFirstName() + ConsoleColors.RESET);
         ui.memberCreatedConfirmationMessage();
-        cashierController.createSubscription(proSwimmer);
+        cashierManager.createSubscription(proSwimmer);
         fhProSwimmer.saveInProSwimmersFile(proSwimmers);
     }
 
@@ -52,16 +52,16 @@ public class ChairmanProController {
 
     public void displayProSwimmers() {
         System.out.println(ConsoleColors.PURPLE_BOLD_BRIGHT + "\n       NAME                          AGE      EMAIL" +
-                "                               ADDRESS                         DISCIPLINE      COACH       MEMBER    ARREARS");
+                "                               ADDRESS                         DISCIPLINE             MEMBER    ARREARS");
         for (int i = 0; i < proSwimmers.size(); i++) {
-            System.out.printf("%s %-4s %s %-28s %s %-3d %s | %s  %-35s %-30s %s %-14s %-10s %-5s %s | %s %-6s %s %s%n",
+            System.out.printf("%s %-4s %s %-28s %s %-3d %s | %s  %-35s %-30s %s %-14s %-10s %-5s %s | %s %-6s %s%n",
                     ConsoleColors.PURPLE_BOLD_BRIGHT, (i + 1) + ".", ConsoleColors.CYAN_BOLD_BRIGHT,
                     proSwimmers.get(i).getFirstName() + " " + proSwimmers.get(i).getLastName(),
                     ConsoleColors.YELLOW_BOLD_BRIGHT, (LocalDateTime.now().getYear() - proSwimmers.get(i).getYearOfBirth()),
                     ConsoleColors.PURPLE_BOLD_BRIGHT, ConsoleColors.YELLOW_BOLD_BRIGHT,
                     proSwimmers.get(i).getEmail(), proSwimmers.get(i).getAddress(),
                     ConsoleColors.CYAN_BOLD_BRIGHT, proSwimmers.get(i).getSwimDisciplin(),
-                    proSwimmers.get(i).getCoachName(), proSwimmers.get(i).isActive(),
+                    proSwimmers.get(i).isActive(),
                     ConsoleColors.PURPLE_BOLD_BRIGHT, ConsoleColors.CYAN_BOLD_BRIGHT, proSwimmers.get(i).isPaid(),
                     ConsoleColors.PURPLE_BOLD_BRIGHT,"|" + ConsoleColors.RESET); // todo display coach
         }
