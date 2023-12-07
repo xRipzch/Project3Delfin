@@ -21,7 +21,7 @@ public class CashierMenu {
             case 1 -> cashier.displayFinance();
             case 2 -> cashier.displayMembersInArrears();
             case 3 -> cashier.recievePayment();
-            case 9 -> mainMenu.chooseFromMainMenu();
+            case 9 -> mainMenu.executeMainMenu(0);
         }
     }
 

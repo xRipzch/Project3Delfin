@@ -9,6 +9,7 @@ public class ChairmanMenu {
     Menu chairmanMenu = new Menu("Chairman Menu:", pointsChairmanMenu());
     Menu changeMemberMenu = new Menu("Change member menu", pointsEditMenu());
     MainMenu mainMenu = new MainMenu();
+
     private Chairman chairman = new Chairman();
     private Scanner scanner = new Scanner(System.in);
     private int userChoice = -1;
@@ -17,17 +18,17 @@ public class ChairmanMenu {
     public void chooseFromChairmanMenu() {
         chairmanMenu.printMenu();
         userChoice = scanner.nextInt();
-        switch (userChoice) {
-            case 0 -> mainMenu.exitProgram();
-            case 1 -> chairman.addProSwimmer();
-            case 2 -> chairman.addRegularSwimmer();
-            case 3 -> chairman.removeRegularSwimmer();
-            case 4 -> chairman.removeProSwimmer();
-            case 5 -> chairman.displayRegularSwimmer();
-            case 6 -> chairman.displayProSwimmer();
-            case 7 -> chooseEditMenu();
-            case 9 -> mainMenu.chooseFromMainMenu();
-        }
+            switch (userChoice) {
+                case 0 -> mainMenu.exitProgram();
+                case 1 -> chairman.addProSwimmer();
+                case 2 -> chairman.addRegularSwimmer();
+                case 3 -> chairman.removeRegularSwimmer();
+                case 4 -> chairman.removeProSwimmer();
+                case 5 -> chairman.displayRegularSwimmer();
+                case 6 -> chairman.displayProSwimmer();
+                case 7 -> chooseEditMenu();
+                case 9 -> mainMenu.executeMainMenu(0);
+            }
     }
 
 
@@ -38,11 +39,11 @@ public class ChairmanMenu {
             case 0 -> mainMenu.exitProgram();
             case 1 -> chairman.changeRegularSwimmerToPro();
             case 2 -> chairman.changeProSwimmerToRegular();
-            //    case 3 -> chairman.changeSwimDisciplineForProSwimmer();
+//                case 3 -> chairman.changeSwimDisciplineForProSwimmer();
             case 4 -> chairman.changeActivityStatus();
-            //    case 5 -> chairman.changeEmail();
-            //    case 6 -> chairman.changeAddress();
-            case 9 -> mainMenu.chooseFromMainMenu();
+//                case 5 -> chairman.changeEmail();
+//                case 6 -> chairman.changeAddress();
+            case 9 -> mainMenu.executeMainMenu(0);
         }
     }
 

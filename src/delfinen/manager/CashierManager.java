@@ -1,4 +1,4 @@
-package delfinen.controller;
+package delfinen.manager;
 
 import delfinen.misc.ConsoleColors;
 import delfinen.model.Subscription;
@@ -9,7 +9,7 @@ import delfinen.filehandling.FHFinance;
 import java.time.LocalDate;
 import java.util.ArrayList;
 
-public class CashierController {
+public class CashierManager {
 
     private FHFinance fhFinance = new FHFinance();
     private ArrayList<Subscription> subscriptions = fhFinance.loadSubscriptionsFromFile();
@@ -55,6 +55,7 @@ public class CashierController {
     }
 
     public void displayFinances(){
+        subscriptions.clear();
         subscriptions = fhFinance.loadSubscriptionsFromFile();
         printFinances();
     }

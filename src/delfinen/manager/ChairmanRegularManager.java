@@ -1,4 +1,4 @@
-package delfinen.controller;
+package delfinen.manager;
 
 import delfinen.misc.ConsoleColors;
 import delfinen.model.ProSwimmer;
@@ -9,10 +9,10 @@ import delfinen.filehandling.FHRegularSwimmer;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 
-public class ChairmanRegularController {
+public class ChairmanRegularManager {
     UI ui = new UI();
 
-    private CashierController cashierController = new CashierController();
+    private CashierManager cashierManager = new CashierManager();
     private FHRegularSwimmer fhRegularSwimmer = new FHRegularSwimmer();
     private ArrayList<Swimmer> regularSwimmers = fhRegularSwimmer.loadRegularMembersFromFile();
 
@@ -27,7 +27,7 @@ public class ChairmanRegularController {
         addRegularSwimmerToList(swimmer);
         System.out.print(ConsoleColors.CYAN_BOLD_BRIGHT + swimmer.getFirstName() + ConsoleColors.RESET);
         ui.memberCreatedConfirmationMessage();
-        cashierController.createSubscription(swimmer);
+        cashierManager.createSubscription(swimmer);
         fhRegularSwimmer.saveInRegularSwimmersFile(regularSwimmers);
     }
     public void addRegularSwimmerToList(Swimmer swimmer){

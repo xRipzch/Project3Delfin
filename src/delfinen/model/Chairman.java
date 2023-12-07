@@ -1,6 +1,6 @@
 package delfinen.model;
-import delfinen.controller.ChairmanProController;
-import delfinen.controller.ChairmanRegularController;
+import delfinen.manager.ChairmanProManager;
+import delfinen.manager.ChairmanRegularManager;
 import delfinen.misc.ConsoleColors;
 import delfinen.viewer.UI;
 
@@ -9,45 +9,45 @@ import java.util.Scanner;
 public class Chairman {
     private Scanner scanner = new Scanner(System.in);
 
-   private ChairmanRegularController chairmanRegularController = new ChairmanRegularController();
-   private ChairmanProController chairmanProController = new ChairmanProController();
+   private ChairmanRegularManager chairmanRegularManager = new ChairmanRegularManager();
+   private ChairmanProManager chairmanProManager = new ChairmanProManager();
    private UI ui = new UI();
 
     public void addProSwimmer() {
-        chairmanProController.createProMember();
+        chairmanProManager.createProMember();
     }
 
     public void addRegularSwimmer() {
-        chairmanRegularController.createRegularMember();
+        chairmanRegularManager.createRegularMember();
     }
 
     public void removeRegularSwimmer(){
-        chairmanRegularController.chooseRegularSwimmerToRemove();
+        chairmanRegularManager.chooseRegularSwimmerToRemove();
     }
 
     public void removeProSwimmer () {
-        chairmanProController.chooseProSwimmerToRemove();
+        chairmanProManager.chooseProSwimmerToRemove();
     }
 
     public void displayRegularSwimmer() {
-        chairmanRegularController.displayRegularSwimmers();
+        chairmanRegularManager.displayRegularSwimmers();
     }
 
     public void displayProSwimmer() {
-        chairmanProController.displayProSwimmers();
+        chairmanProManager.displayProSwimmers();
     }
 
     public void changeRegularSwimmerToPro() {
-        int chosenMember = chairmanRegularController.chooseRegularSwimmer();
-        chairmanProController.addProSwimmerToList( chairmanRegularController.createProSwimmerFromRegular(chosenMember));
-        chairmanRegularController.removeMemberFromInt(chosenMember);
+        int chosenMember = chairmanRegularManager.chooseRegularSwimmer();
+        chairmanProManager.addProSwimmerToList( chairmanRegularManager.createProSwimmerFromRegular(chosenMember));
+        chairmanRegularManager.removeMemberFromInt(chosenMember);
         System.out.println(ConsoleColors.GREEN_BOLD_BRIGHT + "Regular has been changed to pro!" + ConsoleColors.RESET);
     } // TODO SKRIV NAVN DER BLIVER ÆNDRET
 
     public void changeProSwimmerToRegular() {
-        int chosenMember = chairmanProController.chooseProSwimmer();
-        chairmanRegularController.addRegularSwimmerToList(chairmanProController.createRegularSwimmerFromPro(chosenMember));
-        chairmanProController.removeMemberFromInt(chosenMember);
+        int chosenMember = chairmanProManager.chooseProSwimmer();
+        chairmanRegularManager.addRegularSwimmerToList(chairmanProManager.createRegularSwimmerFromPro(chosenMember));
+        chairmanProManager.removeMemberFromInt(chosenMember);
         System.out.println(ConsoleColors.GREEN_BOLD_BRIGHT + "Pro swimmer changed to regular!" + ConsoleColors.RESET);
     }// TODO SKRIV NAVN DER BLIVER ÆNDRET
 
@@ -55,9 +55,9 @@ public class Chairman {
         int swimmerType = ui.chooseSwimmerType(); // todo fix så vi ikke kalder UI klasse
 
         if (swimmerType == 1) {
-            chairmanProController.changeActivityStatusPro();
+            chairmanProManager.changeActivityStatusPro();
         } else if (swimmerType == 2) {
-            chairmanRegularController.changeActivityStatusRegular();
+            chairmanRegularManager.changeActivityStatusRegular();
         }
     }
 }

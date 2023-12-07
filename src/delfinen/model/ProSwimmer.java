@@ -1,21 +1,15 @@
 package delfinen.model;
 
-import delfinen.misc.ConsoleColors;
 import delfinen.misc.SwimDiscipline;
 
-import java.util.HashMap;
-import java.util.Map;
+import java.util.ArrayList;
 
 public class ProSwimmer extends Swimmer {
     private SwimDiscipline swimDisciplin;
     private double quickestTime; // Sikre invarians
     //private Map<SwimDiscipline, Double> trainingResults;
-    int[5] trainingResults;
-    Coach coachBreaststroke = new Coach("Brian");
-    Coach coachCrawl = new Coach("Casper");
-    Coach coachMedley = new Coach("Magnus");
-    Coach coachButterfly = new Coach("Bunny");
-    Coach coachBackstroke = new Coach("Baggy");
+    private ArrayList<ResultTraining> trainingResultTrainings;
+    private ArrayList<ResultCompetition> competitionResult;
 
 
     public ProSwimmer(String firstName, String lastName, int yearOfBirth, String email,
@@ -23,48 +17,37 @@ public class ProSwimmer extends Swimmer {
                       SwimDiscipline swimDisciplin) {
         super(firstName, lastName, yearOfBirth, email, address, isActive, isPaid);
         this.swimDisciplin = swimDisciplin;
-        //this.trainingResults = new HashMap<>();
-        if(swimDisciplin == SwimDiscipline.CRAWL)
-           getCoachName() = coachCrawl;
-        else if (swimDisciplin == SwimDiscipline.BREASTSTROKE)
-            coachBackstroke;
-        else if (swimDisciplin == SwimDiscipline.MEDLEY)
-            coachMedley
-        else if (swimDisciplin == SwimDiscipline.BUTTERFLY)
-            coachButterfly
-        else if (swimDisciplin == SwimDiscipline.BACKSTROKE)
-            coachBackstroke
+        this.trainingResultTrainings = new ArrayList<ResultTraining>();
+        this.competitionResult = new ArrayList<ResultCompetition>();
+
 
     }
 
-    public String getCoachName() {
-        return coach.getName();
+    public void addResultToArray(ResultTraining resultTraining) {
+        trainingResultTrainings.add(resultTraining);
     }
+
+    public void addCompResultToArray(ResultCompetition resultCompetition) {
+        competitionResult.add(resultCompetition);
+    }
+
+    public ArrayList<ResultCompetition> getCompetitionResult() {
+        return competitionResult;
+    }
+
+    public ArrayList<ResultTraining> getTrainingResults() {
+        return trainingResultTrainings;
+    }
+
 
     public SwimDiscipline getSwimDisciplin() {
         return swimDisciplin;
     }
 
-    public void setSwimDisciplin(SwimDiscipline swimDisciplin) {
-        this.swimDisciplin = swimDisciplin;
-    }
-
-    public void setQuickestTime(double quickestTime) {
-        if (quickestTime > 0) {
-            this.quickestTime = quickestTime;
-        } else System.out.println(ConsoleColors.RED_BOLD_BRIGHT + "Invalid value.");
-    }
-
-    //public Map<SwimDiscipline, Double> getTrainingResults() {
-   //     return trainingResults;
-    //}
-
-    public double getQuickestTime(String swimDiscipline) {
-        return quickestTime;
-    }
-
-    public void addTrainingResult(SwimDiscipline swimDiscipline, double result) {
-        if (!trainingResults.containsKey(swimDiscipline) || result > trainingResults.get(swimDiscipline))
-            trainingResults.put(swimDiscipline, result);
+    @Override
+    public String toString() {
+        return "ProSwimmer{" +
+                "trainingResults=" + trainingResultTrainings +
+                '}';
     }
 }

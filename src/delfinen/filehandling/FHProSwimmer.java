@@ -3,18 +3,19 @@ package delfinen.filehandling;
 import delfinen.misc.ConsoleColors;
 import delfinen.model.ProSwimmer;
 import delfinen.misc.SwimDiscipline;
-import delfinen.model.Coach;
+
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.PrintStream;
 import java.util.ArrayList;
 import java.util.Scanner;
-
+import java.io.File;
 public class FHProSwimmer {
 
 
     private static ArrayList<ProSwimmer> proSwimmers = new ArrayList<>();
-    static final java.io.File proSwimmersFile = new java.io.File("src\\delfinen\\files\\pro_swimmers.csv");
+    static final File proSwimmersFile = new File("src\\delfinen\\files\\pro_swimmers.csv");
+
 
     public void saveInProSwimmersFile(ArrayList<ProSwimmer> newProSwimmers) {
         PrintStream ps = null;
@@ -29,8 +30,7 @@ public class FHProSwimmer {
                         newProSwimmers.get(i).getAddress() + "," +
                         newProSwimmers.get(i).isActive() + "," +
                         newProSwimmers.get(i).isPaid() + "," +
-                        newProSwimmers.get(i).getSwimDisciplin() + "," +
-                        newProSwimmers.get(i).getCoachName());
+                        newProSwimmers.get(i).getSwimDisciplin());
             }
         } catch (FileNotFoundException e) {
             System.out.println(ConsoleColors.RED_BOLD_BRIGHT + "File not found" + ConsoleColors.RESET);
@@ -48,7 +48,6 @@ public class FHProSwimmer {
         boolean isActive;
         boolean isPaid;
         SwimDiscipline swimDisciplin;
-        Coach coach;
         Scanner fileScanner;
         String line;
         String[] parts;
