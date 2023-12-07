@@ -6,7 +6,14 @@
   <component name="ChangeListManager">
     <list default="true" id="1a7dfa2b-dcc2-4474-948f-4ef6cd864b54" name="Changes" comment="Commited to pull">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/delfinen/viewer/Landing.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/delfinen/viewer/Landing.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Project3_delfin/delfinen/manager/ChairmanProManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Project3_delfin/delfinen/manager/ChairmanProManager.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Project3_delfin/delfinen/menu/ChairmanMenu.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Project3_delfin/delfinen/menu/ChairmanMenu.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Project3_delfin/delfinen/model/Chairman.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Project3_delfin/delfinen/model/Chairman.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Project3_delfin/delfinen/viewer/UI.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Project3_delfin/delfinen/viewer/UI.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/delfinen/manager/ChairmanProManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/delfinen/manager/ChairmanProManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/delfinen/menu/ChairmanMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/delfinen/menu/ChairmanMenu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/delfinen/model/Chairman.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/delfinen/model/Chairman.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/delfinen/viewer/UI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/delfinen/viewer/UI.java" afterDir="false" />
     </list>
     <list id="bcfd5b4b-7bd7-4fa5-bf1c-f6cbbe545d42" name="Changes by ottob" comment="" />
     <option name="SHOW_DIALOG" value="false" />

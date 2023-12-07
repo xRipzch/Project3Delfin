@@ -12,8 +12,6 @@ import java.util.ArrayList;
 public class ChairmanProManager {
     UI ui = new UI();
 
-    Scanner scanner = new Scanner(System.in);
-
     private CashierManager cashierManager = new CashierManager();
     private FHProSwimmer fhProSwimmer = new FHProSwimmer();
     private ArrayList<ProSwimmer> proSwimmers = fhProSwimmer.loadFileProSwimmers();
@@ -108,7 +106,6 @@ public class ChairmanProManager {
                 System.out.println(ConsoleColors.RED_BOLD_BRIGHT + "Invalid input. Try again." + ConsoleColors.RESET);
             }
         } while (!validChoice);
-        scanner.close();
     }
 
 

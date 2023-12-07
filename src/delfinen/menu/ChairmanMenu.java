@@ -40,7 +40,8 @@ public class ChairmanMenu {
             case 1 -> chairman.changeRegularSwimmerToPro();
             case 2 -> chairman.changeProSwimmerToRegular();
 //                case 3 -> chairman.changeSwimDisciplineForProSwimmer();
-            case 4 -> chairman.changeActivityStatus();
+            case 4 -> chairman.changeActivityStatusRegular();
+            case 5 -> chairman.changeActivityStatusPro();
 //                case 5 -> chairman.changeEmail();
 //                case 6 -> chairman.changeAddress();
             case 9 -> mainMenu.executeMainMenu(0);
@@ -64,9 +65,10 @@ public class ChairmanMenu {
         return new String[]{ConsoleColors.PURPLE_BOLD_BRIGHT + "1." + ConsoleColors.BLUE_BOLD + " Change regular swimmer to pro.",
                 ConsoleColors.PURPLE_BOLD_BRIGHT + "2." + ConsoleColors.BLUE_BOLD + " Change pro swimmer to regular.",
                 ConsoleColors.PURPLE_BOLD_BRIGHT + "3." + ConsoleColors.BLUE_BOLD + " Change swim discipline for pro swimmer.",
-                ConsoleColors.PURPLE_BOLD_BRIGHT + "4." + ConsoleColors.BLUE_BOLD + " Change activity status.",
-                ConsoleColors.PURPLE_BOLD_BRIGHT + "5." + ConsoleColors.BLUE_BOLD + " Change email of member.",
-                ConsoleColors.PURPLE_BOLD_BRIGHT + "6." + ConsoleColors.BLUE_BOLD + " Change address of member",
+                ConsoleColors.PURPLE_BOLD_BRIGHT + "4." + ConsoleColors.BLUE_BOLD + " Change activity status for regular swimmer.",
+                ConsoleColors.PURPLE_BOLD_BRIGHT + "5." + ConsoleColors.BLUE_BOLD + " Change activity status for pro swimmer.",
+                ConsoleColors.PURPLE_BOLD_BRIGHT + "6." + ConsoleColors.BLUE_BOLD + " Change email of member.",
+                ConsoleColors.PURPLE_BOLD_BRIGHT + "7." + ConsoleColors.BLUE_BOLD + " Change address of member",
                 ConsoleColors.PURPLE_BOLD_BRIGHT + "9." + ConsoleColors.BLUE_BOLD + " Main Menu.",
                 ConsoleColors.PURPLE_BOLD_BRIGHT + "0." + ConsoleColors.BLUE_BOLD + " Exit program" + ConsoleColors.RESET};
     }

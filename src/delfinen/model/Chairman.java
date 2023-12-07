@@ -51,14 +51,12 @@ public class Chairman {
         System.out.println(ConsoleColors.GREEN_BOLD_BRIGHT + "Pro swimmer changed to regular!" + ConsoleColors.RESET);
     }// TODO SKRIV NAVN DER BLIVER ÆNDRET
 
-    public void changeActivityStatus() {
-        int swimmerType = ui.chooseSwimmerType(); // todo fix så vi ikke kalder UI klasse
-
-        if (swimmerType == 1) {
-            chairmanProManager.changeActivityStatusPro();
-        } else if (swimmerType == 2) {
+    public void changeActivityStatusRegular() {
             chairmanRegularManager.changeActivityStatusRegular();
         }
+
+    public void changeActivityStatusPro() {
+        chairmanProManager.changeActivityStatusPro();
     }
 }
 

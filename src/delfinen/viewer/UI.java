@@ -229,7 +229,7 @@ public class UI {
 
 ///////////////////////////////////////////EDIT MEMBERS///////////////////////////////////////////
 
-    public int chooseSwimmerType() {
+    public int chooseSwimmerType() { //bliver ikke brugt længere
         boolean validInput = false;
         int choice = 0;
 
@@ -264,7 +264,6 @@ public class UI {
         System.out.println(ConsoleColors.BLUE_BRIGHT + "Change the status to:");
         System.out.println(ConsoleColors.PURPLE_BOLD_BRIGHT + "1." + ConsoleColors.BLUE_BRIGHT + " Active.");
         System.out.println(ConsoleColors.PURPLE_BOLD_BRIGHT + "2." + ConsoleColors.BLUE_BRIGHT + " Passive." + ConsoleColors.RESET);
-        scanner.nextLine();
         int choice = scanner.nextInt();
         return choice;
     }
