@@ -6,7 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="1a7dfa2b-dcc2-4474-948f-4ef6cd864b54" name="Changes" comment="Commited to pull">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/delfinen/viewer/Landing.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/delfinen/viewer/Landing.java" afterDir="false" />
     </list>
+    <list id="bcfd5b4b-7bd7-4fa5-bf1c-f6cbbe545d42" name="Changes by ottob" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -133,6 +135,7 @@
       <workItem from="1701763300862" duration="13943000" />
       <workItem from="1701851983116" duration="18427000" />
       <workItem from="1701936635268" duration="22000" />
+      <workItem from="1701939617060" duration="676000" />
     </task>
     <task id="LOCAL-00001" summary="Second commit fr">
       <option name="closed" value="true" />

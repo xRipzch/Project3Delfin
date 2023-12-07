@@ -43,7 +43,66 @@ public class Landing {
         System.out.println("~---~~~~----~~~~             ~~");
         System.out.println(ConsoleColors.RESET);
         sleep();
+        sleep();
+        sleep();
+        ClearConsole();
+        intro2();
     }
+
+    public void intro2() {
+        System.out.println(ConsoleColors.CYAN_BOLD_BRIGHT);
+        System.out.println();
+        System.out.println();
+        System.out.println("                      Delfinen Swimclub!                      ");
+        System.out.println("                         Please hold.                        ");
+        System.out.println();
+        System.out.println("                                   __");
+        System.out.println("                               _.-~  )");
+        System.out.println("                    _..--~~~~,'   ,-/     _");
+        System.out.println("                 .-'. . . .'   ,-','    ,' )");
+        System.out.println("               ,'. . . _   ,--~,-'__..-'  ,'");
+        System.out.println("             ,'. . .  (_)' ---~~~~      ,'");
+        System.out.println("           //. . . . '~~             ,-'");
+        System.out.println("          //. . . . .             ,-'");
+        System.out.println("          ; . . . .  - .        ,'");
+        System.out.println("         : . . . .       _     /");
+        System.out.println("        . . . . .          `- .:");
+        System.out.println("       . . . ./  - .          )");
+        System.out.println("      .  . . |  _____..---.._/ _____");
+        System.out.println("~---~~~~----~~~~             ~~");
+        System.out.println(ConsoleColors.RESET);
+        sleep();
+        sleep();
+        sleep();
+        ClearConsole();
+        intro3();
+    }
+
+    public void intro3() {
+        System.out.println(ConsoleColors.CYAN_BOLD_BRIGHT);
+        System.out.println();
+        System.out.println();
+        System.out.println("                      Delfinen Swimclub!                      ");
+        System.out.println("                         Please hold.                        ");
+        System.out.println();
+        System.out.println("                                   __");
+        System.out.println("                               _.-~  )");
+        System.out.println("                    _..--~~~~,'   ,-/     _");
+        System.out.println("                 .-'. . . .'   ,-','    ,' )");
+        System.out.println("               ,'. . . _   ,--~,-'__..-'  ,'");
+        System.out.println("             ,'. . .  (@)' ---~~~~      ,'");
+        System.out.println("           //. . . . '~~             ,-'");
+        System.out.println("          //. . . . .             ,-'");
+        System.out.println("          ; . . . .  - .        ,'");
+        System.out.println("         : . . . .       _     /");
+        System.out.println("        . . . . .          `- .:");
+        System.out.println("       . . . ./  - .          )");
+        System.out.println("      .  . . |  _____..---.._/ _____");
+        System.out.println("~---~~~~----~~~~             ~~");
+        System.out.println(ConsoleColors.RESET);
+        sleep();
+    }
+
     private void playSound() {
         try {
             AudioInputStream audioInputStream = AudioSystem.getAudioInputStream(new File("src\\delfinen\\viewer\\sound.wav").getAbsoluteFile());
@@ -54,9 +113,13 @@ public class Landing {
             System.err.println("Error playing sound: " + e.getMessage());
         }
     }
+    public void ClearConsole() {
+        for (int i = 0; i < 20; i++) {
+            System.out.println();
+        }
+    }
 
-
-    public void sleep() {
+    public void sleep () {
         try {
             TimeUnit.MILLISECONDS.sleep(350);
         } catch (InterruptedException e) {
