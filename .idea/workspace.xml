@@ -5,81 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1a7dfa2b-dcc2-4474-948f-4ef6cd864b54" name="Changes" comment="Commited to pull">
-      <change afterPath="$PROJECT_DIR$/src/delfinen/model/ResultCompetition.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/delfinen/model/ResultTraining.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Project3_delfin/delfinen/controller/CashierController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Project3_delfin/delfinen/controller/ChairmanProController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Project3_delfin/delfinen/controller/ChairmanRegularController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Project3_delfin/delfinen/controller/CoachController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Project3_delfin/delfinen/filehandling/FHFinance.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Project3_delfin/delfinen/filehandling/FHFinance.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Project3_delfin/delfinen/filehandling/FHProSwimmer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Project3_delfin/delfinen/filehandling/FHProSwimmer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Project3_delfin/delfinen/filehandling/FHRegularSwimmer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Project3_delfin/delfinen/filehandling/FHRegularSwimmer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Project3_delfin/delfinen/files/coaches.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Project3_delfin/delfinen/files/finances.csv" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Project3_delfin/delfinen/files/finances.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Project3_delfin/delfinen/files/pro_swimmers.csv" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Project3_delfin/delfinen/files/pro_swimmers.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Project3_delfin/delfinen/files/regular_swimmers.csv" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Project3_delfin/delfinen/files/regular_swimmers.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Project3_delfin/delfinen/menu/CashierMenu.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Project3_delfin/delfinen/menu/CashierMenu.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Project3_delfin/delfinen/menu/ChairmanMenu.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Project3_delfin/delfinen/menu/ChairmanMenu.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Project3_delfin/delfinen/menu/CoachMenu.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Project3_delfin/delfinen/menu/CoachMenu.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Project3_delfin/delfinen/menu/ExecuteMenu.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Project3_delfin/delfinen/menu/MainMenu.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Project3_delfin/delfinen/menu/MainMenu.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Project3_delfin/delfinen/menu/Menu.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Project3_delfin/delfinen/menu/Menu.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Project3_delfin/delfinen/misc/ConsoleColors.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Project3_delfin/delfinen/misc/ConsoleColors.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Project3_delfin/delfinen/misc/ProSwimmerComparator.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Project3_delfin/delfinen/misc/ProSwimmerComparator.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Project3_delfin/delfinen/misc/SwimDiscipline.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Project3_delfin/delfinen/misc/SwimDiscipline.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Project3_delfin/delfinen/model/Cashier.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Project3_delfin/delfinen/model/Cashier.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Project3_delfin/delfinen/model/Chairman.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Project3_delfin/delfinen/model/Chairman.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Project3_delfin/delfinen/model/Coach.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Project3_delfin/delfinen/model/Coach.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Project3_delfin/delfinen/model/Delfinen.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Project3_delfin/delfinen/model/Delfinen.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Project3_delfin/delfinen/model/ProSwimmer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Project3_delfin/delfinen/model/ProSwimmer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Project3_delfin/delfinen/model/Subscription.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Project3_delfin/delfinen/model/Subscription.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Project3_delfin/delfinen/model/Swimmer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Project3_delfin/delfinen/model/Swimmer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Project3_delfin/delfinen/viewer/Landing.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Project3_delfin/delfinen/viewer/Landing.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Project3_delfin/delfinen/viewer/Results.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Project3_delfin/delfinen/viewer/UI.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Project3_delfin/delfinen/viewer/UI.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/delfinen/controller/CashierController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/delfinen/manager/CashierManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/delfinen/controller/ChairmanProController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/delfinen/manager/ChairmanProManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/delfinen/controller/ChairmanRegularController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/delfinen/manager/ChairmanRegularManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/delfinen/controller/CoachController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/delfinen/filehandling/FHProSwimmer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/delfinen/filehandling/FHProSwimmer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/delfinen/files/finances.csv" beforeDir="false" afterPath="$PROJECT_DIR$/src/delfinen/files/finances.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/delfinen/files/pro_swimmers.csv" beforeDir="false" afterPath="$PROJECT_DIR$/src/delfinen/files/pro_swimmers.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/delfinen/files/regular_swimmers.csv" beforeDir="false" afterPath="$PROJECT_DIR$/src/delfinen/files/regular_swimmers.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/delfinen/menu/ChairmanMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/delfinen/menu/ChairmanMenu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/delfinen/menu/CoachMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/delfinen/menu/CoachMenu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/delfinen/menu/ExecuteMenu.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/delfinen/menu/MainMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/delfinen/menu/MainMenu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/delfinen/misc/ProSwimmerComparator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/delfinen/misc/ProSwimmerComparator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/delfinen/model/Cashier.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/delfinen/model/Cashier.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/delfinen/model/Chairman.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/delfinen/model/Chairman.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/delfinen/model/Coach.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/delfinen/model/ProSwimmer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/delfinen/model/ProSwimmer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/delfinen/viewer/Results.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/delfinen/viewer/UI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/delfinen/viewer/UI.java" afterDir="false" />
-    </list>
-    <list id="56419c25-b686-4e0f-b95c-8d86d93275a3" name="Changes by LENOVO" comment="">
-      <change beforePath="$PROJECT_DIR$/src/delfinen/controller/CashierController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/delfinen/manager/CashierManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/delfinen/filehandling/FHFinance.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/delfinen/filehandling/FHFinance.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/delfinen/filehandling/FHProSwimmer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/delfinen/filehandling/FHProSwimmer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/delfinen/menu/CoachMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/delfinen/menu/CoachMenu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/delfinen/model/Delfinen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/delfinen/model/Delfinen.java" afterDir="false" />
-    </list>
-    <list id="4d616dc7-1ce6-4141-a620-02a668497665" name="Changes by Magne" comment="">
-      <change beforePath="$PROJECT_DIR$/src/delfinen/controller/ChairmanProController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/delfinen/manager/ChairmanProManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/delfinen/filehandling/FHProSwimmer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/delfinen/filehandling/FHProSwimmer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/delfinen/files/coaches.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/delfinen/menu/CashierMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/delfinen/menu/CashierMenu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/delfinen/menu/ChairmanMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/delfinen/menu/ChairmanMenu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/delfinen/menu/CoachMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/delfinen/menu/CoachMenu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/delfinen/menu/MainMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/delfinen/menu/MainMenu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/delfinen/viewer/UI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/delfinen/viewer/UI.java" afterDir="false" />
-    </list>
-    <list id="37d53e69-8a3f-4c5a-9ea7-3c814c972658" name="Changes by ottob" comment="">
-      <change beforePath="$PROJECT_DIR$/src/delfinen/misc/ProSwimmerComparator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/delfinen/misc/ProSwimmerComparator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/delfinen/model/ProSwimmer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/delfinen/model/ProSwimmer.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -113,96 +39,6 @@
       </UrlAndAccount>
     </option>
   </component>
-  <component name="LineStatusTrackerManager">
-    <file path="$PROJECT_DIR$/src/delfinen/menu/CoachMenu.java">
-      <ranges>
-        <range start1="2" end1="3" start2="2" end2="3" changelist="56419c25-b686-4e0f-b95c-8d86d93275a3" />
-        <range start1="4" end1="4" start2="4" end2="5" changelist="56419c25-b686-4e0f-b95c-8d86d93275a3" />
-        <range start1="5" end1="5" start2="6" end2="7" changelist="56419c25-b686-4e0f-b95c-8d86d93275a3" />
-        <range start1="8" end1="11" start2="10" end2="20" changelist="1a7dfa2b-dcc2-4474-948f-4ef6cd864b54" />
-        <range start1="12" end1="12" start2="21" end2="22" changelist="4d616dc7-1ce6-4141-a620-02a668497665" />
-        <range start1="15" end1="15" start2="25" end2="51" changelist="4d616dc7-1ce6-4141-a620-02a668497665" />
-        <range start1="16" end1="27" start2="52" end2="63" changelist="56419c25-b686-4e0f-b95c-8d86d93275a3" />
-        <range start1="29" end1="31" start2="65" end2="67" changelist="56419c25-b686-4e0f-b95c-8d86d93275a3" />
-        <range start1="33" end1="39" start2="69" end2="75" changelist="56419c25-b686-4e0f-b95c-8d86d93275a3" />
-        <range start1="41" end1="57" start2="77" end2="96" changelist="1a7dfa2b-dcc2-4474-948f-4ef6cd864b54" />
-        <range start1="59" end1="78" start2="98" end2="123" changelist="4d616dc7-1ce6-4141-a620-02a668497665" />
-      </ranges>
-    </file>
-    <file path="$PROJECT_DIR$/src/delfinen/filehandling/FHProSwimmer.java">
-      <ranges>
-        <range start1="5" end1="6" start2="5" end2="6" changelist="1a7dfa2b-dcc2-4474-948f-4ef6cd864b54" />
-        <range start1="11" end1="12" start2="11" end2="12" changelist="1a7dfa2b-dcc2-4474-948f-4ef6cd864b54" />
-        <range start1="16" end1="17" start2="16" end2="18" changelist="4d616dc7-1ce6-4141-a620-02a668497665" />
-        <range start1="31" end1="33" start2="32" end2="33" changelist="4d616dc7-1ce6-4141-a620-02a668497665" />
-        <range start1="50" end1="51" start2="50" end2="50" changelist="56419c25-b686-4e0f-b95c-8d86d93275a3" />
-      </ranges>
-    </file>
-    <file path="$PROJECT_DIR$/src/delfinen/manager/ChairmanProManager.java">
-      <ranges>
-        <range start1="0" end1="1" start2="0" end2="1" changelist="1a7dfa2b-dcc2-4474-948f-4ef6cd864b54" />
-        <range start1="11" end1="12" start2="11" end2="12" changelist="1a7dfa2b-dcc2-4474-948f-4ef6cd864b54" />
-        <range start1="16" end1="17" start2="16" end2="17" changelist="1a7dfa2b-dcc2-4474-948f-4ef6cd864b54" />
-        <range start1="33" end1="34" start2="33" end2="34" changelist="1a7dfa2b-dcc2-4474-948f-4ef6cd864b54" />
-        <range start1="54" end1="55" start2="54" end2="55" changelist="1a7dfa2b-dcc2-4474-948f-4ef6cd864b54" />
-        <range start1="56" end1="57" start2="56" end2="57" changelist="4d616dc7-1ce6-4141-a620-02a668497665" />
-        <range start1="63" end1="64" start2="63" end2="64" changelist="1a7dfa2b-dcc2-4474-948f-4ef6cd864b54" />
-      </ranges>
-    </file>
-    <file path="$PROJECT_DIR$/src/delfinen/misc/ProSwimmerComparator.java">
-      <ranges>
-        <range start1="1" end1="1" start2="1" end2="2" changelist="1a7dfa2b-dcc2-4474-948f-4ef6cd864b54" />
-        <range start1="2" end1="2" start2="3" end2="5" changelist="37d53e69-8a3f-4c5a-9ea7-3c814c972658" />
-        <range start1="7" end1="8" start2="10" end2="11" changelist="37d53e69-8a3f-4c5a-9ea7-3c814c972658" />
-        <range start1="9" end1="10" start2="12" end2="13" changelist="37d53e69-8a3f-4c5a-9ea7-3c814c972658" />
-        <range start1="15" end1="18" start2="18" end2="21" changelist="1a7dfa2b-dcc2-4474-948f-4ef6cd864b54" />
-        <range start1="19" end1="20" start2="22" end2="27" changelist="1a7dfa2b-dcc2-4474-948f-4ef6cd864b54" />
-      </ranges>
-    </file>
-    <file path="$PROJECT_DIR$/src/delfinen/menu/ChairmanMenu.java">
-      <ranges>
-        <range start1="11" end1="11" start2="11" end2="12" changelist="4d616dc7-1ce6-4141-a620-02a668497665" />
-        <range start1="19" end1="30" start2="20" end2="31" changelist="4d616dc7-1ce6-4141-a620-02a668497665" />
-        <range start1="40" end1="41" start2="41" end2="42" changelist="4d616dc7-1ce6-4141-a620-02a668497665" />
-        <range start1="42" end1="45" start2="43" end2="46" changelist="1a7dfa2b-dcc2-4474-948f-4ef6cd864b54" />
-      </ranges>
-    </file>
-    <file path="$PROJECT_DIR$/src/delfinen/manager/CashierManager.java">
-      <ranges>
-        <range start1="0" end1="1" start2="0" end2="1" changelist="1a7dfa2b-dcc2-4474-948f-4ef6cd864b54" />
-        <range start1="11" end1="12" start2="11" end2="12" changelist="1a7dfa2b-dcc2-4474-948f-4ef6cd864b54" />
-        <range start1="57" end1="57" start2="57" end2="58" changelist="56419c25-b686-4e0f-b95c-8d86d93275a3" />
-      </ranges>
-    </file>
-    <file path="$PROJECT_DIR$/src/delfinen/menu/MainMenu.java">
-      <ranges>
-        <range start1="9" end1="9" start2="9" end2="10" changelist="4d616dc7-1ce6-4141-a620-02a668497665" />
-        <range start1="12" end1="12" start2="13" end2="17" changelist="1a7dfa2b-dcc2-4474-948f-4ef6cd864b54" />
-        <range start1="13" end1="21" start2="18" end2="31" changelist="1a7dfa2b-dcc2-4474-948f-4ef6cd864b54" />
-        <range start1="23" end1="23" start2="33" end2="38" changelist="1a7dfa2b-dcc2-4474-948f-4ef6cd864b54" />
-        <range start1="24" end1="30" start2="39" end2="45" changelist="1a7dfa2b-dcc2-4474-948f-4ef6cd864b54" />
-        <range start1="31" end1="35" start2="46" end2="47" changelist="1a7dfa2b-dcc2-4474-948f-4ef6cd864b54" />
-      </ranges>
-    </file>
-    <file path="$PROJECT_DIR$/src/delfinen/model/ProSwimmer.java">
-      <ranges>
-        <range start1="2" end1="3" start2="2" end2="2" changelist="1a7dfa2b-dcc2-4474-948f-4ef6cd864b54" />
-        <range start1="5" end1="7" start2="4" end2="5" changelist="1a7dfa2b-dcc2-4474-948f-4ef6cd864b54" />
-        <range start1="12" end1="18" start2="10" end2="13" changelist="37d53e69-8a3f-4c5a-9ea7-3c814c972658" />
-        <range start1="19" end1="20" start2="14" end2="14" changelist="1a7dfa2b-dcc2-4474-948f-4ef6cd864b54" />
-        <range start1="25" end1="36" start2="19" end2="22" changelist="1a7dfa2b-dcc2-4474-948f-4ef6cd864b54" />
-        <range start1="39" end1="41" start2="25" end2="39" changelist="1a7dfa2b-dcc2-4474-948f-4ef6cd864b54" />
-        <range start1="42" end1="42" start2="40" end2="41" changelist="37d53e69-8a3f-4c5a-9ea7-3c814c972658" />
-        <range start1="47" end1="68" start2="46" end2="51" changelist="1a7dfa2b-dcc2-4474-948f-4ef6cd864b54" />
-      </ranges>
-    </file>
-    <file path="$PROJECT_DIR$/src/delfinen/viewer/UI.java">
-      <ranges>
-        <range start1="52" end1="54" start2="52" end2="55" changelist="4d616dc7-1ce6-4141-a620-02a668497665" />
-        <range start1="279" end1="280" start2="280" end2="280" changelist="1a7dfa2b-dcc2-4474-948f-4ef6cd864b54" />
-      </ranges>
-    </file>
-  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 0
 }</component>
@@ -212,31 +48,31 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "codeWithMe.voiceChat.enabledByDefault": "false",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "C:/Users/Ravn/IdeaProjects/Git",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.keymap",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Ravn/IdeaProjects/Git&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "ChangesTree.GroupingKeys": [
-      "directory",
-      "module",
-      "repository"
+  &quot;keyToStringList&quot;: {
+    &quot;ChangesTree.GroupingKeys&quot;: [
+      &quot;directory&quot;,
+      &quot;module&quot;,
+      &quot;repository&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Ravn\IdeaProjects\Project3Delfin\src\delfinen\files" />
@@ -295,7 +131,8 @@
       <workItem from="1701675564706" duration="20550000" />
       <workItem from="1701763266058" duration="25000" />
       <workItem from="1701763300862" duration="13943000" />
-      <workItem from="1701851983116" duration="18027000" />
+      <workItem from="1701851983116" duration="18427000" />
+      <workItem from="1701936635268" duration="22000" />
     </task>
     <task id="LOCAL-00001" summary="Second commit fr">
       <option name="closed" value="true" />
