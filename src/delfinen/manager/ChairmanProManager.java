@@ -3,6 +3,7 @@ package delfinen.manager;
 import delfinen.misc.ConsoleColors;
 import delfinen.model.ProSwimmer;
 import delfinen.model.Swimmer;
+import delfinen.model.Cashier;
 import delfinen.viewer.UI;
 import delfinen.filehandling.FHProSwimmer;
 import java.util.Scanner;
@@ -12,7 +13,7 @@ import java.util.ArrayList;
 public class ChairmanProManager {
     UI ui = new UI();
 
-    private CashierManager cashierManager = new CashierManager();
+    private Cashier cashier = new Cashier();
     private FHProSwimmer fhProSwimmer = new FHProSwimmer();
     private ArrayList<ProSwimmer> proSwimmers = fhProSwimmer.loadFileProSwimmers();
 
@@ -29,7 +30,7 @@ public class ChairmanProManager {
         addProSwimmerToList(proSwimmer);
         System.out.print(ConsoleColors.CYAN_BOLD_BRIGHT + proSwimmer.getFirstName() + ConsoleColors.RESET);
         ui.memberCreatedConfirmationMessage();
-        cashierManager.createSubscription(proSwimmer);
+        cashier.createSubscription(proSwimmer);
         fhProSwimmer.saveInProSwimmersFile(proSwimmers);
     }
 
@@ -50,7 +51,7 @@ public class ChairmanProManager {
 
     public void displayProSwimmers() {
         System.out.println(ConsoleColors.PURPLE_BOLD_BRIGHT + "\n       NAME                          AGE      EMAIL" +
-                "                               ADDRESS                         DISCIPLINE             MEMBER    ARREARS");
+                "                               ADDRESS                         DISCIPLINE             MEMBER    PAID");
         for (int i = 0; i < proSwimmers.size(); i++) {
             System.out.printf("%s %-4s %s %-28s %s %-3d %s | %s  %-35s %-30s %s %-14s %-10s %-5s %s | %s %-6s %s%n",
                     ConsoleColors.PURPLE_BOLD_BRIGHT, (i + 1) + ".", ConsoleColors.CYAN_BOLD_BRIGHT,

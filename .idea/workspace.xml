@@ -4,15 +4,38 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1a7dfa2b-dcc2-4474-948f-4ef6cd864b54" name="Changes" comment="Commited to pull">
+    <list default="true" id="1a7dfa2b-dcc2-4474-948f-4ef6cd864b54" name="Changes" comment="Fix for crash ved ændring af aktiv status for pro members">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Project3_delfin/delfinen/files/finances.csv" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Project3_delfin/delfinen/files/finances.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Project3_delfin/delfinen/files/regular_swimmers.csv" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Project3_delfin/delfinen/files/regular_swimmers.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Project3_delfin/delfinen/manager/CashierManager.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Project3_delfin/delfinen/manager/ChairmanProManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Project3_delfin/delfinen/manager/ChairmanProManager.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Project3_delfin/delfinen/menu/ChairmanMenu.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Project3_delfin/delfinen/menu/ChairmanMenu.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Project3_delfin/delfinen/manager/ChairmanRegularManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Project3_delfin/delfinen/manager/ChairmanRegularManager.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Project3_delfin/delfinen/manager/CoachManager.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Project3_delfin/delfinen/menu/CashierMenu.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Project3_delfin/delfinen/menu/ChairmanMenu.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Project3_delfin/delfinen/menu/CoachMenu.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Project3_delfin/delfinen/menu/MainMenu.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Project3_delfin/delfinen/menu/MainMenu.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Project3_delfin/delfinen/model/Cashier.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Project3_delfin/delfinen/model/Cashier.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Project3_delfin/delfinen/model/Chairman.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Project3_delfin/delfinen/model/Chairman.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Project3_delfin/delfinen/model/Coach.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Project3_delfin/delfinen/model/Coach.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Project3_delfin/delfinen/model/Delfinen.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Project3_delfin/delfinen/model/Delfinen.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Project3_delfin/delfinen/viewer/UI.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Project3_delfin/delfinen/viewer/UI.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/delfinen/files/competition.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/delfinen/files/finances.csv" beforeDir="false" afterPath="$PROJECT_DIR$/src/delfinen/files/finances.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/delfinen/files/regular_swimmers.csv" beforeDir="false" afterPath="$PROJECT_DIR$/src/delfinen/files/regular_swimmers.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/delfinen/manager/CashierManager.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/delfinen/manager/ChairmanProManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/delfinen/manager/ChairmanProManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/delfinen/menu/ChairmanMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/delfinen/menu/ChairmanMenu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/delfinen/manager/ChairmanRegularManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/delfinen/manager/ChairmanRegularManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/delfinen/manager/CoachManager.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/delfinen/menu/CashierMenu.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/delfinen/menu/ChairmanMenu.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/delfinen/menu/CoachMenu.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/delfinen/menu/MainMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/delfinen/menu/MainMenu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/delfinen/model/Cashier.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/delfinen/model/Cashier.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/delfinen/model/Chairman.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/delfinen/model/Chairman.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/delfinen/model/Coach.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/delfinen/model/Coach.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/delfinen/model/Delfinen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/delfinen/model/Delfinen.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/delfinen/viewer/UI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/delfinen/viewer/UI.java" afterDir="false" />
     </list>
     <list id="bcfd5b4b-7bd7-4fa5-bf1c-f6cbbe545d42" name="Changes by ottob" comment="" />
@@ -143,6 +166,9 @@
       <workItem from="1701851983116" duration="18427000" />
       <workItem from="1701936635268" duration="22000" />
       <workItem from="1701939617060" duration="676000" />
+      <workItem from="1702039626645" duration="2144000" />
+      <workItem from="1702296167534" duration="7089000" />
+      <workItem from="1702455019686" duration="13528000" />
     </task>
     <task id="LOCAL-00001" summary="Second commit fr">
       <option name="closed" value="true" />
@@ -160,7 +186,15 @@
       <option name="project" value="LOCAL" />
       <updated>1701675651787</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Fix for crash ved ændring af aktiv status for pro members">
+      <option name="closed" value="true" />
+      <created>1701971455304</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1701971455304</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -185,7 +219,8 @@
     <MESSAGE value="Changes by LENOVO" />
     <MESSAGE value="Commited" />
     <MESSAGE value="Commited to pull" />
-    <option name="LAST_COMMIT_MESSAGE" value="Commited to pull" />
+    <MESSAGE value="Fix for crash ved ændring af aktiv status for pro members" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix for crash ved ændring af aktiv status for pro members" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

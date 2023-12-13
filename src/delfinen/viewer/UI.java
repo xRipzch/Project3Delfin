@@ -12,11 +12,6 @@ import java.util.regex.Pattern;
 public class UI {
 
     Scanner scanner = new Scanner(System.in);
-    ProSwimmer proSwimmer = new ProSwimmer("first", "last", 1994, " email", "address", true, true, SwimDiscipline.BACKSTROKE);
-
-
-
-
 
 
     ///////////////////////////////////////////FIRST AND LAST NAME///////////////////////////////////////////
@@ -180,7 +175,7 @@ public class UI {
     }
 
 
-    public SwimDiscipline chooseSwimDisciplin() {
+    public SwimDiscipline chooseSwimDisciplin() { //ikke generisk
         int choice = 0;
         System.out.println(ConsoleColors.PURPLE_BOLD_BRIGHT + "\nPlease choose a swimming discipline:");
         System.out.println(ConsoleColors.PURPLE_BOLD_BRIGHT + "1." + ConsoleColors.BLUE_BOLD + " Crawl.");

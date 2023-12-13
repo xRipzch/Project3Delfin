@@ -1,7 +1,9 @@
 package delfinen.model;
 
+import delfinen.filehandling.FHProSwimmer;
 import delfinen.misc.ConsoleColors;
 import delfinen.misc.ProSwimmerComparator;
+import delfinen.misc.SwimDiscipline;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
@@ -10,18 +12,14 @@ import java.util.Scanner;
 
 public class Coach {
 
-
-    private String name;
+    private Scanner scanner = new Scanner(System.in);
+    private FHProSwimmer fhProSwimmer = new FHProSwimmer();
+    private ArrayList<ProSwimmer> proSwimmers = fhProSwimmer.loadFileProSwimmers();
     private ArrayList<ProSwimmer> specificProSwimmers = new ArrayList<>();
+    private ArrayList<Coach> coaches = new ArrayList<>();
     private ArrayList<ProSwimmer> juniors = new ArrayList<>();
     private ArrayList<ProSwimmer> seniors = new ArrayList<>();
-    Scanner scanner = new Scanner(System.in);
 
-
-    public Coach(String name, ArrayList<ProSwimmer> proSwimmers) {
-        this.name = name;
-        this.specificProSwimmers = proSwimmers;
-    }
 
     public void addCompetitionResult(ProSwimmer proSwimmer) {
         System.out.println(ConsoleColors.BLUE_BRIGHT + "Enter name of competition:" + ConsoleColors.RESET);
@@ -171,5 +169,83 @@ public class Coach {
         for (int i = 0; i < Math.min(5, seniors.size()); i++) {
             System.out.println(ConsoleColors.BLUE_BOLD + seniors.get(i).getCompetitionResult()); // TODO FARVER
         }
+    }
+
+    public Coach createBackstrokeCoach() {
+        Coach coachBackstroke = new Coach();
+        ArrayList<ProSwimmer> backStrokeSwimmers = new ArrayList<>();
+        for (int i = 0; i < proSwimmers.size(); i++) {
+            if (proSwimmers.get(i).getSwimDisciplin() == SwimDiscipline.BACKSTROKE) {
+                backStrokeSwimmers.add(proSwimmers.get(i));
+            }
+        }
+        coachBackstroke.setSpecificProSwimmers(backStrokeSwimmers);
+        return coachBackstroke;
+    }
+
+    public Coach createBreaststrokeCoach() {
+        Coach coachBreaststroke = new Coach();
+        ArrayList<ProSwimmer> breastStrokeSwimmers = new ArrayList<>();
+        for (int i = 0; i < proSwimmers.size(); i++) {
+            if (proSwimmers.get(i).getSwimDisciplin() == SwimDiscipline.BREASTSTROKE) {
+                    breastStrokeSwimmers.add(proSwimmers.get(i));
+            }
+        }
+        coachBreaststroke.setSpecificProSwimmers(breastStrokeSwimmers);
+        return coachBreaststroke;
+    }
+
+    public Coach createButterflyCoach() {
+        Coach coachButterfly = new Coach();
+        ArrayList<ProSwimmer> butterflySwimmers = new ArrayList<>();
+        for (int i = 0; i < proSwimmers.size(); i++) {
+            if (proSwimmers.get(i).getSwimDisciplin() == SwimDiscipline.BUTTERFLY) {
+                butterflySwimmers.add(proSwimmers.get(i));
+            }
+        }
+        coachButterfly.setSpecificProSwimmers(butterflySwimmers);
+        return coachButterfly;
+
+    }
+
+    public Coach createCrawlCoach() {
+        Coach coachCrawl = new Coach();
+        ArrayList<ProSwimmer> crawlSwimmers = new ArrayList<>();
+        for (int i = 0; i < proSwimmers.size(); i++) {
+            if (proSwimmers.get(i).getSwimDisciplin() == SwimDiscipline.CRAWL) {
+                crawlSwimmers.add(proSwimmers.get(i));
+            }
+        }
+        coachCrawl.setSpecificProSwimmers(crawlSwimmers);
+        return coachCrawl;
+    }
+
+    public Coach createMedleyCoach() {
+        Coach coachMedley = new Coach();
+        ArrayList<ProSwimmer> medleySwimmers = new ArrayList<>();
+        for (int i = 0; i < proSwimmers.size(); i++) {
+            if (proSwimmers.get(i).getSwimDisciplin() == SwimDiscipline.MEDLEY) {
+                medleySwimmers.add(proSwimmers.get(i));
+            }
+        }
+        coachMedley.setSpecificProSwimmers(medleySwimmers);
+        return coachMedley;
+    }
+
+    public void addCoachesToArray() {
+        coaches.add(createBackstrokeCoach());
+        coaches.add(createBreaststrokeCoach());
+        coaches.add(createButterflyCoach());
+        coaches.add(createCrawlCoach());
+        coaches.add(createMedleyCoach());
+    }
+
+    public ArrayList<Coach> getCoaches() {
+        addCoachesToArray();
+        return coaches;
+    }
+
+    public void setSpecificProSwimmers(ArrayList<ProSwimmer> specificProSwimmers) {
+        this.specificProSwimmers = specificProSwimmers;
     }
 }

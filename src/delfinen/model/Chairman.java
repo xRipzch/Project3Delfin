@@ -11,7 +11,6 @@ public class Chairman {
 
    private ChairmanRegularManager chairmanRegularManager = new ChairmanRegularManager();
    private ChairmanProManager chairmanProManager = new ChairmanProManager();
-   private UI ui = new UI();
 
     public void addProSwimmer() {
         chairmanProManager.createProMember();

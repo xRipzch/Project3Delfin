@@ -18,6 +18,6 @@ public class Delfinen {
 
     private void run() {
         landing.intro1();
-        mainMenu.executeMainMenu(-1);
+        mainMenu.executeMainMenu();
     }
 }
